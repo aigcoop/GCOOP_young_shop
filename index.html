@@ -46,6 +46,10 @@ a{color:inherit}
 .annc{background:var(--brand);color:var(--brand-ink);font-size:13px}
 .annc .wrap{padding-block:8px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap;text-align:center}
 .annc b{font-weight:600}
+.ship{background:var(--soft);color:var(--ink);border-bottom:1px solid var(--line)}
+.ship .wrap{padding-block:7px;display:flex;align-items:center;justify-content:center;gap:6px;text-align:center;font-size:13px;word-break:keep-all}
+.ship .ico{width:17px;height:17px;color:var(--brand);flex:none}
+.ship b{color:var(--hot);font-weight:700}
 
 /* 헤더 */
 .hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
@@ -305,7 +309,7 @@ footer b{color:var(--ink);font:700 15px var(--f-display)}
 
 </head>
 <body>
-<div class="annc"><div class="wrap"><span><b>회원가입 없이 회원가로</b> 바로 구입</span><span class="sep">·</span><span>본사 정품 직접 발송</span><span class="sep">·</span><span>여러 개는 맞춤 링크오더로 카톡 발송</span><span class="sep">·</span><span>회원가입을 원할 경우 카톡 문의</span></div></div>
+<div class="annc"><div class="wrap"><span><b>회원가입 없이 회원가로</b> 바로 구입</span><span class="sep">·</span><span>본사 정품 직접 발송</span><span class="sep">·</span><span>여러 개는 맞춤 링크오더로 카톡 발송</span><span class="sep">·</span><span>회원가입을 원할 경우 카톡 문의</span></div><div class="ship"><div class="wrap"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span>링크오더(회원가)로 구입 시 <b>50,000원 이하</b>는 택배비 <b>2,500원</b>이 부과됩니다.</span></div></div></div>
 
 <header class="hdr"><div class="wrap">
   <div class="hrow">
