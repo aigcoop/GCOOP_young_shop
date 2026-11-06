@@ -840,7 +840,7 @@ let cur = null, curOpt = 0, lastFocus = null;
 const scrim = $("scrim"), pd = $("pd"), cartEl = $("cart");
 function openSheet(el){ lastFocus = document.activeElement; el.hidden = false; scrim.classList.add("on"); document.body.style.overflow="hidden"; requestAnimationFrame(()=>el.querySelector("button, a")?.focus()); }
 function closeSheets(){ if(!pd.hidden && history.state && history.state.p){ history.back(); return; } realClose(); }
-function realClose(){ pd.hidden = true; cartEl.hidden = true; scrim.classList.remove("on"); document.body.style.overflow=""; lastFocus?.focus?.(); }
+function realClose(){ if(/^#p\d+$/.test(location.hash)){ try{ history.replaceState(null, "", location.pathname + location.search); }catch(e){} } pd.hidden = true; cartEl.hidden = true; scrim.classList.remove("on"); document.body.style.overflow=""; lastFocus?.focus?.(); }
 function openProduct(n, push=true, to=""){
   cur = BYN[n]; curOpt = 0;
   pd.innerHTML = `<div class="pdtop"><button class="bk" type="button" data-close aria-label="목록으로">${I.chev(0)}<span>목록</span></button><b class="tt">${esc(cur.name)}</b><button class="bk sharebtn" type="button" data-share="${n}" aria-label="이 제품 링크 공유">${I.share}<span>공유</span></button><button class="bk cartbtn" type="button" data-cartopen aria-label="바구니">${I.bag}<span>바구니</span></button></div><div class="pdhead"></div><section class="pdx" id="pdx" aria-label="상세정보"></section><a class="fkk" ${ext(KAKAO)} aria-label="카카오톡으로 문의하기">${I.kakao}<span>카톡 문의</span></a>`;
