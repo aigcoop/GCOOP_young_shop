@@ -72,10 +72,13 @@ a{color:inherit}
 .hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);box-shadow:0 1px 0 var(--line)}
 .hrow{display:flex;align-items:center;gap:16px;padding-block:10px}
 .logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex:none;background:none;border:0;padding:0;cursor:pointer;min-width:0}
-.logo .mark{width:32px;height:32px;border-radius:9px;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font:900 16px var(--f-display)}
+.logo .mark{width:40px;height:40px;flex:none;display:block;filter:drop-shadow(0 4px 8px rgba(20,82,58,.28))}
+.logo .mark svg{display:block;width:100%;height:100%}
 .logo .lt{display:flex;flex-direction:column;line-height:1.1;text-align:left;min-width:0}
-.logo .lt b{font:800 17px var(--f-display);letter-spacing:-.03em;white-space:nowrap}
-.logo .lt span{font-size:10px;color:var(--muted);letter-spacing:.08em;font-weight:600;margin-top:2px}
+.logo .lt b{font:900 19px var(--f-display);letter-spacing:-.04em;white-space:nowrap;color:var(--ink)}
+.logo .lt b em{font-style:normal;color:var(--brand);background:linear-gradient(transparent 62%,color-mix(in srgb,#ffd84d 70%,transparent) 62%);padding:0 2px}
+.logo .lt .lk{font-size:9.5px;font-weight:800;letter-spacing:.2em;color:var(--brand);margin:0 0 3px 1px}
+
 .search{flex:1;min-width:0;display:flex;align-items:center;gap:8px;background:var(--fill);border:1.5px solid transparent;border-radius:12px;padding:0 14px;max-width:520px;margin-inline:auto}
 .search:focus-within{border-color:var(--brand);background:var(--surface)}
 .search input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:inherit;padding:10px 0;outline:none}
@@ -311,6 +314,16 @@ footer b{color:var(--ink);font:800 15px var(--f-display)}
 .pdsum b{color:var(--brand);font-size:21px;font-weight:900;letter-spacing:-.02em}
 .pdsum em{font-style:normal;font-size:12.5px;vertical-align:3px;font-weight:800;color:var(--brand);background:var(--soft);border-radius:999px;padding:2px 8px;margin-left:4px}
 .pdsum em.fee{color:var(--muted);background:var(--fill)}
+.gk{display:block;font-size:11.5px;font-weight:800;letter-spacing:.02em;color:var(--brand);margin-bottom:1px}
+.fkk{position:fixed;z-index:7;top:116px;right:12px;display:flex;align-items:center;gap:5px;height:34px;padding:0 12px 0 9px;border-radius:999px;background:var(--kakao);color:var(--kakao-ink);font-size:12.5px;font-weight:800;text-decoration:none;box-shadow:0 6px 16px -6px rgba(0,0,0,.35);animation:fkkIn .5s cubic-bezier(.2,.8,.3,1.2) both, fkkBob 3.2s ease-in-out .6s infinite;transition:padding .25s, gap .25s}
+.fkk svg{width:19px;height:19px;flex:none}
+.fkk span{max-width:70px;overflow:hidden;white-space:nowrap;transition:max-width .25s, opacity .2s}
+.fkk.mini{padding:0 9px;gap:0}
+.fkk.mini span{max-width:0;opacity:0}
+@keyframes fkkIn{from{transform:translateX(120%);opacity:0}to{transform:none;opacity:1}}
+@keyframes fkkBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media (min-width:901px){.fkk{top:70px;right:20px}}
+@media (prefers-reduced-motion:reduce){.fkk{animation:none}}
 .pdx{max-width:860px;margin:0 auto;padding-bottom:40px}
 .pdtabs{position:sticky;top:54px;z-index:4;display:grid;grid-template-columns:1fr 1fr;background:var(--surface);border-bottom:1px solid var(--line)}
 .pdtabs button{border:0;background:none;padding:14px 0 12px;font:700 15px var(--f-body);color:var(--muted);border-bottom:3px solid transparent;cursor:pointer}
@@ -425,7 +438,7 @@ footer b{color:var(--ink);font:800 15px var(--f-display)}
 
   /* 헤더: 로고 한 줄 + 카테고리 알약 */
   .hrow{gap:6px;padding-block:8px}
-  .logo .lt b{font-size:16.5px}
+  .logo .lt b{font-size:18px}
   .search{display:none;order:3;flex-basis:100%;max-width:none;margin-top:2px}
   .hdr.srch .hrow{flex-wrap:wrap}
   .hdr.srch .search{display:flex}
@@ -498,8 +511,8 @@ footer b{color:var(--ink);font:800 15px var(--f-display)}
 }
 @keyframes tick{0%,21%{transform:translateY(0)}25%,46%{transform:translateY(-20px)}50%,71%{transform:translateY(-40px)}75%,96%{transform:translateY(-60px)}100%{transform:translateY(0)}}
 @media (max-width:380px){
-  .logo .lt b{font-size:15.5px}
-  .logo .lt span{display:none}
+  .logo .lt b{font-size:17px}
+  .logo .mark{width:36px;height:36px}
   .slide h2{font-size:17px}
   .grid{gap:22px 10px}
   .pname{font-size:14px}
@@ -513,11 +526,11 @@ footer b{color:var(--ink);font:800 15px var(--f-display)}
 
 </head>
 <body>
-<div class="annc"><div class="wrap"><div class="tick"><div class="tick-in"><span><b>회원가입 없이 회원가로</b> 바로 구입</span><span>본사 정품 직접 발송</span><span>여러 개는 맞춤 링크오더로 카톡 발송</span><span>회원가입을 원할 경우 카톡 문의</span></div></div></div><div class="ship"><div class="wrap"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span>링크오더(회원가)로 구입 시 <b>50,000원 이하</b>는 택배비 <b>2,500원</b>이 부과됩니다.</span></div></div></div>
+<div class="annc"><div class="wrap"><div class="tick"><div class="tick-in"><span><b>회원가입 없이 회원가로</b> 바로 구입</span><span><b>지쿱 파트너스 영샵</b> · 본사 정품 직접 발송</span><span>여러 개는 맞춤 링크오더로 카톡 발송</span><span>회원가입을 원할 경우 카톡 문의</span></div></div></div><div class="ship"><div class="wrap"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span>링크오더(회원가)로 구입 시 <b>50,000원 이하</b>는 택배비 <b>2,500원</b>이 부과됩니다.</span></div></div></div>
 
 <header class="hdr"><div class="wrap">
   <div class="hrow">
-    <button class="logo" type="button" id="home" aria-label="처음으로"><span class="mark">G</span><span class="lt"><b>지쿱 파트너스 영샵</b><span>GCOOP PARTNERS SHOP</span></span></button>
+    <button class="logo" type="button" id="home" aria-label="처음으로"><span class="mark" aria-hidden="true"><svg viewBox="0 0 40 40"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f8f5f"/><stop offset="1" stop-color="#14523a"/></linearGradient></defs><rect width="40" height="40" rx="12" fill="url(#lg)"/><path d="M28.6 14.2A10 10 0 1 0 30 20h-9.2" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M27.6 7.2c3.9-.6 6 1.4 5.6 5.4-3.8.6-6-1.5-5.6-5.4z" fill="#b9f0c9"/><circle cx="20" cy="20" r="2.1" fill="#ffd84d"/></svg></span><span class="lt"><span class="lk">GCOOP PARTNERS</span><b>지쿱 파트너스 <em>영샵</em></b></span></button>
     <label class="search" for="q">
       <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input id="q" type="search" placeholder="제품명, 효능으로 찾기 (예: 세럼, 유산균)" autocomplete="off">
@@ -540,7 +553,7 @@ footer b{color:var(--ink);font:800 15px var(--f-display)}
 
   <div class="wrap"><button class="guidebtn" type="button" data-go="guide">
     <span class="gb-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.4 2.3c-.6.3-.9.8-.9 1.4V14"/><circle cx="12" cy="17" r=".6" fill="currentColor"/></svg></span>
-    <span class="gb-t"><b>회원가 구입 링크오더란?</b><span>가입 없이 회원가로 사는 방법, 여러 개 주문하는 방법</span></span>
+    <span class="gb-t"><small class="gk">지쿱 파트너스</small><b>회원가 구입 링크오더란?</b><span>가입 없이 회원가로 사는 방법, 여러 개 주문하는 방법</span></span>
     <span class="gb-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
   </button></div>
   <div class="wrap"><div class="perks">
@@ -575,7 +588,7 @@ footer b{color:var(--ink);font:800 15px var(--f-display)}
   </section>
 
   <section class="sec wrap" id="guide" aria-labelledby="gh">
-    <div class="sh"><h2 id="gh">회원가 구입 링크오더란?</h2></div>
+    <div class="sh"><h2 id="gh">지쿱 파트너스 회원가 구입 링크오더란?</h2></div>
     <div class="guide">
       <div class="gbox">
         <h3>링크오더로 구입하는 방법</h3>
@@ -805,7 +818,7 @@ function closeSheets(){ if(!pd.hidden && history.state && history.state.p){ hist
 function realClose(){ pd.hidden = true; cartEl.hidden = true; scrim.classList.remove("on"); document.body.style.overflow=""; lastFocus?.focus?.(); }
 function openProduct(n, push=true, to=""){
   cur = BYN[n]; curOpt = 0;
-  pd.innerHTML = `<div class="pdtop"><button class="bk" type="button" data-close aria-label="목록으로">${I.chev(0)}<span>목록</span></button><b class="tt">${esc(cur.name)}</b><button class="bk sharebtn" type="button" data-share="${n}" aria-label="이 제품 링크 공유">${I.share}<span>공유</span></button><button class="bk cartbtn" type="button" data-cartopen aria-label="바구니">${I.bag}<span>바구니</span></button></div><div class="pdhead"></div><section class="pdx" id="pdx" aria-label="상세정보"></section>`;
+  pd.innerHTML = `<div class="pdtop"><button class="bk" type="button" data-close aria-label="목록으로">${I.chev(0)}<span>목록</span></button><b class="tt">${esc(cur.name)}</b><button class="bk sharebtn" type="button" data-share="${n}" aria-label="이 제품 링크 공유">${I.share}<span>공유</span></button><button class="bk cartbtn" type="button" data-cartopen aria-label="바구니">${I.bag}<span>바구니</span></button></div><div class="pdhead"></div><section class="pdx" id="pdx" aria-label="상세정보"></section><a class="fkk" ${ext(KAKAO)} aria-label="카카오톡으로 문의하기">${I.kakao}<span>카톡 문의</span></a>`;
   renderPD(); renderDetail(cur);
   if(!cartEl.hidden) cartEl.hidden = true;
   openSheet(pd); pd.scrollTop = 0;
@@ -820,6 +833,8 @@ async function shareProduct(n){
   try{ await navigator.clipboard.writeText(url); toast("제품 링크를 복사했어요. 카톡에 붙여넣어 보내 주세요"); }
   catch(e){ window.prompt("이 링크를 복사해 주세요", url); }
 }
+let fkkT;
+pd.addEventListener("scroll", ()=>{ const f = pd.querySelector(".fkk"); if(!f) return; f.classList.add("mini"); clearTimeout(fkkT); fkkT = setTimeout(()=>f.classList.remove("mini"), 650); }, {passive:true});
 function goDetail(){ const x = $("pdx"); if(x) pd.scrollTo({top: x.offsetTop - pd.querySelector(".pdtop").offsetHeight, behavior: reduce?"auto":"smooth"}); }
 window.addEventListener("popstate", ()=>{
   const m = location.hash.match(/^#p(\d+)$/);
