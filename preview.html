@@ -208,6 +208,9 @@ a{color:inherit}
 .bhint b{color:var(--hot);font-weight:800}
 .bbuy{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0 3px;width:100%;min-height:42px;padding:6px 8px;border-radius:10px;border:0;background:var(--brand);color:var(--brand-ink);font-weight:800;font-size:14px;line-height:1.25;text-align:center;text-decoration:none;cursor:pointer;word-break:keep-all;letter-spacing:-.02em}
 .bbuy .bsub{font-size:12px;font-weight:600;opacity:.9}
+.bgo{flex-direction:column;gap:1px;min-height:56px;padding:13px 8px 8px}
+.bgo .bsub2{display:block;font-size:11.5px;font-weight:600;opacity:.88;letter-spacing:-.01em}
+.bbuy.bgo.ask{background:var(--kakao);color:var(--kakao-ink)}
 .bbuy:hover{background:var(--brand-deep)}
 .bbuy.ask{background:var(--kakao);color:var(--kakao-ink)}
 .bbuy .offtag{position:absolute;top:-11px;right:6px;margin:0;box-shadow:0 3px 8px -3px rgba(0,0,0,.35)}
@@ -720,6 +723,10 @@ function detailLinks(p){
   if(l.length===1) return `<a class="plink" ${ext(l[0].url)}><span class="pt"><b>상세정보 · 성분 보기</b><small>상품정보제공고시 포함</small></span><span class="pc">${I.chev(1)}</span></a>`;
   return `<div class="plinks">${l.map(x=>`<a class="plink" ${ext(x.url)}><span class="pt"><b>${esc(x.label)} 성분 보기</b></span><span class="pc">${I.chev(1)}</span></a>`).join("")}<small class="pnote2">상세정보 · 상품정보제공고시 포함</small></div>`;
 }
+function goBtn(p){
+  const can = orders(p).length;
+  return `<button class="bbuy bgo${can?"":" ask"}" type="button" data-open="${p.n}">${can?"회원가로 구매하기":"상세보기 · 구입문의"}${can?offTag(p):""}<span class="bsub2">${can?"상세정보 · 수량 선택":"카카오톡으로 안내해 드려요"} ›</span></button>`;
+}
 function card(p){
   return `<article class="pcard">
     <div class="tw">
@@ -732,8 +739,7 @@ function card(p){
       <h3 class="pname"><button type="button" data-open="${p.n}">${esc(p.name)}</button></h3>
       <p class="pdesc">${esc(p.desc||"")}</p>
       <div class="pprice"><span class="plabel">${/\d/.test(p.price)?"소비자가":"가격 안내"}</span>${priceHTML(p.price)}${p.pnote?`<span class="pn">${esc(p.pnote)}</span>`:""}</div>
-      ${detailLinks(p)}
-      <div class="pact" data-act="${p.n}">${actHTML(p)}</div>
+      <div class="pact">${goBtn(p)}</div>
     </div>
   </article>`;
 }
@@ -834,7 +840,7 @@ async function renderDetail(p){
   const x = $("pdx"); if(!x) return;
   const parts = p.comp ? p.comp.map(c=>({no:c[0], qty:c[1], name:(DATA.find(y=>y.ino===c[0])||{}).name || ""})) : (p.ino ? [{no:p.ino}] : []);
   if(!parts.length){ x.innerHTML = ""; return; }
-  x.innerHTML = `<div class="pdtabs" role="tablist"><button type="button" role="tab" data-dtab="d" aria-selected="true">상세정보</button><button type="button" role="tab" data-dtab="i" aria-selected="false">정보고시</button></div>
+  x.innerHTML = `<div class="pdtabs" role="tablist"><button type="button" role="tab" data-dtab="d" aria-selected="true">상세정보</button><button type="button" role="tab" data-dtab="i" aria-selected="false">상품정보제공고시</button></div>
     <div class="pdpane" data-pane="d"><p class="dmsg">상세정보를 불러오는 중이에요…</p></div><div class="pdpane" data-pane="i" hidden></div>`;
   const got = await Promise.all(parts.map(c=>loadDet(c.no)));
   if(!cur || cur.n !== p.n || !$("pdx")) return;
