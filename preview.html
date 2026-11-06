@@ -383,6 +383,10 @@ footer .disc{display:block;margin-top:10px;font-size:11px;line-height:1.55;color
 @media (min-width:901px){.vgrid{grid-template-columns:repeat(4,1fr)}.vbox.wide{grid-column:span 2}}
 .dframe{display:block;width:100%;height:70vh;border:0;background:#fff}
 .dcomp{margin:0;padding:22px 16px 10px;font:900 17px/1.35 var(--f-display);color:var(--ink);background:var(--surface);border-top:1px solid var(--line)}
+.dblog{padding:16px 14px 22px;background:var(--surface)}
+.dblog p{margin:0 0 10px;font-size:13.5px;color:var(--muted)}
+.dblog .b2.info{display:flex;width:100%}
+.pdpane[data-pane="i"] .cskk{margin:4px 2px}
 .icnote{margin:6px 2px 4px;font-size:13px;color:var(--muted)}
 .dmsg{margin:0;padding:48px 16px;text-align:center;color:var(--muted)}
 .pdpane[data-pane="s"]{padding:12px 14px 20px;background:var(--surface)}
@@ -927,10 +931,20 @@ function shipHTML(){
   return `<table class="ntab"><tbody>${SHIP.map(r=>`<tr><th scope="row">${esc(r[0])}</th><td>${r[1].split("\n").map(l=>l==="@KK"?kk:esc(l)).join("<br>")}</td></tr>`).join("")}</tbody></table>`;
 }
 function infoTable(rows){ return rows && rows.length ? `<table class="ntab"><tbody>${rows.map(r=>`<tr><th scope="row">${esc(isCs(r[0])?"소비자 상담 문의":r[0])}</th><td>${isCs(r[0])?`<a class="cskk" ${ext(KAKAO)}>${I.kakao} 영샵 판매자 카카오톡 문의</a>`:nlbr(r[1])}</td></tr>`).join("")}</tbody></table>` : `<p class="dmsg">정보고시 내용을 불러오지 못했어요.</p>`; }
+function vidsHTML(p){ return p.vids ? (()=>{ let shown = 0; const items = p.vids.map(v=>{ const hide = shown >= 3; shown += 1; return `<figure class="vbox${v.w?" wide":""}"${hide?" data-more hidden":""}><video controls playsinline preload="none" poster="videos/${v.f}.jpg" src="videos/${v.f}.mp4"></video><figcaption>${esc(v.t)}</figcaption></figure>`; }).join("");
+    const more = p.vids.length - 3;
+    return `<section class="pvids" aria-label="제품 영상"><h4>영상으로 먼저 보기 <small>${p.vids.length}개</small></h4><div class="vgrid">${items}</div>${more>0?`<button type="button" class="vmore" data-vmore>영상 ${more}개 더 보기 ▾</button>`:""}</section>`; })() : ""; }
 async function renderDetail(p){
   const x = $("pdx"); if(!x) return;
   const parts = p.comp ? p.comp.map(c=>({no:c[0], qty:c[1], name:(DATA.find(y=>y.ino===c[0])||{}).name || ""})) : (p.ino ? [{no:p.ino}] : []);
-  if(!parts.length){ x.innerHTML = ""; return; }
+  if(!parts.length){
+    if(!p.vids && !(p.links||[]).length){ x.innerHTML = ""; return; }
+    const blog = (p.links||[]).find(l=>!/vcshop\.gcoop\.com/.test(l.url));
+    x.innerHTML = `<div class="pdtabs" role="tablist"><button type="button" role="tab" data-dtab="d" aria-selected="true">상세정보</button><button type="button" role="tab" data-dtab="i" aria-selected="false">상품정보제공고시</button><button type="button" role="tab" data-dtab="s" aria-selected="false">배송·교환·반품</button></div>
+      <div class="pdpane" data-pane="d">${vidsHTML(p)}${blog?`<div class="dblog"><p>이 제품의 자세한 설명과 사용 후기는 아래에서 볼 수 있어요.</p><a class="b2 info" ${ext(blog.url)}><span class="it"><b>제품 상세 설명 보기</b><small>사진·사용법·후기 (새 창)</small></span><span class="ia">${I.chev(1)}</span></a></div>`:""}</div>
+      <div class="pdpane" data-pane="i" hidden><p class="icnote">상품정보제공고시는 카카오톡으로 문의 주시면 바로 안내해 드려요.</p><a class="cskk" ${ext(KAKAO)}>${I.kakao} 카카오톡 문의하기</a></div><div class="pdpane" data-pane="s" hidden>${shipHTML()}</div>`;
+    return;
+  }
   x.innerHTML = `<div class="pdtabs" role="tablist"><button type="button" role="tab" data-dtab="d" aria-selected="true">상세정보</button><button type="button" role="tab" data-dtab="i" aria-selected="false">상품정보제공고시</button><button type="button" role="tab" data-dtab="s" aria-selected="false">배송·교환·반품</button></div>
     <div class="pdpane" data-pane="d"><p class="dmsg">상세정보를 불러오는 중이에요…</p></div><div class="pdpane" data-pane="i" hidden></div><div class="pdpane" data-pane="s" hidden>${shipHTML()}</div>`;
   const got = await Promise.all(parts.map(c=>loadDet(c.no)));
@@ -938,9 +952,7 @@ async function renderDetail(p){
   if(p.icomp && !(got[0] && got[0].info && got[0].info.length)) icomp = await Promise.all(p.icomp.map(async no=>({no, name:(DATA.find(y=>y.ino===no)||{}).name||"", g: await loadDet(no)})));
   if(!cur || cur.n !== p.n || !$("pdx")) return;
   const dp = x.querySelector('[data-pane="d"]'), ip = x.querySelector('[data-pane="i"]');
-  dp.innerHTML = p.vids ? (()=>{ let shown = 0; const items = p.vids.map(v=>{ const hide = shown >= 3; shown += 1; return `<figure class="vbox${v.w?" wide":""}"${hide?" data-more hidden":""}><video controls playsinline preload="none" poster="videos/${v.f}.jpg" src="videos/${v.f}.mp4"></video><figcaption>${esc(v.t)}</figcaption></figure>`; }).join("");
-    const more = p.vids.length - 3;
-    return `<section class="pvids" aria-label="제품 영상"><h4>영상으로 먼저 보기 <small>${p.vids.length}개</small></h4><div class="vgrid">${items}</div>${more>0?`<button type="button" class="vmore" data-vmore>영상 ${more}개 더 보기 ▾</button>`:""}</section>`; })() : ""; let html = "";
+  dp.innerHTML = vidsHTML(p); let html = "";
   parts.forEach((c,k)=>{
     const g = got[k];
     if(p.comp){ const h = document.createElement("h4"); h.className = "dcomp"; h.textContent = `${k+1}. ${c.name} × ${c.qty}개`; dp.appendChild(h); }
@@ -976,7 +988,7 @@ function renderPD(){
       <div class="pdbtns">
         ${buy}
         <div class="cartrow"><button class="b2 cartb" type="button" data-cart="${p.n}">${I.bag}<span class="ct"><b>바구니 담기</b><small>4개 이상 · 여러 제품 함께</small></span></button><button class="b2 shareb" type="button" data-share="${p.n}" aria-label="이 제품 링크 공유">${I.share}<b>링크 공유</b></button></div>
-        ${(p.ino||p.comp)?`<button class="b2 info" type="button" data-godetail><span class="ii"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span class="it"><b>상세정보 · 성분 보기</b><small>아래에서 바로 보기 · 상품정보제공고시 포함</small></span><span class="ia">${I.chev(1)}</span></button>`:link?`<a class="b2 info" ${ext(link.url)}><span class="ii"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span class="it"><b>상세정보 · 성분 보기</b><small>본사 상세페이지 · 상품정보제공고시 포함</small></span><span class="ia">${I.chev(1)}</span></a>`:`<a class="b2 kk" ${ext(KAKAO)}>${I.kakao} 상담</a>`}
+        ${(p.ino||p.comp||p.vids)?`<button class="b2 info" type="button" data-godetail><span class="ii"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span class="it"><b>상세정보 · 성분 보기</b><small>아래에서 바로 보기 · 상품정보제공고시 포함</small></span><span class="ia">${I.chev(1)}</span></button>`:link?`<a class="b2 info" ${ext(link.url)}><span class="ii"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span class="it"><b>상세정보 · 성분 보기</b><small>본사 상세페이지 · 상품정보제공고시 포함</small></span><span class="ia">${I.chev(1)}</span></a>`:`<a class="b2 kk" ${ext(KAKAO)}>${I.kakao} 상담</a>`}
       </div>
       ${links.length>1?`<div class="optt">옵션별 상세정보 · 성분 보기 <span class="optsub">(상품정보제공고시 포함)</span></div><div class="pdlinks">${links.map(x=>`<a ${ext(x.url)}>${esc(x.label)} ${I.arrow}</a>`).join("")}</div>`:""}
       <p class="pdnote">${p.packs&&o.length?"스페셜팩을 고르면 그 팩의 링크오더로 바로 연결돼요. ":""}${o.length?(p.qurl?"수량(1·2·3개)을 고른 뒤 링크오더로 구매하세요. 링크를 연 뒤에는 수량을 바꿀 수 없어요. 4개 이상이나 여러 종류는 바구니에 담아 카카오톡으로 보내 주시면, 그 구성대로 담은 링크오더를 따로 만들어 보내 드려요.":(p.isset?"세트 구성 그대로 회원가로 구입하는 링크오더예요. 회원가 5만 원이 넘어 택배비가 붙지 않아요.":"이 링크오더는 이 제품 1개를 회원가로 구입하는 링크예요. 2개 이상이나 여러 종류는 바구니에 담아 카카오톡으로 보내 주시면, 그 구성대로 담은 링크오더를 따로 만들어 보내 드려요.")):(p.packs?"단품은 카카오톡으로 안내해 드리고, 스페셜팩은 위에서 골라 바로 구매할 수 있어요.":"이 제품은 카카오톡으로 따로 안내해 드려요.")}</p>
