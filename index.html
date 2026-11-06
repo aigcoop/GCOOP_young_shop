@@ -195,6 +195,9 @@ a{color:inherit}
 .pcard .qrow{flex-direction:column;align-items:stretch;gap:6px;margin-bottom:16px}
 .pcard .qty3{display:flex}
 .pcard .qb{flex:1;padding:7px 0}
+.qlab{font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:-.01em}
+.pcard .qlab{margin-bottom:-2px}
+.bbuy .bq{font-weight:900;background:rgba(255,255,255,.2);border-radius:6px;padding:1px 6px;margin-right:2px}
 .pcard .fship{align-self:center}
 .pdq .qrow{margin:2px 0 12px;flex-wrap:nowrap}
 .pdq .qb{padding:9px 16px;font-size:14px}
@@ -621,14 +624,14 @@ const freeShip = p => p.member && p.member*qOf(p) > 50000;
 function qtyChips(p){
   if(!p.qurl) return "";
   const q = qOf(p);
-  return `<div class="qrow"><div class="qty3" role="group" aria-label="수량 선택">${[1,2,3].filter(k=>k===1||p.qurl[k]).map(k=>`<button type="button" class="qb" data-qty="${p.n}:${k}" aria-pressed="${k===q}">${k}개</button>`).join("")}</div><span class="fship"${freeShip(p)?"":" data-off"}>택배비 무료</span></div>`;
+  return `<div class="qrow"><span class="qlab">구매 수량 선택</span><div class="qty3" role="group" aria-label="수량 선택">${[1,2,3].filter(k=>k===1||p.qurl[k]).map(k=>`<button type="button" class="qb" data-qty="${p.n}:${k}" aria-pressed="${k===q}">${k}개</button>`).join("")}</div><span class="fship"${freeShip(p)?"":" data-off"}>택배비 무료</span></div>`;
 }
 function actHTML(p){
   return `${qtyChips(p)}${buyBtn(p)}<p class="bhint"${orders(p).length?"":' style="visibility:hidden" aria-hidden="true"'}>클릭 시 <b>회원가</b>로 구매 가능</p>`;
 }
 function buyBtn(p){
   const o = orders(p);
-  if(o.length===1) return `<a class="bbuy" ${ext(qUrl(p))}>링크오더 구매<span class="bsub">(회원가)</span>${offTag(p)}</a>`;
+  if(o.length===1) return `<a class="bbuy" ${ext(qUrl(p))}>${p.qurl?`<b class="bq">${qOf(p)}개</b> `:""}링크오더 구매<span class="bsub">(회원가)</span>${offTag(p)}</a>`;
   if(o.length>1) return `<button class="bbuy" type="button" data-open="${p.n}">링크오더 구매<span class="bsub">(옵션 선택)</span>${offTag(p)}</button>`;
   return `<a class="bbuy ask" ${ext(KAKAO)}>구입문의</a>`;
 }
