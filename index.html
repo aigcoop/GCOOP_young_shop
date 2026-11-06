@@ -10,8 +10,8 @@
 <meta property="og:url" content="https://aigcoop.github.io/GCOOP_young_shop/">
 <meta property="og:site_name" content="지쿱 파트너스 영샵">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:image" content="https://aigcoop.github.io/GCOOP_young_shop/images/og.jpg?v=2">
-<meta property="og:image:secure_url" content="https://aigcoop.github.io/GCOOP_young_shop/images/og.jpg?v=2">
+<meta property="og:image" content="https://aigcoop.github.io/GCOOP_young_shop/images/og.jpg?v=3">
+<meta property="og:image:secure_url" content="https://aigcoop.github.io/GCOOP_young_shop/images/og.jpg?v=3">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="지쿱 파트너스 영샵 | 지쿱 공식 링크오더 샵">
 <meta name="twitter:description" content="지쿱의 공식 링크오더로 판매되는 지쿱 파트너스 샵입니다. 회원가입 없이 회원가 구매 가능, 정품 본사 직접 발송 및 CS 진행.">
-<meta name="twitter:image" content="https://aigcoop.github.io/GCOOP_young_shop/images/og.jpg?v=2">
+<meta name="twitter:image" content="https://aigcoop.github.io/GCOOP_young_shop/images/og.jpg?v=3">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <title>지쿱 파트너스 영샵 | 지쿱 공식 링크오더 샵</title>
@@ -515,22 +515,24 @@ function imgFallback(el){
 const imgTag = (p, lazy=true) => `<img src="images/${p.n}.jpg" data-n="${p.n}" data-step="0" onerror="imgFallback(this)" alt="${esc(p.name)}"${lazy?' loading="lazy"':''}>`;
 
 const CATS = [
-  {id:"all",label:"전체",rep:24},
-  {id:"beauty",label:"케어셀라 뷰티",rep:1},
-  {id:"biok",label:"바이오케이",rep:23},
-  {id:"telo",label:"텔로메라",rep:26},
-  {id:"hair",label:"하라힐즈",rep:30},
+  {id:"all",label:"전체",rep:33},
   {id:"health",label:"건강식품",rep:33},
+  {id:"telo",label:"텔로메라",rep:26},
+  {id:"beauty",label:"케어셀라 뷰티",rep:1},
   {id:"elixir",label:"디엘릭서",rep:40},
-  {id:"device",label:"건강기기",rep:49},
+  {id:"device",label:"홈케어 기기",rep:47},
+  {id:"biok",label:"바이오케이",rep:23},
+  {id:"hair",label:"하라힐즈",rep:30},
   {id:"living",label:"생활제품",rep:53}
 ];
+// 전체 상품은 위 카테고리 순서대로 보여줘요
+const CORD = Object.fromEntries(CATS.map((c,i)=>[c.id,i]));
 const CATNAME = Object.fromEntries(CATS.map(c=>[c.id,c.label]));
-const PICKS = [24,1,33,40,7,39,49,53,26,60];
+const PICKS = [33,39,24,26,1,7,40,47,36,53];
 const SLIDES = [
+  {cls:"c", eyebrow:"GENERAL BALANCE", title:"매일 챙기는\n제너럴 밸런스 건강식품", text:"유산균, 밀크씨슬, 루테인까지 꼭 필요한 것만 모았어요.", imgs:[33,39], cat:"health", cta:"건강식품 보기"},
   {cls:"a", eyebrow:"TELOMERA", title:"텔로메라 3종 세트로\n하루 피부 관리를 한 번에", text:"부스터, 세럼, 크림을 순서대로. 링크 하나로 회원가 구입이 바로 돼요.", imgs:[24,27], open:24, cta:"제품 보러가기"},
-  {cls:"b", eyebrow:"CARECELLA HYDRATION", title:"수분 장벽을 채우는\n하이드레이션 라인", text:"클렌저부터 크림까지 단계별로 골라 담을 수 있어요.", imgs:[1,4], cat:"beauty", cta:"뷰티 전체 보기"},
-  {cls:"c", eyebrow:"GENERAL BALANCE", title:"매일 챙기는\n제너럴 밸런스 건강식품", text:"유산균, 밀크씨슬, 루테인까지 꼭 필요한 것만 모았어요.", imgs:[33,39], cat:"health", cta:"건강식품 보기"}
+  {cls:"b", eyebrow:"CARECELLA HYDRATION", title:"수분 장벽을 채우는\n하이드레이션 라인", text:"클렌저부터 크림까지 단계별로 골라 담을 수 있어요.", imgs:[1,4], cat:"beauty", cta:"뷰티 전체 보기"}
 ];
 const KAKAO = "http://pf.kakao.com/_vXxnQn/chat";
 
@@ -635,9 +637,10 @@ function renderCats(){
 function renderGrid(){
   const term = q.trim().toLowerCase();
   let items = DATA.filter(p => (cat==="all" || (cat==="wish" ? wish.has(p.n) : p.cat===cat)) &&
-    (!term || (p.name+" "+(p.desc||"")+" "+p.code+" "+(CATNAME[p.cat]||"")).toLowerCase().includes(term)));
+    (!term || (p.name+" "+(p.desc||"")+" "+p.code+" "+(CATNAME[p.cat]||"")+(p.cat==="device"?" 건강기기 의료기기":"")).toLowerCase().includes(term)));
   const pv = p => num(p.price) ?? Infinity;
-  if(sort==="low") items.sort((a,b)=>pv(a)-pv(b));
+  if(sort==="rec") items.sort((a,b)=>(CORD[a.cat]-CORD[b.cat])||(a.rank-b.rank));
+  else if(sort==="low") items.sort((a,b)=>pv(a)-pv(b));
   else if(sort==="high") items.sort((a,b)=>(num(b.price)??-1)-(num(a.price)??-1));
   else if(sort==="name") items.sort((a,b)=>a.name.localeCompare(b.name,"ko"));
   const title = cat==="wish" ? "찜한 상품" : (cat==="all" ? "전체 상품" : CATNAME[cat]);
