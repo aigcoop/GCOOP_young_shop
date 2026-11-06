@@ -183,6 +183,10 @@ a{color:inherit}
 .pprice small{font-size:13px;font-weight:600;margin-left:1px}
 .pprice .pn{font-size:12px;font-weight:500;color:var(--muted);margin-left:5px}
 .pact{margin-top:auto;padding-top:12px}
+.plabel{display:block;font-size:11.5px;font-weight:600;color:var(--muted);letter-spacing:0;margin-bottom:-1px}
+.pdprice .plabel{font-size:13px;margin-bottom:0}
+.bhint{margin:6px 0 0;text-align:center;font-size:11.5px;font-weight:500;color:var(--muted);letter-spacing:-.01em;word-break:keep-all}
+.bhint b{color:var(--hot);font-weight:800}
 .bbuy{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0 3px;width:100%;min-height:42px;padding:6px 8px;border-radius:10px;border:0;background:var(--brand);color:var(--brand-ink);font-weight:800;font-size:14px;line-height:1.25;text-align:center;text-decoration:none;cursor:pointer;word-break:keep-all;letter-spacing:-.02em}
 .bbuy .bsub{font-size:12px;font-weight:600;opacity:.9}
 .bbuy:hover{background:var(--brand-deep)}
@@ -610,9 +614,9 @@ function card(p){
       <span class="pbrand">${esc(CATNAME[p.cat]||"")}</span>
       <h3 class="pname"><button type="button" data-open="${p.n}">${esc(p.name)}</button></h3>
       <p class="pdesc">${esc(p.desc||"")}</p>
-      <div class="pprice">${priceHTML(p.price)}${p.pnote?`<span class="pn">${esc(p.pnote)}</span>`:""}</div>
+      <div class="pprice">${/\d/.test(p.price)?'<span class="plabel">소비자가</span>':""}${priceHTML(p.price)}${p.pnote?`<span class="pn">${esc(p.pnote)}</span>`:""}</div>
       ${detailLinks(p)}
-      <div class="pact">${buyBtn(p)}</div>
+      <div class="pact">${buyBtn(p)}${orders(p).length?'<p class="bhint">클릭 시 <b>회원가</b>로 구매 가능</p>':""}</div>
     </div>
   </article>`;
 }
@@ -691,7 +695,7 @@ function renderPD(){
       <h3>${esc(p.name)}</h3>
       ${p.code?`<div class="pdcode">${esc(p.code)}</div>`:""}
       <p class="pddesc">${esc(p.desc||"")}</p>
-      <div class="pdprice">${priceHTML(p.price)}${p.pnote?` <span class="pn" style="font-size:13px;font-weight:500;color:var(--muted)">${esc(p.pnote)}</span>`:""}</div>
+      <div class="pdprice">${/\d/.test(p.price)?'<span class="plabel">소비자가</span>':""}${priceHTML(p.price)}${p.pnote?` <span class="pn" style="font-size:13px;font-weight:500;color:var(--muted)">${esc(p.pnote)}</span>`:""}</div>
       ${multi?`<div class="optt">옵션 선택</div><div class="opts">${o.map((x,i)=>`<button class="opt" type="button" data-opt="${i}" aria-pressed="${i===curOpt}">${esc(x.label)}</button>`).join("")}</div>`:""}
       <div class="pdbtns">
         ${buy}
