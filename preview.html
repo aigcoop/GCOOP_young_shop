@@ -304,9 +304,9 @@ footer b{color:var(--ink);font:800 15px var(--f-display)}
 .pdmem b small{font-size:14px;font-weight:700}
 .pdmem .mo{font-size:12.5px;font-weight:800;color:#fff;background:var(--hot);border-radius:999px;padding:2px 8px}
 .pdprice:has(+ .pdmem){border-bottom:0;padding-bottom:0}
-.pdsum{margin:0 0 12px;font-size:13.5px;color:var(--muted)}
-.pdsum b{color:var(--ink);font-size:15px}
-.pdsum em{font-style:normal;font-size:11.5px;font-weight:800;color:var(--brand);background:var(--soft);border-radius:999px;padding:2px 8px;margin-left:4px}
+.pdsum{margin:2px 0 12px;font-size:15.5px;font-weight:600;color:var(--ink)}
+.pdsum b{color:var(--brand);font-size:21px;font-weight:900;letter-spacing:-.02em}
+.pdsum em{font-style:normal;font-size:12.5px;vertical-align:3px;font-weight:800;color:var(--brand);background:var(--soft);border-radius:999px;padding:2px 8px;margin-left:4px}
 .pdsum em.fee{color:var(--muted);background:var(--fill)}
 .pdx{max-width:860px;margin:0 auto;padding-bottom:40px}
 .pdtabs{position:sticky;top:54px;z-index:4;display:grid;grid-template-columns:1fr 1fr;background:var(--surface);border-bottom:1px solid var(--line)}
@@ -332,6 +332,21 @@ footer b{color:var(--ink);font:800 15px var(--f-display)}
 .ntab td{color:var(--ink)}
 .pdpane[data-pane="i"] .dcomp{padding:20px 2px 8px;border-top:0}
 .cartb,.shareb{gap:8px}
+.cartrow{grid-column:1 / -1;display:grid;grid-template-columns:2fr 1fr;gap:8px}
+.cartrow .b2{min-width:0;padding-inline:10px;grid-column:auto!important;width:auto!important}
+.pdsum em{white-space:nowrap}
+.shareb{color:var(--brand);flex-direction:column;gap:3px!important;padding-inline:6px!important}
+.shareb b{font-size:13.5px;font-weight:800;white-space:nowrap}
+.pdprices{display:flex;align-items:flex-end;gap:10px 26px;flex-wrap:wrap;padding-block:4px 12px;border-bottom:1px solid var(--line)}
+.pp{display:flex;flex-direction:column;gap:2px;min-width:0}
+.pp .pl{font-size:13px;font-weight:700;color:var(--muted);display:flex;align-items:center;gap:6px}
+.pp .pv{font-size:26px;font-weight:900;font-variant-numeric:tabular-nums;letter-spacing:-.02em;line-height:1.15;color:var(--ink);text-decoration:none}
+.pp .pv small{font-size:15px;font-weight:700}
+.pp s.pv{color:#8a938c;text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:#8a938c;font-weight:800}
+.pp.mem .pl{color:var(--brand)}
+.pp.mem .pv{color:var(--brand)}
+.pp .mo{font-style:normal;font-size:11.5px;font-weight:800;color:#fff;background:var(--hot);border-radius:999px;padding:1px 7px}
+@media (max-width:380px){.pp .pv{font-size:23px}}
 .shareb{border-style:dashed}
 .shareb .ct{display:flex;flex-direction:column;align-items:flex-start;line-height:1.25;text-align:left}
 .shareb .ct small{font-size:11.5px;font-weight:500;color:var(--muted)}
@@ -838,7 +853,7 @@ function renderPD(){
   const p = cur, o = orders(p), links = p.links || [];
   const head = pd.querySelector(".pdhead"); if(!head) return;
   const q = qOf(p), off = offPct(p);
-  const mem = p.member && off ? `<div class="pdmem"><span class="ml">회원가</span><b>${won(p.member)}<small>원</small></b>${off?`<span class="mo">${off}% 할인</span>`:""}</div>` : "";
+  const mem = p.member && off ? `<div class="pp mem"><span class="pl">회원가 <em class="mo">${off}% 할인</em></span><b class="pv">${won(p.member)}<small>원</small></b></div>` : "";
   const sum = p.member && p.qurl ? `<p class="pdsum"><span>${q}개 회원가 합계</span> <b>${won(p.member*q)}원</b> ${p.member*q>50000?'<em>택배비 무료</em>':'<em class="fee">택배비 2,500원</em>'}</p>` : "";
   const multi = o.length > 1;
   const link = links[multi ? Math.min(curOpt, links.length-1) : 0];
@@ -847,18 +862,16 @@ function renderPD(){
   else buy = `<a class="b2 kk full" ${ext(KAKAO)}>${I.kakao} 카카오톡으로 구입문의</a>`;
   head.innerHTML = `
    <div class="pdin">
-    <div class="pdimg">${imgTag(p,false)}<button class="dl" type="button" data-n="${p.n}" aria-label="${esc(p.name)} 이미지 저장">${I.dl} 사진 저장</button></div>
+    <div class="pdimg">${imgTag(p,false)}</div>
     <div class="pdbody">
       <span class="pbrand">${subLabel(p)}</span>
       <h3>${esc(p.name)}</h3>
-      ${p.code?`<div class="pdcode">${esc(p.code)}</div>`:""}
       <p class="pddesc">${esc(p.desc||"")}</p>
-      <div class="pdprice">${/\d/.test(p.price)?'<span class="plabel">소비자가</span>':""}${priceHTML(p.price)}${p.pnote?` <span class="pn" style="font-size:13px;font-weight:500;color:var(--muted)">${esc(p.pnote)}</span>`:""}</div>${mem}
+      <div class="pdprices">${/\d/.test(p.price)?`<div class="pp"><span class="pl">소비자가</span>${mem?`<s class="pv">${priceHTML(p.price)}</s>`:`<b class="pv">${priceHTML(p.price)}</b>`}</div>`:`<div class="pp"><b class="pv">${priceHTML(p.price)}</b></div>`}${mem}</div>
       ${multi?`<div class="optt">옵션 선택</div><div class="opts">${o.map((x,i)=>`<button class="opt" type="button" data-opt="${i}" aria-pressed="${i===curOpt}">${esc(x.label)}</button>`).join("")}</div>`:""}
       <div class="pdbtns">
         ${buy}
-        <button class="b2 cartb" type="button" data-cart="${p.n}">${I.bag}<span class="ct"><b>바구니 담기</b><small>4개 이상 · 여러 제품 함께 구매할 때</small></span></button>
-        <button class="b2 shareb full" type="button" data-share="${p.n}">${I.share}<span class="ct"><b>이 제품 링크 공유하기</b><small>카톡으로 보내면 제품 사진과 가격이 함께 보여요</small></span></button>
+        <div class="cartrow"><button class="b2 cartb" type="button" data-cart="${p.n}">${I.bag}<span class="ct"><b>바구니 담기</b><small>4개 이상 · 여러 제품 함께</small></span></button><button class="b2 shareb" type="button" data-share="${p.n}" aria-label="이 제품 링크 공유">${I.share}<b>링크 공유</b></button></div>
         ${(p.ino||p.comp)?`<button class="b2 info" type="button" data-godetail><span class="ii"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span class="it"><b>상세정보 · 성분 보기</b><small>아래에서 바로 보기 · 상품정보제공고시 포함</small></span><span class="ia">${I.chev(1)}</span></button>`:link?`<a class="b2 info" ${ext(link.url)}><span class="ii"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span class="it"><b>상세정보 · 성분 보기</b><small>본사 상세페이지 · 상품정보제공고시 포함</small></span><span class="ia">${I.chev(1)}</span></a>`:`<a class="b2 kk" ${ext(KAKAO)}>${I.kakao} 상담</a>`}
       </div>
       ${links.length>1?`<div class="optt">옵션별 상세정보 · 성분 보기 <span class="optsub">(상품정보제공고시 포함)</span></div><div class="pdlinks">${links.map(x=>`<a ${ext(x.url)}>${esc(x.label)} ${I.arrow}</a>`).join("")}</div>`:""}
