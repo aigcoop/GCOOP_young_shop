@@ -322,6 +322,11 @@ footer b{color:var(--ink);font:800 15px var(--f-display)}
 .ntab th{width:32%;background:var(--fill);font-weight:700;color:var(--ink)}
 .ntab td{color:var(--ink)}
 .pdpane[data-pane="i"] .dcomp{padding:20px 2px 8px;border-top:0}
+.cartb{gap:8px}
+.cartb .ct{display:flex;flex-direction:column;align-items:flex-start;line-height:1.25;text-align:left}
+.cartb .ct small{font-size:11.5px;font-weight:500;color:var(--muted)}
+.cskk{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:9px;background:var(--kakao);color:var(--kakao-ink);font-weight:800;font-size:13px;text-decoration:none}
+.cskk svg{width:16px;height:16px}
 .pdbtns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto;padding-top:8px}
 .pdbtns .full{grid-column:1/-1}
 .pdbtns [data-cart]{grid-column:1/-1}
@@ -785,7 +790,8 @@ function fitFrame(fr){
   fr.addEventListener("load", ()=>{ fit(); try{ const d = fr.contentDocument; new ResizeObserver(fit).observe(d.body); d.querySelectorAll("img").forEach(i=>i.addEventListener("load", fit)); }catch(e){ fr.style.height = "80vh"; fr.setAttribute("scrolling","yes"); } });
 }
 const nlbr = t => esc(t).replace(/\n/g, "<br>");
-function infoTable(rows){ return rows && rows.length ? `<table class="ntab"><tbody>${rows.map(r=>`<tr><th scope="row">${esc(r[0])}</th><td>${nlbr(r[1])}</td></tr>`).join("")}</tbody></table>` : `<p class="dmsg">정보고시 내용을 불러오지 못했어요.</p>`; }
+const isCs = k => /소비자\s*상담/.test(k);
+function infoTable(rows){ return rows && rows.length ? `<table class="ntab"><tbody>${rows.map(r=>`<tr><th scope="row">${esc(isCs(r[0])?"소비자 상담 문의":r[0])}</th><td>${isCs(r[0])?`<a class="cskk" ${ext(KAKAO)}>${I.kakao} 영샵 판매자 카카오톡 문의</a>`:nlbr(r[1])}</td></tr>`).join("")}</tbody></table>` : `<p class="dmsg">정보고시 내용을 불러오지 못했어요.</p>`; }
 async function renderDetail(p){
   const x = $("pdx"); if(!x) return;
   const parts = p.comp ? p.comp.map(c=>({no:c[0], qty:c[1], name:(DATA.find(y=>y.ino===c[0])||{}).name || ""})) : (p.ino ? [{no:p.ino}] : []);
@@ -828,7 +834,7 @@ function renderPD(){
       ${multi?`<div class="optt">옵션 선택</div><div class="opts">${o.map((x,i)=>`<button class="opt" type="button" data-opt="${i}" aria-pressed="${i===curOpt}">${esc(x.label)}</button>`).join("")}</div>`:""}
       <div class="pdbtns">
         ${buy}
-        <button class="b2" type="button" data-cart="${p.n}">${I.bag} 바구니 담기</button>
+        <button class="b2 cartb" type="button" data-cart="${p.n}">${I.bag}<span class="ct"><b>바구니 담기</b><small>4개 이상 · 여러 제품 함께 구매할 때</small></span></button>
         ${(p.ino||p.comp)?`<button class="b2 info" type="button" data-godetail><span class="ii"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span class="it"><b>상세정보 · 성분 보기</b><small>아래에서 바로 보기 · 상품정보제공고시 포함</small></span><span class="ia">${I.chev(1)}</span></button>`:link?`<a class="b2 info" ${ext(link.url)}><span class="ii"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span class="it"><b>상세정보 · 성분 보기</b><small>본사 상세페이지 · 상품정보제공고시 포함</small></span><span class="ia">${I.chev(1)}</span></a>`:`<a class="b2 kk" ${ext(KAKAO)}>${I.kakao} 상담</a>`}
       </div>
       ${links.length>1?`<div class="optt">옵션별 상세정보 · 성분 보기 <span class="optsub">(상품정보제공고시 포함)</span></div><div class="pdlinks">${links.map(x=>`<a ${ext(x.url)}>${esc(x.label)} ${I.arrow}</a>`).join("")}</div>`:""}
