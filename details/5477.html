@@ -1,0 +1,992 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><base target="_blank"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap"><link rel="stylesheet" href="https://vcshop.gcoop.com/layouts/shopmobile/css/common.css"><link rel="stylesheet" href="https://vcshop.gcoop.com/layouts/shopmobile/css/sub.css"><style>
+                    /* 제품 상세정보 ~ 배송/교환/반품 안내 텍스트 크기 조정 */
+                    .pdt-detail-view > div > div > h2 {font-size:1rem !important;}
+                    .pdt-detail-view > div, .product-tab-box > div > div, .product-tab-box > div > div > dl > dd, .product-tab-box > div > div > dl > dt, .product-tab-box > div > div > ul > li  {font-size:.8rem;}
+                    .product_info-table {display:relative;}
+                    .product_info-table > ul > li {width:100% !important;}
+                    .product_info-table > ul > li > div {font-size:.8rem;}
+                    .popup_wrap .popup_container{position:absolute;left:50%;top:50%;width:100%;max-height:calc(100% - 50px);background-color:#fff;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+                    /* 제품상세 , 상품정보고시 , 배송 교환 반품 안내 */
+                    .product-tab-box{position:relative;overflow:hidden}
+                    .product-tab-box:after{display:block;content:"";position:absolute;right:0;top:0;z-index:10;width:10px;height:17px;background-color:#fff}
+                    .product-tab-swiper{padding:10px;border-bottom:1px solid #d0d0d0;}
+                    .product-tab-swiper .swiper-slide{width:33% !important; height:40px; line-height:40px; margin-right:0 !important; background:#eee; border-right:1px solid #fff;}
+                    .product-tab-swiper .swiper-slide a{display:block;position:relative; color:#262626; text-align:center; font-size:1em}
+                    .product-tab-swiper .swiper-slide:last-child a{font-size:0.5em}
+                    .product-tab-swiper .swiper-slide .on:after{display:block;content:"";position:absolute;left:0;bottom:-1px;width:100%;height:4px;background-color:#f35656}
+
+                    .product_detail img{width:100%}
+                    .product_info-table{border-bottom:1px solid #ccc}
+                    .product_info-table li{font-size:13px}
+                    .product_info-table li>div:first-child{width:112px;padding:6px 9px}
+                    .product_info-table li>div:last-child{padding:7px 12px;word-break:break-all}
+                    .product_info-table .indent{padding-left:12px}
+
+                    .product_info-table{border:1px solid #ccc}
+                    .product_info-table li{display:table;table-layout:fixed;width:100%;border-bottom:1px solid #dedede;background-color:#f5f5f5;font-weight:500;color:#333}
+                    .product_info-table li:last-child{border-bottom:0}
+                    .product_info-table li>div:first-child{display:table-cell}
+                    .product_info-table li>div:last-child{display:table-cell;background-color:#fff;vertical-align:middle}
+                    iframe{width:100%;height:100%;}
+                </style><style>html,body{margin:0;padding:0;background:#fff;overflow:hidden}#wrap,#view-box,.outer,.view-detail-box,.tab-detail-box{margin:0!important;padding:0!important;border:0!important;width:100%!important;min-height:0!important}.tab-view-box{display:block!important}img{max-width:100%;height:auto}.btn-expand,.btn-expand+br{display:none!important}iframe.yt{display:block;width:100%!important;aspect-ratio:16/9;height:auto!important;border:0;margin:10px 0}</style></head><body id="body"><div id="wrap"><div id="view-box"><div class="outer"><div class="view-detail-box"><div class="tab-detail-box"><div class="tab-view-box on">
+<div>
+
+<a class="btn-expand btn-expand2" href="https://vcshop.gcoop.com/Imgpop?seq_pd=5477" rel="noopener" target="_blank" xxtarget="_blank">
+<i class="fal fa-search-plus"></i>
+
+</a>
+</div>
+<br/>
+
+<div align="center" class="product_detail">
+<img alt="제품 상세 공지(탑) - 온라인 가품 유통 주의 안내" decoding="async" loading="lazy" src="https://cdn.gcoopm.com/shop/storage/shop_image/V3ue8ESIsAzJJqp54HLFdojrz8YFQt9LzUXZT0Y9.jpg"/>
+</div>
+<div align="center">
+<div class="pdt_video_box">
+<iframe allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen="" class="yt" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/rGXODLFaGx0" title="케어셀라 바이오케이 애플타민 C 세럼 | DPPH 항산화 테스트 | 홈케어의 새로운 기준!"></iframe>
+</div>
+<br/>
+</div>
+<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-myeongjo.css" rel="stylesheet"/>
+<link href="https://cdn.gcoop.me/storage/global_image/web_font/nexon_gothic.css" rel="stylesheet"/>
+<style type="text/css">/* 기본 */
+            .font_NMr {font-family:'NanumMyeongjo' !important;}
+            .font_NMb {font-family:'NanumMyeongjoBold' !important;}
+            .font_NMeb {font-family:'NanumMyeongjoExtraBold' !important;}
+            .font_NGL {font-family:'NEXON Lv2 Gothic Light' !important;}
+            .font_NGB {font-family:'NEXON Lv2 Gothic Bold' !important;}
+            .Product_DetailWrap * {box-sizing:border-box;word-break:keep-all;word-wrap:break-word;}
+            .Product_DetailWrap ul, ol, li, dl, dt, dd, p, div, span, section, i, form, fieldset, input, table, tr, th, td, button, textarea, br {margin:0;padding:0;}
+            .Product_DetailWrap i {font-style:normal;}
+            .Product_DetailWrap ul, ol, li, dl, dt, dd {list-style:none;}
+            .Product_DetailWrap img {width:auto;max-width:100%;margin:0 auto;}
+            .Product_DetailWrap {font-family:'NEXON Lv2 Gothic', sans-serif;width:100%;max-width:800px !important;font-weight:400;margin:0 auto;font-size:8px;letter-spacing:-0.05em;-webkit-letter-spacing:-0.25px;text-align:center;color:#424242;line-height:1.4;}
+
+            /* FONT SIZE CSS */
+            .Product_DetailWrap p {transform:rotate(0.03deg)}
+            .Product_DetailWrap .p0 {font-size:2em;}/*14px*/
+            .Product_DetailWrap .p1 {font-size:2.2em;}/*16px*/
+            .Product_DetailWrap .p2 {font-size:2.4em;}/*18px*/
+            .Product_DetailWrap .p3 {font-size:2.6em;}/*24px*/
+            .Product_DetailWrap .p4 {font-size:3.2em;}/*32px*/
+            .Product_DetailWrap .p5 {font-size:4.8em;}/*48px*/
+            .Product_DetailWrap .p6 {font-size:7.2em;}/*72px*/
+            .Product_DetailWrap .p7 {font-size:8em;}/*80px*/
+
+            /* FONT STYLE CSS */
+            .Product_DetailWrap .lh_10 {line-height:1;}
+            .Product_DetailWrap .lh_12 {line-height:1.2;}
+            .Product_DetailWrap .lh_2 {line-height:2;}
+            .Product_DetailWrap .ta_l {text-align:left;}
+            .Product_DetailWrap .ta_r {text-align:right;}
+
+            /* FONT COLOR CSS */
+            .Product_DetailWrap .color_white {color:#fff;}
+            .Product_DetailWrap .color_dark {color:#121212;}
+            .Product_DetailWrap .color_gray {color:#999;}
+            .Product_DetailWrap .color_red {color:#89170d;}
+            .Product_DetailWrap .color_darkorange {color:#302300;}
+            .Product_DetailWrap .color_softred {color:#b96962;}
+            .Product_DetailWrap .color_yellow {color:#fcb800;}
+            .Product_DetailWrap .color_lightorange {color:#ded0ab;}
+            .Product_DetailWrap .color_deeporange {color:#443800;}
+            .Product_DetailWrap .color_cyan {color:#5f8d8b;}
+
+            /* BG COLOR CSS */
+            .Product_DetailWrap .bg_white {background-color:#fff;}
+            .Product_DetailWrap .bg_whitegray {background-color:#fbfbfb;}
+            .Product_DetailWrap .bg_dark {background-color:#424242;}
+            .Product_DetailWrap .bg_red {background-color:#89170d;}
+            .Product_DetailWrap .bg_whitered {background-color:#faf7f6;}
+            .Product_DetailWrap .bg_lightred {background-color:#f6efed;}
+            .Product_DetailWrap .bg_softred {background-color:#b96962;}
+            .Product_DetailWrap .bg_yellow {background-color:#fcb800;}
+            .Product_DetailWrap .bg_whiteyellow {background-color:#faf9f5;}
+            .Product_DetailWrap .bg_deeporange {background-color:#443800;}
+
+            /* MARGIN CSS */
+            .Product_DetailWrap .mg_center {margin-left:50%;transform:translateX(-50%);}
+            .Product_DetailWrap .mt-05em {margin-top:-0.5em;}
+            .Product_DetailWrap .mt_02em {margin-top:0.2em;}
+            .Product_DetailWrap .mt_04em {margin-top:0.4em;}
+            .Product_DetailWrap .mt_08em {margin-top:0.8em;}
+            .Product_DetailWrap .mt_1em {margin-top:1em;}
+            .Product_DetailWrap .mt_15em {margin-top:1.5em;}
+            .Product_DetailWrap .mt_10 {margin-top:8px;}
+            .Product_DetailWrap .mt_20 {margin-top:16px;}
+            .Product_DetailWrap .mt_30 {margin-top:24px;}
+            .Product_DetailWrap .mt_50 {margin-top:40px;}
+            .Product_DetailWrap .mt_70 {margin-top:56px;}
+            .Product_DetailWrap .mt_120 {margin-top:96px;}
+            .Product_DetailWrap .mt_150 {margin-top:120px;}
+            .Product_DetailWrap .mt_200 {margin-top:160px;}
+            .Product_DetailWrap .ml_10 {margin-left:8px;}
+
+            /* PADDING CSS */
+            .Product_DetailWrap .pt_30 {padding-top:24px;}
+            .Product_DetailWrap .pt_50 {padding-top:40px;}
+            .Product_DetailWrap .pt_80 {padding-top:64px;}
+            .Product_DetailWrap .pt_100 {padding-top:80px;}
+            .Product_DetailWrap .pb_30 {padding-bottom:30px;}
+            .Product_DetailWrap .pb_50 {padding-bottom:40px;}
+            .Product_DetailWrap .pb_80 {padding-bottom:64px;}
+            .Product_DetailWrap .pb_100 {padding-bottom:80px;}
+            .Product_DetailWrap .pd_80 {padding:64px;}
+            .Product_DetailWrap .pd_5p {padding:5%;}
+            .Product_DetailWrap .pd_2em {padding:2em;}
+            .Product_DetailWrap .plr_05em {padding:0 0.5em;}
+
+             /* GRID · FLEX 스타일 */
+             .Product_DetailWrap .grid_2step {display:grid;grid-template-columns:repeat(2, 49%);justify-content:space-between;}
+            .Product_DetailWrap .grid_3step {display:grid;grid-template-columns:repeat(3, 32%);justify-content:space-between;}
+            .Product_DetailWrap .grid_txtList {display:grid;grid-template-columns:2.4167em 1fr;align-items:start;gap:2.0833em 1.25em;text-align:left;}
+            .Product_DetailWrap .flex_row {display:flex;justify-content:space-between;align-items:center;}
+            .Product_DetailWrap .flex_colum {display:flex;flex-direction:column;justify-content:center;}
+
+            /* 기타 스타일 */
+            .Product_DetailWrap .w84 {width:84%;margin-left:8%;}
+            .Product_DetailWrap .w90 {width:90%;margin-left:5%;}
+            .Product_DetailWrap .wMax {width:max-content;}
+            .Product_DetailWrap .mWidth_10 {max-width:10% !important;}
+            .Product_DetailWrap .bdr_10 {border-radius:10px;overflow:hidden;}
+            .Product_DetailWrap .pos_r {position:relative;}
+            .Product_DetailWrap .opacity_30 {opacity:30%;}
+            .Product_DetailWrap .opacity_50 {opacity:50%;}
+            .Product_DetailWrap .opacity_80 {opacity:80%;}
+            .Product_DetailWrap .line_01 {width:3.5em;height:1px;}
+            .Product_DetailWrap .line_02 {height:1px;}
+            .Product_DetailWrap .r_upperdot:after {content:'';position:absolute;display:block;width:0.15em;height:0.15em;border-radius:100px;top:-0.2em;left:50%;transform:translateX(-50%);background-color:#89170d;}
+            .Product_DetailWrap .y_underline:after {content:'';width:100%;position:absolute;bottom:-1px;left:0;border-bottom:1px solid #fcb800;}
+            .Product_DetailWrap .r_underline:after {content:'';width:100%;position:absolute;bottom:-1px;left:0;border-bottom:1px solid #89170d;}
+            .Product_DetailWrap .g_underline:after {content:'';width:100%;position:absolute;bottom:-1px;left:0;border-bottom:1px solid #ccc;}
+            .Product_DetailWrap .title_bar {display:inline-block;border-radius:150px;padding:0.9em 2em 0.7em;}
+            .Product_DetailWrap .title_abar {position:absolute;top:0;left:50%;transform:translate(-50%, -50%);border-radius:100px;padding:0.5em 1em 0.4em;}
+            .Product_DetailWrap .txtList_dotline {border-bottom:#ccc dotted 1px;margin-bottom:1.5em;padding:0 0.5em 1.5em;}
+            .Product_DetailWrap .ybr {display:none;}
+            .Product_DetailWrap .nbr {display:block;}
+
+            /* 타이틀 */
+            .Product_Title .ProductName i {background-color:#fff;padding:0 1em;}
+            .Product_Title .ProductName::after {content: '';position:absolute;display:block;width:100%;height:1px;top:50%;left:50%;transform:translate(-50%, -2px);background:linear-gradient(90deg,#fff,#d9d9d9 20%,#d9d9d9 80%,#fff 100%);z-index:-1;}
+            .NumberBox {display:inline-block;padding:0.5em 0.684em 0.4em;border-radius:150px;background-color:#fcb800;}
+
+            /* 키이미지 */
+            .KeyImg .key_TitleBox {position:absolute;top:11%;}
+            .KeyImg .key_IconBox li {position:absolute;width:15.3333%;height:12.9577%;}
+            .KeyImg .key_IconBox li > img {width:5.1333vw;max-width:48px;}
+            .KeyImg .key_IconBox li:nth-of-type(1) {top:38.5211%;left:23.5%;}
+            .KeyImg .key_IconBox li:nth-of-type(2) {top:38.5211%;right:23.5%;}
+            .KeyImg .key_IconBox li:nth-of-type(3) {top:59.0141%;left:16%;}
+            .KeyImg .key_IconBox li:nth-of-type(4) {top:59.0141%;right:16%;}
+            .KeyImg .key_IconBox li:nth-of-type(5) {top:71.6197%;left:42.3333%;}
+            .KeyImg .key_BottomText {position:absolute;bottom:11.2676%;}
+
+            /* 인트로 */
+            .BrowningTest_Grid {position:absolute;width:81%;bottom:6%;left:9.5%;display:grid;grid-template-columns:41.8381% 42.1125%;align-items:start;justify-content:space-between;}
+            
+            /* 체크 포인트 */
+            .CheckPoint_Grid {display:grid;grid-template-columns:55% 40%;justify-content:space-between;background:linear-gradient(90deg,#faf7f6 80%, #fff 80%);}
+            .CheckPoint_TextBox {padding:6.6667em 0 6.6667em 5em;}
+            .CheckPoint_TextBox .flex_box {display:flex;justify-content:start;align-items:start;}
+            .CheckPoint_TextBox .flex_box > div:nth-of-type(1) {flex:0 0 0.9em;}
+
+            /* 핵심원료_1 */
+            .ShinanoGoldApple {position:absolute;top:6%;}
+            .PhotoName {position:absolute;width:94%;bottom:3%;left:3%;display:grid;grid-template-columns:1fr max-content;align-items:center;justify-content:space-between;column-gap:1em;}
+            .RawMaterial {display:grid;grid-template-columns:45% 4% 45%;justify-content:space-between;row-gap:2.5em;}
+            .RawMaterial .ProcessBox {border:#89170d solid 0.5em;border-radius:500px;padding:12%;min-height:23.3333em;}
+            .RawMaterial .ProcessBox img {width:6.8333vw;max-width:82px;}
+            .RawMaterial .down_arrow {width:2.5vw;max-width:24px;margin-bottom:0.5em;}
+
+            /* 핵심원료_2 */
+            .QuotationMarks {width:7.1667vw !important;max-width:68px !important;}
+            .VitaminC_Table thead th {background-color:#f3f3f3;vertical-align:middle;padding:1em 0;border:1px solid #cccccc;}
+            .VitaminC_Table td {border:1px solid #cccccc;padding:1em 0.5em;vertical-align:middle;}
+            .VitaminC_Table tr .red_border {border-left:2px solid #b96962;border-right:2px solid #b96962;}
+            .VitaminC_Table tr .red_border_top {border-top:2px solid #b96962;}
+            .VitaminC_Table tr .red_border_bottom {border-bottom:2px solid #b96962;}
+            .Graph_Box {border:1px solid #cccccc;}
+            .Graph_Box .left_txt {position:absolute;top:0;left:0;transform:rotate(-90deg) translate(-100%, 60%);transform-origin:top left;}
+            .Graph_Box .ic50 {position:absolute;top:0.5em;left:27.335%;}
+            .Graph_Box .product_quantity {width:75.1708%;margin-left:20.0456%;}
+            .Graph_Box .product_number {width:53.303%;margin-left:27.5626%;}
+            .Graph_Box .product_number p {width:38.4615%;}
+
+            /* 제형_1 */
+            .Formulation_Text {position:absolute;bottom:5%;}
+
+            /* 제형_2 */
+            .DubleLayer_Method {border-radius:500px;padding:5% 5%;}
+            .DubleLayer_Method .coating_1 {position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);}
+            .DubleLayer_Method .coating_2 {position:absolute;width:100%;height:100%;display:grid;grid-template-columns:repeat(5, 16.6667%);grid-template-rows:repeat(3, 30.2013%);justify-content:space-between;align-items:center;align-content: space-between;}
+
+            /* 제형_3 */
+            .Moisturizer > li p {position:absolute;}
+            .Moisturizer .title_box {top:10%;left:50%;transform:translateX(-50%);padding:0.8em 1.5em 0.7em;}
+            .Moisturizer > li:nth-of-type(1) p:nth-of-type(1) {bottom:81.25%;left:13.3333%;}
+            .Moisturizer > li:nth-of-type(1) p:nth-of-type(2) {top:48.8%;left:9%;}
+            .Moisturizer > li:nth-of-type(1) p:nth-of-type(3) {top:50.5%;right:9%;}
+            .Moisturizer > li:nth-of-type(3) p:nth-of-type(2) {bottom:46.5%;right:14.4444%;}
+            .Moisturizer > li:nth-of-type(3) p:nth-of-type(3) {top:87%;left:50%;transform:translateX(-50%);}
+
+            /* Q & A */
+            .QNA_Grid {padding:3em 3.5em 2.8em;}
+            .QNA_Grid > div {display:grid;grid-template-columns:3.5em 1fr;justify-content:space-between;padding:0 0.5em;}
+
+            /* 주의사항 */
+            .Caution_Grid {display:grid;grid-template-columns:2.3em 1fr;justify-content:space-between;align-items:start;}
+            .Caution_Grid .num_box {width:max-content;padding:0.2em 0.55em 0.1em;border-radius:150px;}
+
+            /* 브랜드 스토리 */
+            .Brand_Grid {display:grid;grid-template-columns:40% 56%;justify-content:space-between;align-items:start;border:#ccc solid 1px;text-align:left;}
+            .Brand_Grid .logo_img {max-width:40% !important;margin-top:1em;}
+
+            /* 각종인증사항 */
+            .certifi_grid {display:grid;grid-template-columns:15% 82%;justify-content:space-between;align-items:start;border:#cccc solid 1px;}
+
+            @media all and (max-width:799px) {
+                .Product_DetailWrap .p0 {font-size:2em;}/*14px*/
+                .Product_DetailWrap .p1 {font-size:2.2em;}/*16px*/
+                .Product_DetailWrap .p2 {font-size:2.4em;}/*18px*/
+                .Product_DetailWrap .mt_10 {margin-top:0.8333vw;}
+                .Product_DetailWrap .mt_20 {margin-top:1.6667px;}
+                .Product_DetailWrap .mt_30 {margin-top:2.5vw;}
+                .Product_DetailWrap .mt_50 {margin-top:4.1667vw;}
+                .Product_DetailWrap .mt_70 {margin-top:5.8333vw;}
+                .Product_DetailWrap .mt_120 {margin-top:10vw;}
+                .Product_DetailWrap .mt_150 {margin-top:12.5vw;}
+                .Product_DetailWrap .mt_200 {margin-top:16.6667vw;}
+                .Product_DetailWrap .ml_10 {margin-left:0.8333vw;}
+                .Product_DetailWrap .pt_30 {padding-top:2.5vw;}
+                .Product_DetailWrap .pt_50 {padding-top:4.1667vw;}
+                .Product_DetailWrap .pt_80 {padding-top:6.6667vw;}
+                .Product_DetailWrap .pt_100 {padding-top:8.3333vw;}
+                .Product_DetailWrap .pb_30 {padding-bottom:2.5vw;}
+                .Product_DetailWrap .pb_50 {padding-bottom:4.1667vw;}
+                .Product_DetailWrap .pb_80 {padding-bottom:6.6667vw;}
+                .Product_DetailWrap .pb_100 {padding-bottom:8.3333vw;}
+                .Product_DetailWrap .pd_80 {padding:6.6667vw;}
+                .Product_DetailWrap .bdr_10 {border-radius:0.8333vw;}
+                .Product_DetailWrap .ybr {display:block;}
+                .Product_DetailWrap .nbr {display:none;}
+            }
+
+            @media all and (max-width:720px) {
+                .Product_DetailWrap {font-size:7px;}
+            }
+
+            @media all and (max-width:620px) {
+                .Product_DetailWrap {font-size:6px;}
+            }
+
+            @media all and (max-width:510px) {
+                .Brand_Grid {grid-template-columns:1fr;row-gap:4.1667vw;text-align:center;}
+                .Brand_Grid .logo_img {margin-top:0 !important;}
+            }
+
+            @media all and (max-width:520px) {
+                .Product_DetailWrap {font-size:5px;}
+            }
+
+            @media all and (max-width:420px) {
+                .Product_DetailWrap {font-size:4px;}
+            }
+
+            @media all and (max-width:320px) {
+                .Product_DetailWrap {font-size:3px;}
+            }
+</style>
+<div class="Product_DetailWrap">
+<section class="KeyImg pos_r lh_12">
+<div class="key_TitleBox w90">
+<p class="p4 color_deeporange opacity_80">샬롱급 관리를 집에서! 항산화 미백 안티에이징</p>
+<p class="p7 font_NGB color_deeporange mt_02em">케어셀라 바이오케이<br/>
+애플타민 씨 세럼</p>
+</div>
+<ul class="key_IconBox">
+<li class="flex_colum"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_keyimg_01.png"/>
+<p class="p2 color_white mt_10">피부 미백</p>
+</li>
+<li class="flex_colum"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_keyimg_02.png"/>
+<p class="p2 color_white mt_10">피부결<br/>
+	케어</p>
+</li>
+<li class="flex_colum"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_keyimg_03.png"/>
+<p class="p2 color_white mt_10">멜라닌<br/>
+	감소</p>
+</li>
+<li class="flex_colum"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_keyimg_04.png"/>
+<p class="p2 color_white mt_10">복합 잡티<br/>
+	케어</p>
+</li>
+<li class="flex_colum"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_keyimg_05.png"/>
+<p class="p2 color_white mt_10">항산화<br/>
+	효과</p>
+</li>
+</ul>
+<p class="key_BottomText w90 p2 color_red"><span class="font_NGB">* 애플타민 씨 세럼</span> : Apple (사과) + Vitamin C (비타민C) 의 합성어</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_keyimg_mod.jpg"/></section>
+
+<section class="w90 mt_50">
+<p class="p5 color_dark">지금 이 순간에도<br/>
+당신의 피부를 노화시키고 있는 <span class="pos_r font_NGB color_red r_upperdot">활</span><span class="pos_r font_NGB color_red r_upperdot">성</span><span class="pos_r font_NGB color_red r_upperdot">산</span><span class="pos_r font_NGB color_red r_upperdot">소</span></p>
+<p class="p4 color_dark font_NGB mt_04em">바이오케이가 찾은 해결책, <span class="pos_r color_yellow y_underline">'비타민 C'</span></p>
+<div class="pos_r mt_70 bdr_10">
+<div class="BrowningTest_Grid">
+<p class="p1 color_cyan">일반 사과</p>
+<p class="p1 color_cyan">애플타민 씨 세럼을 바른 사과</p>
+</div>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_01.gif"/></div>
+<p class="p3 mt_50">바르게 만든 순수 비타민 C 세럼은 다릅니다.<br/>
+피부를 노화시키고 칙칙한 안색으로 만드는 활성산소를 이길 수 있어야<br/>
+근본적인 미백 관리가 가능합니다.</p>
+</section>
+
+<section class="CheckPoint_Grid mt_150">
+<div class="CheckPoint_TextBox ta_l">
+<p class="p3 color_dark">황금사과와 순수 비타민C가 만나<br/>
+"애플+타민"이 되었다!</p>
+<p class="p5 color_red font_NGB lh_12 mt_02em">케어셀라 바이오케이<br/>
+애플타민 씨 세럼</p>
+<ul>
+<li class="line_01 bg_softred mt_50 opacity_30"> </li>
+<li class="flex_box mt_30">
+<div class="font_NMr p6 color_softred lh_10">1</div>
+<div>
+<p class="p4 font_NGB color_softred">4단계 공법으로 추출한 황금사과 엑기스</p>
+<p class="p3 mt_04em">100시간 추출한 원물 그대로의 에너지를 담아 피부에 촉촉한 맑음을 선사합니다.</p>
+</div>
+</li>
+<li class="line_01 bg_softred mt_30 opacity_30"> </li>
+<li class="flex_box mt_30">
+<div class="font_NMr p6 color_softred lh_10">2</div>
+<div>
+<p class="p4 font_NGB color_softred">비타민 C 17% 고함량 함유</p>
+<p class="p3 mt_04em">순수 비타민 C 아스코빅애씨드 15% + 비타민 C 유도체 아스코빌글루코사이드 2% 미백 및 잡티 개선 효과를 제공합니다.</p>
+</div>
+</li>
+<li class="line_01 bg_softred mt_30 opacity_30"> </li>
+<li class="flex_box mt_30">
+<div class="font_NMr p6 color_softred lh_10">3</div>
+<div>
+<p class="p4 font_NGB color_softred">10배 강력한 투명 항산화 효과</p>
+<p class="p3 mt_04em">황금사과추출물과 비타민C를 이용한 항산화 시험을 통해 입증 된 효과를 경험하세요.</p>
+<p class="p2 color_gray mt_04em">* GB항산화간이테스트 결과</p>
+</div>
+</li>
+<li class="line_01 bg_softred mt_30 opacity_30"> </li>
+<li class="flex_box mt_30">
+<div class="font_NMr p6 color_softred lh_10">4</div>
+<div>
+<p class="p4 font_NGB color_softred">홈케어의 새로운 기준</p>
+<p class="p3 mt_04em">이제 집에서도 피부과 및 에스테틱샵 수준의 관리를 경험할 수 있습니다.<br/>
+	기존에 부족했던 미백 관리에 차도를 느껴보세요.</p>
+</div>
+</li>
+</ul>
+</div>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_02.jpg"/></section>
+
+<div class="Product_Title mt_200">
+<p class="ProductName pos_r font_NMr p0 lh_12"><i>CARECELLA BIO K</i></p>
+<p class="font_NMeb p0 lh_12">APPLETAMIN C SERUM</p>
+<p class="p5 font_NGB color_dark mt_04em">애플타민 씨 세럼 _ 핵심원료</p>
+<p class="p1 font_NMr mt_04em">KEY INGREDIENTS</p>
+</div>
+
+<section class="mt_50">
+<div class="NumberBox font_NMr p5 color_white lh_10">1</div>
+<div class="pos_r mt_30">
+<div class="ShinanoGoldApple w90 color_lightorange">
+<p class="p5 font_NGB">청송 황금사과추출물이 함유되었어요</p>
+<p class="p3 mt_04em">바이오케이는 엄격한 기준을 통과한 청송 지역의<br/>
+시나노골드사과 품종에서 추출하여 원료화한 황금사과추출물을 투입하여<br/>
+피부에 촉촉하고 화사한 생기를 선사해 줍니다.</p>
+<p class="p2 mt_1em">* 사과에는 비타민 C 성분과 플로레틴 성분이 다량 함유되어 미백 항산화에 도움을 줍니다.</p>
+<p class="p2 mt_02em opacity_50">[원료적 특성에 한함]</p>
+</div>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_03_01.jpg"/></div>
+<div class="w90">
+<p class="p5 font_NGB color_dark mt-05em">애플타민 씨 세럼은 왜<br/>
+청송 황금 사과를 선택했을까요?</p>
+<div class="pos_r mt_50 bdr_10">
+<div class="PhotoName">
+<div class="line_02 bg_white opacity_30"> </div>
+<p class="p1 color_white">주왕산 기암단애</p>
+</div>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_03_02.jpg"/></div>
+<div class="flex_row mt_10">
+<div class="pos_r bdr_10">
+<div class="PhotoName">
+<div class="line_02 bg_white opacity_30"> </div>
+<p class="p1 color_white">주산지 저수지</p>
+</div>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_03_03.jpg"/></div>
+<div class="pos_r ml_10 bdr_10">
+<div class="PhotoName">
+<div class="line_02 bg_white opacity_30"> </div>
+<p class="p1 color_white">시나노 골드 사과나무</p>
+</div>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_03_04.jpg"/></div>
+</div>
+<img class="mt_50" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_center_line.png"/>
+<p class="p4 color_dark mt_70">1년 중 오직 4주만 만날 수 있는 청송의 시나노골드사과를<br/>
+<span class="font_NGB">100시간의 냉침공법을 거쳐 원료화</span></p>
+<ul class="RawMaterial mt_70">
+<li class="ProcessBox flex_colum pos_r">
+<div>
+<p class="title_abar p2 bg_red color_white">선별 / 수확</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_04_01.jpg"/>
+<p class="p2 mt_08em">10월, 경상북도 청송 청정 자연에서 건강하게 자란 시나노골드사과를 엄선하여 수확</p>
+</div>
+</li>
+<li class="flex_colum"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_04_arrow_1.jpg"/></li>
+<li class="ProcessBox flex_colum pos_r">
+<div>
+<p class="title_abar p2 bg_red color_white">추출</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_04_02.jpg"/>
+<p class="p2 mt_08em">깨끗하게 손질하여 세척한 원물을 상온에서 약 100시간 침지시켜 유효 성분을 추출</p>
+</div>
+</li>
+<li> </li>
+<li> </li>
+<li><img class="down_arrow" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_04_arrow_2.jpg"/></li>
+<li class="ProcessBox flex_colum pos_r">
+<div>
+<p class="title_abar p2 bg_red color_white">원료화</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_04_04.jpg"/>
+<p class="p2 mt_08em">신선함 가득한<br/>
+	황금사과추출물 완성</p>
+</div>
+</li>
+<li class="flex_colum"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_04_arrow_3.jpg"/></li>
+<li class="ProcessBox flex_colum pos_r">
+<div>
+<p class="title_abar p2 bg_red color_white">여과</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_04_03.jpg"/>
+<p class="p2 mt_08em">추출 된 유효 성분 중 엑기스만을<br/>
+	선택적으로 필터링</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+
+<section class="bg_whitegray pt_100 pb_100 mt_150">
+<div class="NumberBox font_NMr p5 color_white lh_10">2</div>
+<p class="w90 p3 mt_30">까다로운 비타민 C 성분과 황금사과추출물로<br/>
+마침내 최적의 제품을 만들었습니다.</p>
+<p class="w90 p5 font_NGB color_dark mt_02em">투명 항산화 미백 안티에이징 세럼</p>
+<div class="w90 bg_lightred pd_80 mt_50 bdr_10">
+<p class="w90 p5 color_dark lh_10">효과를 볼 수 밖에 없는 조합!</p>
+<div class="bg_white mt_50 bdr_10"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_05_01.jpg"/>
+<p class="p4 color_softred lh_2 pt_30 pb_50"><span class="font_NGB">황금사과추출물</span> / <span class="font_NGB">순수비타민 C 15%</span> /<br/>
+<span class="font_NGB">비타민C유도체 2%</span> / <span class="font_NGB">PH 3.2-3.5</span> /<br/>
+<span class="font_NGB">토코페롤 &amp; 토코트라이엔올 (순수비타민E)</span> /<br/>
+<span class="font_NGB">페룰릭애씨드 5,000ppm</span> /<br/>
+<span class="font_NGB">글루타티온 1,000ppm</span> /<br/>
+<span class="font_NGB">레스베라트롤 1,000ppm</span> /<br/>
+<span class="font_NGB">플로레틴 100ppm</span> / <span class="font_NGB">친수성 정제수 베이스</span> /<br/>
+<span class="font_NGB">9등급 향료 색소 무첨가</span> /<br/>
+<span class="font_NGB">전성분 EWG 그린 등급</span></p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_05_02.jpg"/></div>
+</div>
+<div class="w90 mt_120">
+<p class="p5 color_dark font_NGB">항산화는 곧 미백의 시작이다.</p>
+<p class="p4 mt_02em">노화의 주범인 활성산소를 막아주는<br/>
+"케어셀라 바이오케이 애플타민 씨 세럼"</p>
+<img class="bdr_10 mt_50" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_06.gif"/>
+<p class="p3 mt_50">DPPH 분석 시험은 DPPH 라디칼을 제거하는 화장품의 능력을 측정합니다.<br/>
+DPPH 라디칼은 안정적인 자유라이탈로서,<br/>
+항산화 물질에 의해 제거되면 색이 변하게 됩니다.</p>
+<img class="mt_50" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_center_line.png"/></div>
+<div class="w90 mt_70"><img class="QuotationMarks" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_quotationmarks_top.jpg"/>
+<p class="p4 mt_30">높은 효과만큼이나 제조 과정, 관리가 까다로운 비타민 C<br/>
+민감한 원료인만큼 효과는 우수해야겠죠?</p>
+<p class="p4 font_NGB color_dark mt_04em">미백 효과를 극대화 시키려면 성분 조합과 함량이 중요합니다.</p>
+<img class="QuotationMarks mt_30" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_quotationmarks_bottom.jpg"/></div>
+
+<div class="w90 mt_120">
+<p class="p5 font_NGB color_dark">케어셀라 바이오케이 애플타민 씨 세럼,<br/>
+결과로 확인해보세요</p>
+<p class="title_bar p3 color_white bg_red font_NGB mt_70">비타민 C, 항산화 성분 함량에 따른 효과 비교</p>
+<p class="p1 color_gray ta_r mt_50">* 1번 : 기존 자사 제품 / <span class="color_softred font_NGB">* 2번 : 애플타민 씨 세럼</span></p>
+<table class="VitaminC_Table mt_20">
+<colgroup>
+<col style="width:16%;"/>
+<col/>
+<col style="width:17%;"/>
+<col style="width:17%;"/>
+<col style="width:17%;"/>
+</colgroup>
+<thead class="p2 font_NGB color_dark">
+<tr>
+<th scope="col">성분</th>
+<th scope="col">원료명</th>
+<th scope="col">1번</th>
+<th class="color_softred red_border red_border_top" scope="col">2번</th>
+<th scope="col">함량차이</th>
+</tr>
+</thead>
+<tbody class="p2">
+<tr>
+<td>순수<br/>
+			비타민 C</td>
+<td>아스코빅애씨드</td>
+<td>0.001%</td>
+<td class="red_border">15%</td>
+<td>15%</td>
+</tr>
+<tr>
+<td rowspan="2">비타민 C 유도체</td>
+<td>3-O-에틸아스코빅애씨드</td>
+<td>0.001%</td>
+<td class="red_border">0.1%</td>
+<td>0.10%</td>
+</tr>
+<tr>
+<td>아스코빌글루코사이드</td>
+<td>0.001%</td>
+<td class="red_border">2%</td>
+<td>2.00%</td>
+</tr>
+<tr>
+<td rowspan="6">항산화</td>
+<td>플로레틴</td>
+<td>0.01%</td>
+<td class="red_border">0.01%</td>
+<td>-</td>
+</tr>
+<tr>
+<td>페룰릭애씨드</td>
+<td>0.5%</td>
+<td class="red_border">0.5%</td>
+<td>-</td>
+</tr>
+<tr>
+<td>글루타티온</td>
+<td>0.02%</td>
+<td class="red_border">0.1%</td>
+<td>0.08%</td>
+</tr>
+<tr>
+<td>토코페롤</td>
+<td>0.07%</td>
+<td class="red_border">0.004%</td>
+<td>-0.07%</td>
+</tr>
+<tr>
+<td>토코트라이엔올</td>
+<td>-</td>
+<td class="red_border">0.01%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>레스베라트롤</td>
+<td>-</td>
+<td class="red_border red_border_bottom">0.1%</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<p class="p1 color_gray mt_1em">* 출처 : (주)제너럴바이오 R&amp;D 연구소</p>
+</div>
+
+<div class="w90 mt_120">
+<p class="title_bar p3 color_white bg_red font_NGB">순수 비타민 C, 비타민 C 유도체 함량이 높아질수록<br/>
+항산화 효과는 높아집니다!</p>
+<div class="grid_2step mt_70">
+<div class="Graph_Box pos_r pt_50 pb_30">
+<p class="title_abar wMax p2 font_NGB color_dark bg_whitegray">1번 기존 자사 제품</p>
+<div class="pos_r">
+<p class="left_txt wMax p0">DPPH 라디칼 소거능 (%)</p>
+<p class="ic50 wMax p0">IC50 값 = 8.60㎕</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_07_01.jpg"/></div>
+<p class="product_quantity p0 color_gray mt_04em">제품량 (㎕)</p>
+</div>
+<div class="Graph_Box pos_r pt_50 pb_30">
+<p class="title_abar wMax p2 color_softred bg_whitegray font_NGB">2번 애플타민 씨 세럼</p>
+<div class="pos_r">
+<p class="left_txt wMax p0">DPPH 라디칼 소거능 (%)</p>
+<p class="ic50 wMax p0">IC50 값 = 0.30㎕</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_07_02.jpg"/></div>
+<p class="product_quantity p0 color_gray mt_04em">제품량 (㎕)</p>
+</div>
+</div>
+<p class="p4 color_dark mt_50">기존 자사 제품 대비,<br/>
+DPPH 라디칼 소거능이 <span class="r_underline pos_r color_red font_NGB">약 29배 증가</span></p>
+</div>
+
+<div class="w90 mt_120">
+<p class="title_bar p3 color_white bg_red font_NGB">활성산소를 제거하는 '페놀 / 플라보노이드' 함량 차이</p>
+<p class="p1 color_gray ta_r mt_50">* 1번 : 기존 자사 제품 / <span class="color_softred font_NGB">* 2번 : 애플타민 씨 세럼</span></p>
+<div class="grid_2step mt_30">
+<div class="Graph_Box pos_r pt_50 pb_30">
+<p class="title_abar wMax p2 font_NGB color_dark bg_whitegray">총 페놀 함량 (㎎ GAE/㎖)</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_07_03.jpg"/>
+<div class="flex_row product_number">
+<p class="p0">1번</p>
+<p class="p0 color_softred font_NGB">2번</p>
+</div>
+</div>
+<div class="Graph_Box pos_r pt_50 pb_30">
+<p class="title_abar wMax p2 font_NGB color_dark bg_whitegray">총 플라보노이드 함량 (㎍ QE/㎖)</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_07_04.jpg"/>
+<div class="flex_row product_number">
+<p class="p0">1번</p>
+<p class="p0 color_softred font_NGB">2번</p>
+</div>
+</div>
+<p class="p0 color_gray mt_1em">GAE : Gallic Acid Equivalent (갈릭산 상당량)</p>
+<p class="p0 color_gray mt_1em">QE : Quercetin Equivalent (쿼세틴 상당량)</p>
+</div>
+<p class="p4 color_dark mt_50">기존 자사 제품 대비, 총 페놀 함량은 <span class="r_underline pos_r color_red font_NGB">약 15배 증가,</span><br/>
+총 플라보노이드 함량은 <span class="r_underline pos_r color_red font_NGB">약 2.6배 증가</span></p>
+</div>
+</section>
+
+<div class="Product_Title mt_200">
+<p class="ProductName pos_r font_NMr p0 lh_12"><i>CARECELLA BIO K</i></p>
+<p class="font_NMeb p0 lh_12">APPLETAMIN C SERUM</p>
+<p class="p5 font_NGB color_dark mt_04em">애플타민 씨 세럼 _ 제형</p>
+<p class="p1 font_NMr mt_04em">COSMETIC FORMULATION</p>
+</div>
+
+<section class="w90 mt_50">
+<div class="NumberBox font_NMr p5 color_white lh_10">1</div>
+<p class="p5 font_NGB color_dark mt_30">정제수와 같이 배합되어야 하는<br/>
+순수 비타민 C</p>
+<p class="p3 mt_04em">비타민 C의 최대 효과를 위해서는 친수성 베이스의 화장품이 적합합니다.</p>
+<div class="pos_r bdr_10 mt_50">
+<p class="w90 Formulation_Text p1 color_white font_NGB">* 케어셀라 바이오케이 애플타민 씨 세럼은 연한 노란색을 띠고 있는 액상입니다.</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_08.jpg"/></div>
+<p class="p3 mt_50">순수 비타민 C는 빛, 공기, 열에 의에 산화가 빠르게 일어나기 때문에<br/>
+내용물이 투명한 친수성 제형이여야 사용할 때마다<br/>
+갈변이 어느정도 되었는지 확인할 수 있어 사용 시 안전하며,<br/>
+유화 타입에 비해 제형 흡수율이 높아 효과가 좋습니다.</p>
+</section>
+
+<section class="w90 mt_150">
+<div class="p5 font_NMr color_white lh_10 NumberBox">2</div>
+<p class="p5 font_NGB color_dark mt_30">순수 비타민 C 산화 방지를 위한 기술<br/>
+"GB 더블 레이어 공법 "</p>
+<div class="DubleLayer_Method bg_whitered mt_50">
+<p class="p3 font_NGB color_red">베타-글루칸 + 엑토인 + 사과추출물</p>
+<div class="pos_r mt_30">
+<ul class="coating_2 lh_12">
+<li class="p2 color_darkorange font_NGB">1차 코팅</li>
+<li class="p1 color_lightorange">노나<br/>
+	펩타이드-1</li>
+<li class="p1 color_lightorange">토코페롤<br/>
+	(비타민E)</li>
+<li class="p1 color_lightorange">레스베라<br/>
+	트롤</li>
+<li> </li>
+<li class="p1 color_lightorange">아세틸<br/>
+	글루코사민</li>
+<li> </li>
+<li> </li>
+<li> </li>
+<li class="p1 color_lightorange">글루타티온</li>
+<li> </li>
+<li class="p1 color_lightorange">토코<br/>
+	트라이엔올<br/>
+	(비타민E)</li>
+<li class="p1 color_lightorange">플로레틴</li>
+<li class="p1 color_lightorange">페룰릭<br/>
+	애씨드</li>
+<li> </li>
+</ul>
+<div class="coating_1 color_white flex_row">
+<p><span class="p2 font_NGB">순수 비타민 C</span><br/>
+<span class="p1">아스코빅애씨드</span></p>
+<p class="p4 font_NGB plr_05em">+</p>
+<p class="wMax"><span class="p2 font_NGB">비타민 C 유도체</span><br/>
+<span class="p1">3-O-에틸아스코빅애씨드<br/>
+아스코빌글루코사이드</span></p>
+</div>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_09.png"/></div>
+<p class="p2 font_NGB color_red mt_30">2차 코팅</p>
+</div>
+<p class="p3 mt_50">1차 : 순수비타민C + 비타민C유도체에 8중 항산화 물질을 투입하여 1차 코팅 진행</p>
+<p class="p3">2차 : 베타-글루칸 + 엑토인 + 사과추출물로<br/>
+1차 코팅막에 2차 코팅막을 씌우는 방식으로 안정화 작업 진행</p>
+<p class="p3 color_dark font_NGB mt_1em">비타민 산화를 비교적 방지하는 성분 조합과 제조법으로 더 신선한 성분 유지가 가능합니다.</p>
+</section>
+
+<section class="w90 mt_150">
+<div class="p5 font_NMr color_white lh_10 NumberBox">3</div>
+<p class="p5 font_NGB color_dark mt_30">친수성(정제수베이스) 제형임에도<br/>
+건조함 없이 보습감을 느낄 수 있는 이유!</p>
+<ul class="Moisturizer grid_3step lh_12 mt_50">
+<li class="pos_r bdr_10 ta_l">
+<p class="p1 font_NGB color_red">베타-글루칸 + 엑토인<br/>
+	+ 사과추출물</p>
+<p class="p1 font_NGB color_yellow">비타민 C<br/>
+	+ 항산화 성분</p>
+<p class="p1">이중레이어</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_10_01.jpg"/></li>
+<li class="pos_r bdr_10">
+<p class="title_box p2 font_NGB color_white bg_dark bdr_10">안착</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_10_02.jpg"/></li>
+<li class="pos_r bdr_10">
+<p class="title_box p2 font_NGB color_white bg_dark bdr_10">흡수</p>
+<p class="p1 font_NGB color_red">보습막 형성</p>
+<p class="wMax p1 font_NGB color_yellow">비타민 C &amp; 항산화 안착</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_10_03.jpg"/></li>
+</ul>
+<p class="p3 mt_50">비타민 C, 항산화 성분에 코팅막을 씌운 엑토인 + 베타-글루칸 + 사과추출물이<br/>
+피부에 롤링시 막이 터지면서<br/>
+<span class="font_NGB color_dark">유효성분들이 피부 표면에 스며들게 되면서 표피층에 보습막을 형성해 줍니다.</span></p>
+<p class="p2 color_softred mt_1em">* ‘케어셀라 바이오케이 애플타민 씨 세럼’ 단독 사용에도 큰 건조함을 느끼지 않도록 개발되었습니다.</p>
+</section>
+
+<section class="w90 bg_whiteyellow mt_120 bdr_10">
+<div class="w84 ta_l pt_80 pb_100">
+<p class="p5 color_deeporange lh_12"><span>순수 비타민 C<br/>
+케어셀라 바이오케이 애플타민 씨 세럼</span><br/>
+<span class="color_red font_NGB">똑똑하게 사용하는 법!</span></p>
+<div class="line_01 mt_50 bg_deeporange opacity_30"> </div>
+<div class="p2 color_deeporange mt_30 opacity_80">
+<p>약산성 토너로 피부결을 정리하여 피부의 pH 수준을 약산성으로 맞춰주는 것이 비타민 C가 잘 흡수 될 수 있습니다.</p>
+<p class="mt_1em">또한 비타민 C 화장품을 바른 직후 곧바로 보습제를 바르는 것은 추천하지 않습니다.<br/>
+pH 수치가 3.2 ~ 3.5인 케어셀라 바이오케이 애플타민 씨 세럼을 바른 직후,<br/>
+피부 pH와 유사한 수치(5.5~7)의 보습제를 바르면 pH가 높아져 비타민 C 흡수가 떨어질 수 있습니다.</p>
+</div>
+<div class="line_01 mt_30 bg_deeporange opacity_30"> </div>
+<div class="p2 color_deeporange mt_30 opacity_80">
+<p class="font_NGB">하지만, 단독 사용이 민감하거나 건조함이 심각한 피부의 경우는 이렇게 해보세요.</p>
+<p class="mt_1em">1. 비타민 C 화장품을 소량씩 덜어 사용 후, 적응기를 거쳐 점차 양을 늘린다.</p>
+<p>2. 제품을 충분히 흡수 시킨 후 (최소 5분 후) 적은 양의 보습제를 사용한다.</p>
+<p class="mt_1em">점차 피부가 적응하게 되면 시간의 여유를 두고 나누어 바르면 된답니다.</p>
+</div>
+</div>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_11.jpg"/></section>
+
+<div class="Product_Title mt_200">
+<p class="ProductName pos_r font_NMr p0 lh_12"><i>CARECELLA BIO K</i></p>
+<p class="font_NMeb p0 lh_12">APPLETAMIN C SERUM</p>
+<p class="p5 font_NGB color_dark mt_04em">케어셀라 바이오케이<br/>
+애플타민 씨 세럼 파헤치기!</p>
+<p class="p1 font_NMr mt_04em">QUESTION AND ANSWER</p>
+</div>
+
+<section class="w90 bg_whitered bdr_10 mt_50">
+<ul class="ta_l pd_5p">
+<li class="QNA_Grid bg_white bdr_10">
+<div class="color_red txtList_dotline">
+<p class="p4 font_NGB">Q</p>
+<p class="p3 font_NGB mt_02em">제품 1개로 얼마나 사용할 수 있을까요?</p>
+</div>
+<div>
+<p class="p4 font_NGB">A</p>
+<p class="p3 mt_02em">저녁에 사용하는 제품이며, 30ml 용량으로 짧게는 14일 길게는 30일 가량 사용 가능합니다.</p>
+</div>
+</li>
+<li class="QNA_Grid bg_white mt_10 bdr_10">
+<div class="color_red txtList_dotline">
+<p class="p4 font_NGB">Q</p>
+<p class="p3 font_NGB mt_02em">언제부터 미백 효과를 볼 수 있을까요?</p>
+</div>
+<div class="plr_05em">
+<p class="p4 font_NGB">A</p>
+<div class="mt_02em">
+<p class="p3">피부타입, 피부컨디션에 따라 개인의 편차가 있을 수 있지만, 매일 사용하시면 14일 이내 톤업 효과를 느끼실 수 있습니다.</p>
+<p class="p2 color_gray mt_04em">* 내부 자체 품평 기준 / 사용 환경에 따른 개인차 있을 수 있음</p>
+</div>
+</div>
+</li>
+<li class="QNA_Grid bg_white mt_10 bdr_10">
+<div class="color_red txtList_dotline">
+<p class="p4 font_NGB">Q</p>
+<p class="p3 font_NGB mt_02em">피부가 민감한 편인데 사용할 수 있을까요?</p>
+</div>
+<div class="plr_05em">
+<p class="p4 font_NGB">A</p>
+<p class="p3 mt_02em">비타민 고함량 함유로 인해 자극이 있을 수 있습니다. 제품 사용 전 '패치테스트 후 제품 적응기'를 추천드립니다.</p>
+</div>
+</li>
+<li class="QNA_Grid bg_white mt_10 bdr_10">
+<div class="color_red txtList_dotline">
+<p class="p4 font_NGB">Q</p>
+<p class="p3 font_NGB mt_02em">세럼의 pH가 3.0~3.5인 이유가 있나요?</p>
+</div>
+<div class="plr_05em">
+<p class="p4 font_NGB">A</p>
+<p class="p3 mt_02em">세럼의 pH가 3.0~3.5 산성 상태일 때 두꺼운 피부 각질층을 뚫고 가장 흡수가 잘 되기 때문입니다.</p>
+</div>
+</li>
+<li class="QNA_Grid bg_white mt_10 bdr_10">
+<div class="color_red txtList_dotline">
+<p class="p4 font_NGB">Q</p>
+<p class="p3 font_NGB mt_02em">사용 후 열감이 느껴지고 따가웠다면?</p>
+</div>
+<div class="plr_05em">
+<p class="p4 font_NGB">A</p>
+<p class="p3 mt_02em">순수 비타민C 성분의 미백 화장품을 제대로 사용했다는 겁니다.<br/>
+	비타민 C는 p H가 3.5 산성 상태일 때 가장 흡수가 잘 되기 때문에 중성 ~ 알카리(5.5~7) 피부에 가까운 피부에 발랐을 때, 따끔거림이나 작열감 등을 느껴질 수 있습니다.</p>
+</div>
+</li>
+<li class="QNA_Grid bg_white mt_10 bdr_10">
+<div class="color_red txtList_dotline">
+<p class="p4 font_NGB">Q</p>
+<p class="p3 font_NGB mt_02em">제품에서 쇠 냄새가 나는 것 같습니다.</p>
+</div>
+<div class="plr_05em">
+<p class="p4 font_NGB">A</p>
+<p class="p3 mt_02em">비타민 고함량 제품의 특성상 고유의 특이취 발생하는데, 이 특위취가 쇠냄새와 유사합니다.<br/>
+	조합향료 및 인공향료가 첨가되지 않고 식물,과일추출물의 향을 첨가하여 원료(비타민C)의 고유의 취가 시간이 지남에 따라 발생할 수 있습니다.</p>
+</div>
+</li>
+<li class="QNA_Grid bg_white mt_10 bdr_10">
+<div class="color_red txtList_dotline">
+<p class="p4 font_NGB">Q</p>
+<p class="p3 font_NGB mt_02em">여드름 및 아토피 피부도 사용할 수 있을까요?</p>
+</div>
+<div class="plr_05em">
+<p class="p4 font_NGB">A</p>
+<p class="p3 mt_02em">여드름 피부와 아토피 피부의 경우, 비타민 C 고함량이 따가움과 자극이 될 수 있기에 사용을 권장드리지 않습니다. 여드름 피부는 상처 및 염증이 사라진 후 흔적(색소침착)이 남았을 때 사용하는 것을 추천드립니다. 흔적 관리에 도움을 줍니다.</p>
+</div>
+</li>
+<li class="QNA_Grid bg_white mt_10 bdr_10">
+<div class="color_red txtList_dotline">
+<p class="p4 font_NGB">Q</p>
+<p class="p3 font_NGB mt_02em">임산부가 사용할 수 있을까요?</p>
+</div>
+<div class="plr_05em">
+<p class="p4 font_NGB">A</p>
+<p class="p3 mt_02em">다양한 호르몬이 분비되는 시기이므로 전문의와 상담 후 사용을 권장드립니다.</p>
+</div>
+</li>
+</ul>
+</section>
+
+<div class="Product_Title mt_200">
+<p class="ProductName pos_r font_NMr p0 lh_12"><i>CARECELLA BIO K</i></p>
+<p class="font_NMeb p0 lh_12">APPLETAMIN C SERUM</p>
+<p class="p5 font_NGB color_dark mt_04em">이런 피부에 추천합니다!</p>
+<p class="p1 font_NMr mt_04em">RECOMMENDED TARGET</p>
+</div>
+
+<section class="w90 bg_whitered pb_80 mt_50 bdr_10"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_12.jpg"/>
+<div class="grid_txtList lh_12 wMax mg_center"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_01.png"/>
+<p class="p3">미백 시술 후 관리가 필요하신 분</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_01.png"/>
+<p class="p3">피부 톤이 어두워졌다고 느껴지시는 분</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_01.png"/>
+<p class="p3">피부 톤을 맑고 화사하게 가꾸고 싶은 분</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_01.png"/>
+<p class="p3">기미, 잡티, 색소침착 등으로 고민이신 분</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_01.png"/>
+<p class="p3">보이지 않은 깊은 기미가 고민이신 분</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_01.png"/>
+<p class="p3">자외선에 의한 잡티 발생을 관리하고 싶은 분</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_01.png"/>
+<p class="p3">리얼 비타민 C 제품을 찾고 계셨던 분</p>
+</div>
+</section>
+
+<div class="Product_Title mt_200">
+<p class="ProductName pos_r font_NMr p0 lh_12"><i>CARECELLA BIO K</i></p>
+<p class="font_NMeb p0 lh_12">APPLETAMIN C SERUM</p>
+<p class="p5 font_NGB color_dark mt_04em">사용 방법</p>
+<p class="p1 font_NMr mt_04em">HOW TO UES</p>
+</div>
+
+<section class="w90 mt_50">
+<ul class="grid_3step">
+<li class="bdr_10 bg_whitered"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_13_01.jpg"/>
+<p class="w90 p2 pb_30">캡을 오픈한 후,<br/>
+	스포이드를 이용하여<br/>
+	흡입합니다</p>
+</li>
+<li class="bdr_10 bg_whitered"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_13_02.jpg"/>
+<p class="w90 p2 pb_30">스포이드로 내용물을<br class="nbr"/>
+	1회 흡입한 뒤<br class="nbr"/>
+	피부에 골고루 도포해 줍니다.</p>
+</li>
+<li class="bdr_10 bg_whitered"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/CK_BALANCE_Appletamin_C_Serum/appletamin_c_serum_13_03.jpg"/>
+<p class="w90 p2 pb_30">피부 안쪽에서 바깥쪽으로<br class="nbr"/>
+	피부 결을 따라<br class="nbr"/>
+	부드럽게 펴 발라 줍니다.</p>
+</li>
+</ul>
+<p class="p2 mt_30">* 저녁 기초 스킨케어 적용 시 토너 다음 단계에서 사용합니다.<br/>
+* 개봉 후, 가급적 2~3개월 이내 사용을 권장합니다.</p>
+</section>
+
+<section class="w90 bg_whitegray pt_80 pb_80 mt_120 bdr_10">
+<p class="p5 font_NGB color_dark">사용하기 전 체크해 주세요!</p>
+<div class="line_01 mt_30 mg_center bg_deeporange opacity_30"> </div>
+<ul class="w90 p3 ta_l mt_50">
+<li class="Caution_Grid txtList_dotline">
+<p class="num_box bg_red color_white font_NGB">1</p>
+<p class="mt_02em">고함량 비타민 함유로 인해 자외선에 의한 자극 반응이 있을 수 있으므로, <span class="color_softred font_NGB">저녁 사용을 권장드립니다.</span></p>
+</li>
+<li class="Caution_Grid txtList_dotline">
+<p class="num_box bg_red color_white font_NGB">2</p>
+<p class="mt_02em"><span class="color_softred font_NGB">물리적 및 화학적 관리</span><span class="color_gray">(ex.박피)</span>로 표피층에 손상이 있을 경우 1~2주일 뒤 사용 권장드립니다.</p>
+</li>
+<li class="Caution_Grid txtList_dotline">
+<p class="num_box bg_red color_white font_NGB">3</p>
+<p class="mt_02em">피부과 시술(레이저 및 주사시술)을 진행한 경우, 최소 3일 뒤 사용 권장드립니다.</p>
+</li>
+<li class="Caution_Grid txtList_dotline">
+<p class="num_box bg_red color_white font_NGB">4</p>
+<p class="mt_02em">비타민 C 성분이 고함량 함유되어 공기에 의한 산화로 변색이 쉬워 개봉 후 2~3개월 이내 사용을 권장합니다.<br/>
+<span class="color_gray">(갈변 현상은 자연스러운 변화로 제품의 효능에 문제는 없습니다.)</span></p>
+</li>
+<li class="Caution_Grid txtList_dotline">
+<p class="num_box bg_red color_white font_NGB">5</p>
+<p class="mt_02em">비타민 C 성분이 고함량 함유되어 사용 시, 일시적으로 따가움 및 간지러움 등이 발생할 수 있습니다.<br/>
+<span class="color_gray">(해당 반응이 지속해서 발생 할 경우 사용을 중단하시길 바라며, 증상이 악화될 경우, 피부과 전문의 병원 방문을 부탁드립니다.)</span></p>
+</li>
+<li class="Caution_Grid txtList_dotline">
+<p class="num_box bg_red color_white font_NGB">6</p>
+<p class="mt_02em">고온과 직사광선을 피해서 보관해 주시길 바랍니다.</p>
+</li>
+<li class="Caution_Grid txtList_dotline">
+<p class="num_box bg_red color_white font_NGB">7</p>
+<p class="mt_02em">냉장 보관하시면 비타민 C 성분의 신선도 유지에 도움을 줄 수 있습니다.</p>
+</li>
+<li class="Caution_Grid plr_05em">
+<p class="num_box bg_red color_white font_NGB">8</p>
+<p class="mt_02em">사용 후에는 반드시 닫아서 보관하시길 바랍니다.</p>
+</li>
+</ul>
+</section>
+
+<section class="Brand_Grid pd_2em mt_200 bdr_10"><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/new_package/brand_story/brand_carecella_img.png"/>
+<div><img class="logo_img" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/new_package/brand_story/brand_carecella_logo.png"/>
+<p class="p2 color_dark mt_30"><span class="font_NGB">케어셀라는 ‘낫게하다’를 의미하는 Care와 라틴어로 세포를 의미하는 Cella의 합성어로<br class="ybr"/>
+피부 본연의 아름다움을 찾아주는 시작점을 뜻합니다.</span></p>
+<p class="p2 mt_04em">자연에서 찾은 식물성 원료를 사용하여 각 피부에 맞는 제품을 개발하고 전문적인 케어 가이드를 제안하는 홈 뷰티 화장품 브랜드입니다.</p>
+</div>
+</section>
+
+<div class="mt_150"><img class="mWidth_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/certifications_icon.jpg"/>
+<p class="p5 font_NGB mt_04em color_dark">각종 인증 사항</p>
+<p class="p2 font_NMr mt_04em">CERTIFICATIONS</p>
+</div>
+
+<section class="ta_l pb_80 mt_50">
+<div class="certifi_grid pd_2em bdr_10"><img alt="비코프인증" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/certifi_B_corp.png"/>
+<div class="_txtBox">
+<p class="p3 font_NGB color_dark">비코프인증 획득!</p>
+<p class="p2 font_NGB color_dark mt_08em"><span class="pos_r g_underline">비코프인증(B-Corp Certified)</span>이란?</p>
+<p class="p2 mt_04em">B-Corp은 비즈니스를 통해 사회 환경적 문제를 해결하고 사회에 긍정적인 영향을 끼치는 기업을 확대하기 위해서 2007년 BLab (미국비영리 조직)이 만든 글로벌 사회적 기업 인증 제도입니다.</p>
+</div>
+</div>
+<div class="certifi_grid pd_2em bdr_10 mt_30"><img alt="가족친화우수기업 인증" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/certifi_iso9001.png"/>
+<div class="_txtBox">
+<p class="p3 font_NGB color_dark">ISO9001 인증 획득!</p>
+<p class="p2 font_NGB color_dark mt_08em"><span class="pos_r g_underline">ISO9001</span>이란?</p>
+<p class="p2 mt_04em">ISO9001은 국제표준화기구(International Organization for Standardization)에서 제정·시행하고 있는 품질경영시스템에 관한 국제규격입니다.</p>
+</div>
+</div>
+</section>
+</div>
+<div style="text-align:center;">
+<a href="#" rel="noopener" target="_blank"><img decoding="async" loading="lazy" src="https://vcshop.gcoop.com/images/icon_edu_materials.png" style="width:220px;"/></a>
+</div>
+</div></div></div></div></div></div></body></html>

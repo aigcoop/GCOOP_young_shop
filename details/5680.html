@@ -1,0 +1,1569 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><base target="_blank"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap"><link rel="stylesheet" href="https://vcshop.gcoop.com/layouts/shopmobile/css/common.css"><link rel="stylesheet" href="https://vcshop.gcoop.com/layouts/shopmobile/css/sub.css"><style>
+                    /* 제품 상세정보 ~ 배송/교환/반품 안내 텍스트 크기 조정 */
+                    .pdt-detail-view > div > div > h2 {font-size:1rem !important;}
+                    .pdt-detail-view > div, .product-tab-box > div > div, .product-tab-box > div > div > dl > dd, .product-tab-box > div > div > dl > dt, .product-tab-box > div > div > ul > li  {font-size:.8rem;}
+                    .product_info-table {display:relative;}
+                    .product_info-table > ul > li {width:100% !important;}
+                    .product_info-table > ul > li > div {font-size:.8rem;}
+                    .popup_wrap .popup_container{position:absolute;left:50%;top:50%;width:100%;max-height:calc(100% - 50px);background-color:#fff;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+                    /* 제품상세 , 상품정보고시 , 배송 교환 반품 안내 */
+                    .product-tab-box{position:relative;overflow:hidden}
+                    .product-tab-box:after{display:block;content:"";position:absolute;right:0;top:0;z-index:10;width:10px;height:17px;background-color:#fff}
+                    .product-tab-swiper{padding:10px;border-bottom:1px solid #d0d0d0;}
+                    .product-tab-swiper .swiper-slide{width:33% !important; height:40px; line-height:40px; margin-right:0 !important; background:#eee; border-right:1px solid #fff;}
+                    .product-tab-swiper .swiper-slide a{display:block;position:relative; color:#262626; text-align:center; font-size:1em}
+                    .product-tab-swiper .swiper-slide:last-child a{font-size:0.5em}
+                    .product-tab-swiper .swiper-slide .on:after{display:block;content:"";position:absolute;left:0;bottom:-1px;width:100%;height:4px;background-color:#f35656}
+
+                    .product_detail img{width:100%}
+                    .product_info-table{border-bottom:1px solid #ccc}
+                    .product_info-table li{font-size:13px}
+                    .product_info-table li>div:first-child{width:112px;padding:6px 9px}
+                    .product_info-table li>div:last-child{padding:7px 12px;word-break:break-all}
+                    .product_info-table .indent{padding-left:12px}
+
+                    .product_info-table{border:1px solid #ccc}
+                    .product_info-table li{display:table;table-layout:fixed;width:100%;border-bottom:1px solid #dedede;background-color:#f5f5f5;font-weight:500;color:#333}
+                    .product_info-table li:last-child{border-bottom:0}
+                    .product_info-table li>div:first-child{display:table-cell}
+                    .product_info-table li>div:last-child{display:table-cell;background-color:#fff;vertical-align:middle}
+                    iframe{width:100%;height:100%;}
+                </style><style>html,body{margin:0;padding:0;background:#fff;overflow:hidden}#wrap,#view-box,.outer,.view-detail-box,.tab-detail-box{margin:0!important;padding:0!important;border:0!important;width:100%!important;min-height:0!important}.tab-view-box{display:block!important}img{max-width:100%;height:auto}.btn-expand,.btn-expand+br{display:none!important}iframe.yt{display:block;width:100%!important;aspect-ratio:16/9;height:auto!important;border:0;margin:10px 0}</style></head><body id="body"><div id="wrap"><div id="view-box"><div class="outer"><div class="view-detail-box"><div class="tab-detail-box"><div class="tab-view-box on">
+<div>
+
+<a class="btn-expand btn-expand2" href="https://vcshop.gcoop.com/Imgpop?seq_pd=5680" rel="noopener" target="_blank" xxtarget="_blank">
+<i class="fal fa-search-plus"></i>
+
+</a>
+</div>
+<br/>
+
+<div align="center" class="product_detail">
+<img alt="제품 상세 공지(탑) - 온라인 가품 유통 주의 안내" decoding="async" loading="lazy" src="https://cdn.gcoopm.com/shop/storage/shop_image/V3ue8ESIsAzJJqp54HLFdojrz8YFQt9LzUXZT0Y9.jpg"/>
+</div>
+<div align="center">
+</div>
+<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-myeongjo.css" rel="stylesheet"/>
+<link href="https://cdn.gcoop.me/storage/global_image/web_font/nexon_gothic.css" rel="stylesheet"/>
+<style type="text/css">/* 기본 */
+    .font_NMr {
+        font-family: 'NanumMyeongjo' !important;
+    }
+
+    .font_NMb {
+        font-family: 'NanumMyeongjoBold' !important;
+    }
+
+    .font_NMeb {
+        font-family: 'NanumMyeongjoExtraBold' !important;
+    }
+
+    .font_NGL {
+        font-family: 'NEXON Lv2 Gothic Light' !important;
+    }
+
+    .font_NGB {
+        font-family: 'NEXON Lv2 Gothic Bold' !important;
+    }
+
+    .Product_DetailWrap * {
+        box-sizing: border-box;
+        word-break: keep-all;
+        word-wrap: break-word;
+    }
+
+    .Product_DetailWrap ul,
+    ol,
+    li,
+    dl,
+    dt,
+    dd,
+    p,
+    div,
+    span,
+    section,
+    i,
+    form,
+    fieldset,
+    input,
+    table,
+    tr,
+    th,
+    td,
+    button,
+    textarea,
+    br {
+        margin: 0;
+        padding: 0;
+    }
+
+    .Product_DetailWrap i {
+        font-style: normal;
+    }
+
+    .Product_DetailWrap ul,
+    ol,
+    li,
+    dl,
+    dt,
+    dd {
+        list-style: none;
+    }
+
+    .Product_DetailWrap img {
+        width: auto;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .Product_DetailWrap {
+        font-family: 'NEXON Lv2 Gothic', sans-serif;
+        width: 100%;
+        max-width: 800px !important;
+        font-weight: 400;
+        margin: 0 auto;
+        font-size: 8px;
+        letter-spacing: -0.05em;
+        -webkit-letter-spacing: -0.25px;
+        text-align: center;
+        color: #424242;
+        line-height: 1.4;
+    }
+
+    /* FONT SIZE CSS */
+    .Product_DetailWrap p {
+        transform: rotate(0.03deg)
+    }
+
+    .Product_DetailWrap .p0 {
+        font-size: 2em;
+    }
+
+    /*14px*/
+    .Product_DetailWrap .p1 {
+        font-size: 2.2em;
+    }
+
+    /*16px*/
+    .Product_DetailWrap .p2 {
+        font-size: 2.4em;
+    }
+
+    /*18px*/
+    .Product_DetailWrap .p3 {
+        font-size: 2.6em;
+    }
+
+    /*24px*/
+    .Product_DetailWrap .p4 {
+        font-size: 3.2em;
+    }
+
+    /*32px*/
+    .Product_DetailWrap .p5 {
+        font-size: 4.8em;
+    }
+
+    /*48px*/
+    .Product_DetailWrap .p6 {
+        font-size: 7.2em;
+    }
+
+    /*72px*/
+    .Product_DetailWrap .p7 {
+        font-size: 8em;
+    }
+
+    /*80px*/
+
+    /* FONT STYLE CSS */
+    .Product_DetailWrap .lh_10 {
+        line-height: 1;
+    }
+
+    .Product_DetailWrap .lh_12 {
+        line-height: 1.2;
+    }
+
+    .Product_DetailWrap .lh_2 {
+        line-height: 2;
+    }
+
+    .Product_DetailWrap .ta_l {
+        text-align: left;
+    }
+
+    .Product_DetailWrap .ta_r {
+        text-align: right;
+    }
+
+    .Product_DetailWrap .fw_600 {
+        font-weight: 600;
+    }
+
+    /* FONT COLOR CSS */
+    .Product_DetailWrap .color_white {
+        color: #fff;
+    }
+
+    .Product_DetailWrap .color_dark {
+        color: #121212;
+    }
+
+    .Product_DetailWrap .color_gray {
+        color: #999;
+    }
+
+    .Product_DetailWrap .color_red {
+        color: #89170d;
+    }
+
+    .Product_DetailWrap .color_darkorange {
+        color: #302300;
+    }
+
+    .Product_DetailWrap .color_softred {
+        color: #b96962;
+    }
+
+    .Product_DetailWrap .color_yellow {
+        color: #fcb800;
+    }
+
+    .Product_DetailWrap .color_lightorange {
+        color: #ded0ab;
+    }
+
+    .Product_DetailWrap .color_deeporange {
+        color: #443800;
+    }
+
+    .Product_DetailWrap .color_cyan {
+        color: #5f8d8b;
+    }
+
+    /* BG COLOR CSS */
+    .Product_DetailWrap .bg_white {
+        background-color: #fff;
+    }
+
+    .Product_DetailWrap .bg_whitegray {
+        background-color: #fbfbfb;
+    }
+
+    .Product_DetailWrap .bg_dark {
+        background-color: #424242;
+    }
+
+    .Product_DetailWrap .bg_red {
+        background-color: #89170d;
+    }
+
+    .Product_DetailWrap .bg_whitered {
+        background-color: #faf7f6;
+    }
+
+    .Product_DetailWrap .bg_lightred {
+        background-color: #f6efed;
+    }
+
+    .Product_DetailWrap .bg_softred {
+        background-color: #b96962;
+    }
+
+    .Product_DetailWrap .bg_yellow {
+        background-color: #fcb800;
+    }
+
+    .Product_DetailWrap .bg_whiteyellow {
+        background-color: #faf9f5;
+    }
+
+    .Product_DetailWrap .bg_deeporange {
+        background-color: #443800;
+    }
+
+    /* MARGIN CSS */
+    .Product_DetailWrap .mg_center {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .Product_DetailWrap .mt-05em {
+        margin-top: -0.5em;
+    }
+
+    .Product_DetailWrap .mt_02em {
+        margin-top: 0.2em;
+    }
+
+    .Product_DetailWrap .mt_04em {
+        margin-top: 0.4em;
+    }
+
+    .Product_DetailWrap .mt_08em {
+        margin-top: 0.8em;
+    }
+
+    .Product_DetailWrap .mt_1em {
+        margin-top: 1em;
+    }
+
+    .Product_DetailWrap .mt_15em {
+        margin-top: 1.5em;
+    }
+
+    .Product_DetailWrap .mt_10 {
+        margin-top: 8px;
+    }
+
+    .Product_DetailWrap .mt_20 {
+        margin-top: 16px;
+    }
+
+    .Product_DetailWrap .mt_30 {
+        margin-top: 24px;
+    }
+
+    .Product_DetailWrap .mt_50 {
+        margin-top: 40px;
+    }
+
+    .Product_DetailWrap .mt_70 {
+        margin-top: 56px;
+    }
+
+    .Product_DetailWrap .mt_120 {
+        margin-top: 96px;
+    }
+
+    .Product_DetailWrap .mt_150 {
+        margin-top: 120px;
+    }
+
+    .Product_DetailWrap .mt_200 {
+        margin-top: 160px;
+    }
+
+    .Product_DetailWrap .ml_10 {
+        margin-left: 8px;
+    }
+
+    /* PADDING CSS */
+    .Product_DetailWrap .pt_30 {
+        padding-top: 24px;
+    }
+
+    .Product_DetailWrap .pt_50 {
+        padding-top: 40px;
+    }
+
+    .Product_DetailWrap .pt_80 {
+        padding-top: 64px;
+    }
+
+    .Product_DetailWrap .pt_100 {
+        padding-top: 80px;
+    }
+
+    .Product_DetailWrap .pb_30 {
+        padding-bottom: 30px;
+    }
+
+    .Product_DetailWrap .pb_50 {
+        padding-bottom: 40px;
+    }
+
+    .Product_DetailWrap .pb_80 {
+        padding-bottom: 64px;
+    }
+
+    .Product_DetailWrap .pb_100 {
+        padding-bottom: 80px;
+    }
+
+    .Product_DetailWrap .pd_80 {
+        padding: 64px;
+    }
+
+    .Product_DetailWrap .pd_5p {
+        padding: 5%;
+    }
+
+    .Product_DetailWrap .pd_2em {
+        padding: 2em;
+    }
+
+    .Product_DetailWrap .plr_05em {
+        padding: 0 0.5em;
+    }
+
+    /* GRID · FLEX 스타일 */
+    .Product_DetailWrap .grid_2step {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        justify-content: space-between;
+    }
+
+    .Product_DetailWrap .grid_3step {
+        display: grid;
+        grid-template-columns: repeat(3, 32%);
+        justify-content: space-between;
+    }
+
+    .Product_DetailWrap .grid_txtList {
+        display: grid;
+        grid-template-columns: 2.4167em 1fr;
+        align-items: start;
+        gap: 2.0833em 1.25em;
+        text-align: left;
+    }
+
+    .Product_DetailWrap .flex_row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Product_DetailWrap .flex_colum {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* 기타 스타일 */
+    .Product_DetailWrap .w84 {
+        width: 84%;
+        margin-left: 8%;
+    }
+
+    .Product_DetailWrap .w90 {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .Product_DetailWrap .wMax {
+        width: max-content;
+    }
+
+    .Product_DetailWrap .mWidth_10 {
+        max-width: 10% !important;
+    }
+
+    .Product_DetailWrap .bdr_10 {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .Product_DetailWrap .pos_r {
+        position: relative;
+    }
+
+    .Product_DetailWrap .opacity_30 {
+        opacity: 30%;
+    }
+
+    .Product_DetailWrap .opacity_50 {
+        opacity: 50%;
+    }
+
+    .Product_DetailWrap .opacity_80 {
+        opacity: 80%;
+    }
+
+    .Product_DetailWrap .line_01 {
+        width: 3.5em;
+        height: 1px;
+    }
+
+    .Product_DetailWrap .line_02 {
+        height: 1px;
+    }
+
+    .Product_DetailWrap .r_upperdot:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0.15em;
+        height: 0.15em;
+        border-radius: 100px;
+        top: -0.2em;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #89170d;
+    }
+
+    .Product_DetailWrap .y_underline:after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        border-bottom: 1px solid #fcb800;
+    }
+
+    .Product_DetailWrap .r_underline:after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        border-bottom: 1px solid #89170d;
+    }
+
+    .Product_DetailWrap .g_underline:after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .Product_DetailWrap .title_bar {
+        display: inline-block;
+        border-radius: 150px;
+        padding: 0.9em 2em 0.7em;
+    }
+
+    .Product_DetailWrap .title_abar {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 100px;
+        padding: 0.5em 1em 0.4em;
+    }
+
+    .Product_DetailWrap .txtList_dotline {
+        border-bottom: #ccc dotted 1px;
+        margin-bottom: 1.5em;
+        padding: 0 0.5em 1.5em;
+    }
+
+    .Product_DetailWrap .ybr {
+        display: none;
+    }
+
+    .Product_DetailWrap .nbr {
+        display: block;
+    }
+
+    /* 타이틀 */
+    .Product_Title .ProductName i {
+        background-color: #fff;
+        padding: 0 1em;
+    }
+
+    .Product_Title .ProductName::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -2px);
+        background: linear-gradient(90deg, #fff, #d9d9d9 20%, #d9d9d9 80%, #fff 100%);
+        z-index: -1;
+    }
+
+    .NumberBox {
+        display: inline-block;
+        padding: 0.5em 0.684em 0.4em;
+        border-radius: 150px;
+        background-color: #fcb800;
+    }
+
+    /* 키이미지 */
+    .KeyImg .key_TitleBox {
+        position: absolute;
+        top: 20%;
+    }
+
+    .KeyImg .key_IconBox li {
+        position: absolute;
+        width: 15.3333%;
+        height: 12.9577%;
+    }
+
+    .KeyImg .key_IconBox li>img {
+        width: 5.1333vw;
+        max-width: 48px;
+    }
+
+    .KeyImg .key_IconBox li:nth-of-type(1) {
+        top: 38.5211%;
+        left: 23.5%;
+    }
+
+    .KeyImg .key_IconBox li:nth-of-type(2) {
+        top: 38.5211%;
+        right: 23.5%;
+    }
+
+    .KeyImg .key_IconBox li:nth-of-type(3) {
+        top: 59.0141%;
+        left: 16%;
+    }
+
+    .KeyImg .key_IconBox li:nth-of-type(4) {
+        top: 59.0141%;
+        right: 16%;
+    }
+
+    .KeyImg .key_IconBox li:nth-of-type(5) {
+        top: 71.6197%;
+        left: 42.3333%;
+    }
+
+    .KeyImg .key_BottomText {
+        position: absolute;
+        bottom: 11.2676%;
+    }
+
+    /* 인트로 */
+    .BrowningTest_Grid {
+        position: absolute;
+        width: 81%;
+        bottom: 6%;
+        left: 9.5%;
+        display: grid;
+        grid-template-columns: 41.8381% 42.1125%;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    /* 체크 포인트 */
+    .CheckPoint_Grid {
+        display: grid;
+        grid-template-columns: 55% 40%;
+        justify-content: space-between;
+        background: linear-gradient(90deg, #faf7f6 80%, #fff 80%);
+    }
+
+    .CheckPoint_TextBox {
+        padding: 6.6667em 0 6.6667em 5em;
+    }
+
+    .CheckPoint_TextBox .flex_box {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .CheckPoint_TextBox .flex_box>div:nth-of-type(1) {
+        flex: 0 0 0.9em;
+    }
+
+    /* 핵심원료_1 */
+    .ShinanoGoldApple {
+        position: absolute;
+        top: 6%;
+    }
+
+    .PhotoName {
+        position: absolute;
+        width: 94%;
+        bottom: 3%;
+        left: 3%;
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 1em;
+    }
+
+    .RawMaterial {
+        display: grid;
+        grid-template-columns: 45% 4% 45%;
+        justify-content: space-between;
+        row-gap: 2.5em;
+    }
+
+    .RawMaterial .ProcessBox {
+        border: #89170d solid 0.5em;
+        border-radius: 500px;
+        padding: 12%;
+        min-height: 23.3333em;
+    }
+
+    .RawMaterial .ProcessBox img {
+        width: 6.8333vw;
+        max-width: 82px;
+    }
+
+    .RawMaterial .down_arrow {
+        width: 2.5vw;
+        max-width: 24px;
+        margin-bottom: 0.5em;
+    }
+
+    /* 핵심원료_2 */
+    .QuotationMarks {
+        width: 7.1667vw !important;
+        max-width: 68px !important;
+    }
+
+    .VitaminC_Table thead th {
+        background-color: #f3f3f3;
+        vertical-align: middle;
+        padding: 1em 0;
+        border: 1px solid #cccccc;
+    }
+
+    .VitaminC_Table td {
+        border: 1px solid #cccccc;
+        padding: 1em 0.5em;
+        vertical-align: middle;
+    }
+
+    .VitaminC_Table tr .red_border {
+        border-left: 2px solid #b96962;
+        border-right: 2px solid #b96962;
+    }
+
+    .VitaminC_Table tr .red_border_top {
+        border-top: 2px solid #b96962;
+    }
+
+    .VitaminC_Table tr .red_border_bottom {
+        border-bottom: 2px solid #b96962;
+    }
+
+    .Graph_Box {
+        border: 1px solid #cccccc;
+    }
+
+    .Graph_Box .left_txt {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(-90deg) translate(-100%, 60%);
+        transform-origin: top left;
+    }
+
+    .Graph_Box .ic50 {
+        position: absolute;
+        top: 0.5em;
+        left: 27.335%;
+    }
+
+    .Graph_Box .product_quantity {
+        width: 75.1708%;
+        margin-left: 20.0456%;
+    }
+
+    .Graph_Box .product_number {
+        width: 53.303%;
+        margin-left: 27.5626%;
+    }
+
+    .Graph_Box .product_number p {
+        width: 38.4615%;
+    }
+
+    /* 제형_1 */
+    .Formulation_Text {
+        position: absolute;
+        bottom: 5%;
+    }
+
+    /* 제형_2 */
+    .DubleLayer_Method {
+        border-radius: 500px;
+        padding: 5% 5%;
+    }
+
+    .DubleLayer_Method .coating_1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .DubleLayer_Method .coating_2 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 16.6667%);
+        grid-template-rows: repeat(3, 30.2013%);
+        justify-content: space-between;
+        align-items: center;
+        align-content: space-between;
+    }
+
+    /* 제형_3 */
+    .Moisturizer>li p {
+        position: absolute;
+    }
+
+    .Moisturizer .title_box {
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.8em 1.5em 0.7em;
+    }
+
+    .Moisturizer>li:nth-of-type(1) p:nth-of-type(1) {
+        bottom: 81.25%;
+        left: 13.3333%;
+    }
+
+    .Moisturizer>li:nth-of-type(1) p:nth-of-type(2) {
+        top: 48.8%;
+        left: 9%;
+    }
+
+    .Moisturizer>li:nth-of-type(1) p:nth-of-type(3) {
+        top: 50.5%;
+        right: 9%;
+    }
+
+    .Moisturizer>li:nth-of-type(3) p:nth-of-type(2) {
+        bottom: 46.5%;
+        right: 14.4444%;
+    }
+
+    .Moisturizer>li:nth-of-type(3) p:nth-of-type(3) {
+        top: 87%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Q & A */
+    .QNA_Grid {
+        padding: 3em 3.5em 2.8em;
+    }
+
+    .QNA_Grid>div {
+        display: grid;
+        grid-template-columns: 3.5em 1fr;
+        justify-content: space-between;
+        padding: 0 0.5em;
+    }
+
+    /* 주의사항 */
+    .Caution_Grid {
+        display: grid;
+        grid-template-columns: 2.3em 1fr;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .Caution_Grid .num_box {
+        width: max-content;
+        padding: 0.2em 0.55em 0.1em;
+        border-radius: 150px;
+    }
+
+    /* 브랜드 스토리 */
+    .Brand_Grid {
+        display: grid;
+        grid-template-columns: 40% 56%;
+        justify-content: space-between;
+        align-items: start;
+        border: #ccc solid 1px;
+        text-align: left;
+    }
+
+    .Brand_Grid .logo_img {
+        max-width: 40% !important;
+        margin-top: 1em;
+    }
+
+    /* 각종인증사항 */
+    .certifi_grid {
+        display: grid;
+        grid-template-columns: 15% 82%;
+        justify-content: space-between;
+        align-items: start;
+        border: #cccc solid 1px;
+    }
+
+    .product_info {
+        padding: 9% 0;
+        margin-top: -10px;
+    }
+
+    .product_info .content {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 6%;
+    }
+
+    .info_box {
+        display: inline-block;
+        width: 18%;
+    }
+
+    .info_box img {
+        width: 53%;
+    }
+
+    .info_box .txt {
+        margin-top: 8%;
+    }
+
+    .info_box .txt p {
+        color: #626262;
+        font-weight: 600;
+        font-size: 2em;
+    }
+
+    /* .ml3 {
+        margin-left: 1%;
+    } */
+
+
+
+
+    .point_content {
+        width: 100%;
+        padding: 8% 0;
+    }
+
+    .point_content .content {
+        width: 85%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .main_content {
+        text-align: left;
+        margin-top: 8%;
+    }
+
+    .main_content01 {}
+
+    .contents_img {
+        display: inline-block;
+        width: 35%;
+    }
+
+    .contents_imgR {
+        display: inline-block;
+        width: 43%;
+    }
+
+    .contents_img img,
+    .contents_imgR img {
+        width: 100%;
+    }
+
+    .contents_img,
+    .point_txt {
+        vertical-align: middle;
+    }
+
+    .contents_imgR,
+    .point_txtR {
+        vertical-align: middle;
+    }
+
+    .point_txt {
+        display: inline-block;
+        width: 55%;
+        margin-left: 5%;
+    }
+
+    .point_txtR {
+        display: inline-block;
+        width: 50%;
+        margin-right: 5%;
+        text-align: right;
+    }
+
+    .txt_group {}
+
+    .main_content01 .mt03 {
+        margin-top: 5%;
+    }
+
+    .main_content01 .num {
+        margin-left: 3%;
+    }
+
+    .num .num01 {
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: 2.8rem;
+        color: #dddddd;
+        letter-spacing: -0.1em;
+        font-weight: 300;
+    }
+
+    .main_content01 .num,
+    .contents_txt {
+        vertical-align: top;
+    }
+
+    .contents_txt {
+        display: inline-block;
+        width: 100%;
+        margin-left: 4%;
+        margin-top: 3%;
+    }
+
+    .contents_txtR {
+        display: inline-block;
+        width: 100%;
+        margin-top: 3%;
+    }
+
+    .sub_tit {}
+
+    .sub_tit img,
+    .sub_tit .tit {
+        vertical-align: top;
+    }
+
+    .sub_tit img,
+    .sub_tit .tit {
+        vertical-align: middle;
+    }
+
+    .sub_tit .tit {
+        display: inline-block;
+        font-size: 3.4em;
+        font-weight: 600;
+        color: #011031;
+    }
+
+    .sub_tit .tit span {
+        border-bottom: 1px solid;
+    }
+
+    .contents_txt .txt {
+        margin-top: 3%;
+    }
+
+    .contents_txt .txt p,
+    .contents_txtR .txt p {
+        margin-top: 7%;
+        font-size: 2.4em;
+    }
+
+    .pt05 {
+        padding-top: 5%;
+    }
+
+
+    a.button1 {
+        display: block;
+        float: left;
+        width: 80px;
+        padding: 0;
+        margin: 10px 0 20px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 30px;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 2em;
+    }
+
+    a.button2 {
+        display: block;
+        float: right;
+        width: 80px;
+        padding: 0;
+        margin: 10px 0 20px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 30px;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 2em;
+    }
+
+    .btnLightGray {
+        background: #06365b;
+    }
+
+    .btnFade.btnLightGray:hover {
+        background: #dddddd;
+        color: #06365b;
+    }
+
+    a,
+    a:visited {
+        text-decoration: none;
+    }
+
+
+    /**제품사용방법**/
+    .HowtoUse {
+        padding: 5% 0;
+    }
+
+    .HowtoUse_contents_group01 {
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .HowtoUse_content01,
+    .HowtoUse_content02,
+    .HowtoUse_content03 {
+        display: inline-block;
+        vertical-align: top;
+        width: 40%;
+    }
+
+    .HowtoUse_content01,
+    .HowtoUse_content02 {
+        /*padding-left: 4%;*/
+    }
+
+    .HowtoUse_contents_group01 img {
+        width: 70%;
+    }
+
+    .HowtoUse_contents_group01 .Process_subtit {
+        font-size: 1.7em;
+        color: #333333;
+        font-weight: 700;
+    }
+
+    .HowtoUse_contents_group01 .product_tit {
+        font-weight: 700;
+        color: #666666;
+    }
+
+    .HowtoUse_contents_group01 p {
+        font-size: 2.4em;
+        font-weight: 400;
+        color: #a2a2a2;
+        padding-top: 5%;
+    }
+
+    .HowtoUse .arrow {
+        display: inline-block;
+    }
+
+
+
+    @media all and (max-width:799px) {
+        .Product_DetailWrap .p0 {
+            font-size: 2em;
+        }
+
+        /*14px*/
+        .Product_DetailWrap .p1 {
+            font-size: 2.2em;
+        }
+
+        /*16px*/
+        .Product_DetailWrap .p2 {
+            font-size: 2.4em;
+        }
+
+        /*18px*/
+        .Product_DetailWrap .mt_10 {
+            margin-top: 0.8333vw;
+        }
+
+        .Product_DetailWrap .mt_20 {
+            margin-top: 1.6667px;
+        }
+
+        .Product_DetailWrap .mt_30 {
+            margin-top: 2.5vw;
+        }
+
+        .Product_DetailWrap .mt_50 {
+            margin-top: 4.1667vw;
+        }
+
+        .Product_DetailWrap .mt_70 {
+            margin-top: 5.8333vw;
+        }
+
+        .Product_DetailWrap .mt_120 {
+            margin-top: 10vw;
+        }
+
+        .Product_DetailWrap .mt_150 {
+            margin-top: 12.5vw;
+        }
+
+        .Product_DetailWrap .mt_200 {
+            margin-top: 16.6667vw;
+        }
+
+        .Product_DetailWrap .ml_10 {
+            margin-left: 0.8333vw;
+        }
+
+        .Product_DetailWrap .pt_30 {
+            padding-top: 2.5vw;
+        }
+
+        .Product_DetailWrap .pt_50 {
+            padding-top: 4.1667vw;
+        }
+
+        .Product_DetailWrap .pt_80 {
+            padding-top: 6.6667vw;
+        }
+
+        .Product_DetailWrap .pt_100 {
+            padding-top: 8.3333vw;
+        }
+
+        .Product_DetailWrap .pb_30 {
+            padding-bottom: 2.5vw;
+        }
+
+        .Product_DetailWrap .pb_50 {
+            padding-bottom: 4.1667vw;
+        }
+
+        .Product_DetailWrap .pb_80 {
+            padding-bottom: 6.6667vw;
+        }
+
+        .Product_DetailWrap .pb_100 {
+            padding-bottom: 8.3333vw;
+        }
+
+        .Product_DetailWrap .pd_80 {
+            padding: 6.6667vw;
+        }
+
+        .Product_DetailWrap .bdr_10 {
+            border-radius: 0.8333vw;
+        }
+
+        .Product_DetailWrap .ybr {
+            display: block;
+        }
+
+        .Product_DetailWrap .nbr {
+            display: none;
+        }
+    }
+
+    @media all and (max-width:720px) {
+        .Product_DetailWrap {
+            font-size: 7px;
+        }
+    }
+
+    @media all and (max-width:620px) {
+        .Product_DetailWrap {
+            font-size: 6px;
+        }
+    }
+
+    @media all and (max-width:510px) {
+        .Brand_Grid {
+            grid-template-columns: 1fr;
+            row-gap: 4.1667vw;
+            text-align: center;
+        }
+
+        .Brand_Grid .logo_img {
+            margin-top: 0 !important;
+        }
+    }
+
+    @media all and (max-width:520px) {
+        .Product_DetailWrap {
+            font-size: 5px;
+        }
+    }
+
+    @media all and (max-width:420px) {
+        .Product_DetailWrap {
+            font-size: 4px;
+        }
+    }
+
+    @media all and (max-width:320px) {
+        .Product_DetailWrap {
+            font-size: 3px;
+        }
+    }
+</style>
+<div class="Product_DetailWrap">
+<section class="KeyImg pos_r lh_12">
+<div class="key_TitleBox w90">
+<p class="p4 color_dark_gray opacity_80">피부 속은 촉촉하게, 피부결은 매끈하게</p>
+<p class="p7 font_NGB color_dark mt_02em">케어셀라 하이드레이션</p>
+</div>
+<img decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/HYDRATION/5ea/key.jpg"/></section>
+<div class="Product_Title mt_200">
+<p class="ProductName pos_r font_NMr p0 lh_12"><i>CARECELLA</i></p>
+<p class="font_NMeb p0 lh_12">HYDRATION</p>
+<p class="p5 font_NGB color_dark mt_04em">제품 구성</p>
+<p class="p1 font_NMr mt_04em">INFORMATION</p>
+</div>
+<div class="product_info">
+<div class="content">
+<div class="info_box"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/HYDRATION/5ea/01.png"/>
+<div class="txt">
+<p>케어셀라<br/>
+하이드레이션<br/>
+폼 클렌저<br/>
+100ml</p>
+</div>
+</div>
+
+<div class="info_box ml3"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/HYDRATION/5ea/02.png"/>
+<div class="txt">
+<p>케어셀라<br/>
+하이드레이션<br/>
+밸런스 토너<br/>
+120ml</p>
+</div>
+</div>
+
+<div class="info_box ml3"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/HYDRATION/5ea/03.png"/>
+<div class="txt">
+<p>케어셀라<br/>
+하이드레이션<br/>
+인텐시브 세럼<br/>
+50ml</p>
+</div>
+</div>
+
+<div class="info_box ml3"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/HYDRATION/5ea/04.png"/>
+<div class="txt">
+<p>케어셀라<br/>
+하이드레이션<br/>
+딥 에멀젼<br/>
+120ml</p>
+</div>
+</div>
+
+<div class="info_box ml3"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/HYDRATION/5ea/05.png"/>
+<div class="txt">
+<p>케어셀라<br/>
+하이드레이션<br/>
+아쿠아 크림<br/>
+100ml</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="Product_Title mt_200">
+<p class="ProductName pos_r font_NMr p0 lh_12"><i>CARECELLA</i></p>
+<p class="font_NMeb p0 lh_12">HYDRATION</p>
+<p class="p5 font_NGB color_dark mt_04em">제품 특징</p>
+<p class="p1 font_NMr mt_04em">KEY POINT</p>
+</div>
+<div class="point_content">
+<div class="content">
+<div class="main_content">
+<div class="main_content01">
+<div class="contents_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/HYDRATION/5ea/06.png"/></div>
+<div class="point_txt">
+<div class="txt_group">
+<div class="num">
+<div class="num01">01</div>
+</div>
+<div class="contents_txt">
+<div class="sub_tit">
+<div class="tit">케어셀라 하이드레이션<br/>
+폼 클렌저 100ml</div>
+</div>
+<div class="txt">
+<p>모든 피부에 크림처럼 부드럽게 저자극 세안이 가능하며 선크림/미세먼지/ 모공속 노폐물까지 안심 세안이 가능합니다. 여기에 식물성 방부 효과 겸 피부 진정 및 수분 공급 성분을 업그레이드 하였습니다.</p>
+</div>
+<a class="button1 btnFade btnLightGray" href="https://vcshop.gcoop.com/kr/display?cate=6&amp;itemNo=5677" rel="noopener" target="_blank">자세히 보기</a></div>
+</div>
+</div>
+</div>
+
+<div class="main_content02 pt05">
+<div class="point_txtR">
+<div class="txt_group">
+<div class="num">
+<div class="num01">02</div>
+</div>
+<div class="contents_txtR">
+<div class="sub_tit">
+<div class="tit">케어셀라 하이드레이션<br/>
+밸런스 토너 120ml</div>
+</div>
+<div class="txt">
+<p>모든 피부에 방울방울 적셔주는 촉촉한 에센스 워터 토너로 예민해진 내 피부를 자극없이 진정하여, 매끄러운 피부로 정돈하는데 도움을 드립니다.</p>
+</div>
+<a class="button2 btnFade btnLightGray" href="https://vcshop.gcoop.com/kr/display?cate=6&amp;itemNo=5678" rel="noopener" target="_blank">자세히 보기</a></div>
+</div>
+</div>
+
+<div class="contents_imgR"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/HYDRATION/5ea/07.png"/></div>
+</div>
+
+<div class="main_content01 pt05">
+<div class="contents_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/HYDRATION/5ea/08.png"/></div>
+<div class="point_txt">
+<div class="txt_group">
+<div class="num">
+<div class="num01">03</div>
+</div>
+<div class="contents_txt">
+<div class="sub_tit">
+<div class="tit">케어셀라 하이드레이션<br/>
+인텐시브 세럼 50ml</div>
+</div>
+<div class="txt">
+<p>모든 피부에 촉촉 수분 보습막 블렌딩 포뮬라를 함유한 투명 수분 세럼을 담은 신개념 집중 앰플형 세럼으로 성분을 업그레이드 하여 수분충전, 수분장벽, 수분진정, 수분탄력, 수분미백까지 함께 케어하는 토탈 솔루션 앰플 세럼입니다.</p>
+</div>
+<a class="button1 btnFade btnLightGray" href="https://vcshop.gcoop.com/kr/display?cate=6&amp;itemNo=5676" rel="noopener" target="_blank">자세히 보기</a></div>
+</div>
+</div>
+</div>
+
+<div class="main_content02 pt05">
+<div class="point_txtR">
+<div class="txt_group">
+<div class="num">
+<div class="num01">04</div>
+</div>
+<div class="contents_txtR">
+<div class="sub_tit">
+<div class="tit">케어셀라 하이드레이션<br/>
+딥 에멀젼 120ml</div>
+</div>
+<div class="txt">
+<p>모든 피부에 건조함으로 균형을 잃은 피부 위에서 사르르 스며드는 부드러운 발림성으로 피부결을 부드럽고, 윤기있게 정돈해 주며 고보습 성분으로 물광 피부로 만들어 줍니다. 또한 피부의 보습 장벽을 위해 새로운 성분이 피부 깊숙이 수분 장벽을 유지하는데 도움을 드립니다.</p>
+</div>
+<a class="button2 btnFade btnLightGray" href="https://vcshop.gcoop.com/kr/display?cate=6&amp;itemNo=5679" rel="noopener" target="_blank">자세히 보기</a></div>
+</div>
+</div>
+
+<div class="contents_imgR"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/HYDRATION/5ea/09.png"/></div>
+</div>
+
+<div class="main_content01 pt05">
+<div class="contents_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/HYDRATION/5ea/10.png"/></div>
+<div class="point_txt">
+<div class="txt_group">
+<div class="num">
+<div class="num01">05</div>
+</div>
+<div class="contents_txt">
+<div class="sub_tit">
+<div class="tit">케어셀라 하이드레이션<br/>
+아쿠아크림 100ml</div>
+</div>
+<div class="txt">
+<p>모든 피부에 각질은 잠재우고 피부결을 매끄럽게 해주는 고수분 진정 크림으로 SkinSmoothBomb 성분이 피부 깊숙이 수분 장벽을 유지하여 24시간 지속되는 피부의 유수분 밸런스 케어 가능합니다.</p>
+</div>
+<a class="button1 btnFade btnLightGray" href="https://vcshop.gcoop.com/kr/display?cate=6&amp;itemNo=5675" rel="noopener" target="_blank">자세히 보기</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="Product_Title mt_200">
+<p class="ProductName pos_r font_NMr p0 lh_12"><i>CARECELLA</i></p>
+<p class="font_NMeb p0 lh_12">HYDRATION</p>
+<p class="p5 font_NGB color_dark mt_04em">제품 사용 방법</p>
+<p class="p1 font_NMr mt_04em">HOW TO USE</p>
+</div>
+<div class="HowtoUse">
+<div class="HowtoUse_contents_group01">
+<div class="HowtoUse_content01"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/Carecella_hydration_basic_set/step01.png"/>
+<div class="HowtoUse_c01_txt">
+<p class="product_tit">하이드레이션 폼 클렌저</p>
+<p>아침, 저녁 세안 시 적당량을 취해<br/>
+클렌징합니다.</p>
+</div>
+</div>
+
+<div class="HowtoUse_content02"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/Carecella_hydration_basic_set/step02.png"/>
+<div class="HowtoUse_c02_txt">
+<p class="product_tit">하이드레이션 밸런스 토너</p>
+<p>세안 후 적당량을 취해 얼굴 전체에<br/>
+고르게 펴 바릅니다.</p>
+</div>
+</div>
+</div>
+
+<div class="HowtoUse_contents_group01 pt05">
+<div class="HowtoUse_content02"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/Carecella_hydration_basic_set/step03.png"/>
+<div class="HowtoUse_c02_txt">
+<p class="product_tit">하이드레이션 인텐시브 세럼</p>
+<p>볼과 이마, 턱에 나눠 놓은 후<br/>
+얼굴 안쪽에서 바깥쪽으로 고르게<br/>
+펴 바르면서 흡수시켜 줍니다.</p>
+</div>
+</div>
+
+<div class="HowtoUse_content01"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/Carecella_hydration_basic_set/step04.png"/>
+<div class="HowtoUse_c01_txt">
+<p class="product_tit">하이드레이션 딥 에멀젼</p>
+<p>세럼 다음 단계에서 볼과 이마, 턱에<br/>
+나눠 놓은 후 부드럽게 작은 원을<br/>
+그리며 펴 바릅니다.</p>
+</div>
+</div>
+</div>
+
+<div class="HowtoUse_contents_group01 pt05">
+<div class="HowtoUse_content02"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/Carecella_hydration_basic_set/step05.png"/>
+<div class="HowtoUse_c02_txt">
+<p class="product_tit">하이드레이션 아쿠아 크림</p>
+<p>기초 손질 마지막 단계에서 얼굴 전체에<br/>
+고르게 펴 바릅니다.</p>
+</div>
+</div>
+</div>
+</div>
+
+<section class="Brand_Grid pd_2em bdr_10 mt_150"><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/dermatest_img.jpg"/>
+<div>
+<p class="p3 color_dark mt_15 fw_600">독일 피부과학연구소 더마테스트(dermatest) 엑셀런트 획득</p>
+<p class="p2 mt_04em">세계 최고 독일 피부과학연구소 더마테스트에 24시간, 48시간, 72시간 인체 피부 적용 실험을 의뢰 “피부자극없음”인 Excellent를 획득하였습니다.</p>
+</div>
+</section>
+
+<section class="Brand_Grid pd_2em mt_30 bdr_10"><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/new_package/brand_story/brand_carecella_img.png"/>
+<div><img class="logo_img" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/new_package/brand_story/brand_carecella_logo.png"/>
+<p class="p2 color_dark mt_30"><span class="font_NGB">케어셀라는 ‘낫게하다’를 의미하는 Care와 라틴어로 세포를 의미하는 Cella의 합성어로<br class="ybr"/>
+피부 본연의 아름다움을 찾아주는 시작점을 뜻합니다.</span></p>
+<p class="p2 mt_04em">자연에서 찾은 식물성 원료를 사용하여 각 피부에 맞는 제품을 개발하고 전문적인 케어 가이드를 제안하는 홈 뷰티 화장품 브랜드입니다.</p>
+</div>
+</section>
+
+<div class="mt_150"><img class="mWidth_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/certifications_icon.jpg"/>
+<p class="p5 font_NGB mt_04em color_dark">각종 인증 사항</p>
+<p class="p2 font_NMr mt_04em">CERTIFICATIONS</p>
+</div>
+
+<section class="ta_l pb_80 mt_50">
+<div class="certifi_grid pd_2em bdr_10"><img alt="비코프인증" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/certifi_B_corp.png"/>
+<div class="_txtBox">
+<p class="p3 font_NGB color_dark">비코프인증 획득!</p>
+<p class="p2 font_NGB color_dark mt_08em"><span class="pos_r g_underline">비코프인증(B-Corp Certified)</span>이란?</p>
+<p class="p2 mt_04em">B-Corp은 비즈니스를 통해 사회 환경적 문제를 해결하고 사회에 긍정적인 영향을 끼치는 기업을 확대하기 위해서 2007년 BLab (미국비영리 조직)이 만든 글로벌 사회적 기업 인증 제도입니다.</p>
+</div>
+</div>
+<div class="certifi_grid pd_2em bdr_10 mt_30"><img alt="국제 화장품 규격(Cosmetics GMP)ISO 22716 인증" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/ISO_22716.png"/>
+<div class="_txtBox">
+<p class="p3 font_NGB color_dark">국제 화장품 규격(Cosmetics GMP) ISO 22716 인증 획득!</p>
+<p class="p2 font_NGB color_dark mt_08em"><span class="pos_r g_underline">ISO 22716</span>이란?</p>
+<p class="p2 mt_04em">국제 화장품 규격 ISO 22716은 2007년 11월 15일 공표된 Cosmetics GMP (Guidelines on Good Manufacturing)입니다. ISO 22716에서는 화장품 기업의 제조시설 기준(GMP)뿐만 아니라, 화장품 품질시스템 실행 및 유지 경쟁력이 매우 중요한 평가 요소가 됩니다.</p>
+</div>
+</div>
+<div class="certifi_grid pd_2em bdr_10 mt_30"><img alt="CGMP(우수화장품 제조 및 품질관리 기준) 인증" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/CGMP.png"/>
+<div class="_txtBox">
+<p class="p3 font_NGB color_dark">CGMP(우수화장품 제조 및 품질관리 기준) 인증 획득!</p>
+<p class="p2 font_NGB color_dark mt_08em"><span class="pos_r g_underline">CGMP 인증</span>이란?</p>
+<p class="p2 mt_04em">CGMP 인증은 화장품 제조공장의 구조와 설비, 조직과 원료구매로부터 제조, 포장, 보관, 출하에 이르기까지 모든 단계를 표준화된 기준에 따라 체계적으로 관리하여 제품의 품질보증을 달성하기 위한 규격으로 이를 통해 우수 화장품을 제조, 판매합니다.</p>
+</div>
+</div>
+</section>
+</div>
+<div style="text-align:center;">
+<a href="#" rel="noopener" target="_blank"><img decoding="async" loading="lazy" src="https://vcshop.gcoop.com/images/icon_edu_materials.png" style="width:220px;"/></a>
+</div>
+</div></div></div></div></div></div></body></html>

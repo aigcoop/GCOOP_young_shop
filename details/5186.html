@@ -1,0 +1,614 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><base target="_blank"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap"><link rel="stylesheet" href="https://vcshop.gcoop.com/layouts/shopmobile/css/common.css"><link rel="stylesheet" href="https://vcshop.gcoop.com/layouts/shopmobile/css/sub.css"><style>
+                    /* 제품 상세정보 ~ 배송/교환/반품 안내 텍스트 크기 조정 */
+                    .pdt-detail-view > div > div > h2 {font-size:1rem !important;}
+                    .pdt-detail-view > div, .product-tab-box > div > div, .product-tab-box > div > div > dl > dd, .product-tab-box > div > div > dl > dt, .product-tab-box > div > div > ul > li  {font-size:.8rem;}
+                    .product_info-table {display:relative;}
+                    .product_info-table > ul > li {width:100% !important;}
+                    .product_info-table > ul > li > div {font-size:.8rem;}
+                    .popup_wrap .popup_container{position:absolute;left:50%;top:50%;width:100%;max-height:calc(100% - 50px);background-color:#fff;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+                    /* 제품상세 , 상품정보고시 , 배송 교환 반품 안내 */
+                    .product-tab-box{position:relative;overflow:hidden}
+                    .product-tab-box:after{display:block;content:"";position:absolute;right:0;top:0;z-index:10;width:10px;height:17px;background-color:#fff}
+                    .product-tab-swiper{padding:10px;border-bottom:1px solid #d0d0d0;}
+                    .product-tab-swiper .swiper-slide{width:33% !important; height:40px; line-height:40px; margin-right:0 !important; background:#eee; border-right:1px solid #fff;}
+                    .product-tab-swiper .swiper-slide a{display:block;position:relative; color:#262626; text-align:center; font-size:1em}
+                    .product-tab-swiper .swiper-slide:last-child a{font-size:0.5em}
+                    .product-tab-swiper .swiper-slide .on:after{display:block;content:"";position:absolute;left:0;bottom:-1px;width:100%;height:4px;background-color:#f35656}
+
+                    .product_detail img{width:100%}
+                    .product_info-table{border-bottom:1px solid #ccc}
+                    .product_info-table li{font-size:13px}
+                    .product_info-table li>div:first-child{width:112px;padding:6px 9px}
+                    .product_info-table li>div:last-child{padding:7px 12px;word-break:break-all}
+                    .product_info-table .indent{padding-left:12px}
+
+                    .product_info-table{border:1px solid #ccc}
+                    .product_info-table li{display:table;table-layout:fixed;width:100%;border-bottom:1px solid #dedede;background-color:#f5f5f5;font-weight:500;color:#333}
+                    .product_info-table li:last-child{border-bottom:0}
+                    .product_info-table li>div:first-child{display:table-cell}
+                    .product_info-table li>div:last-child{display:table-cell;background-color:#fff;vertical-align:middle}
+                    iframe{width:100%;height:100%;}
+                </style><style>html,body{margin:0;padding:0;background:#fff;overflow:hidden}#wrap,#view-box,.outer,.view-detail-box,.tab-detail-box{margin:0!important;padding:0!important;border:0!important;width:100%!important;min-height:0!important}.tab-view-box{display:block!important}img{max-width:100%;height:auto}.btn-expand,.btn-expand+br{display:none!important}iframe.yt{display:block;width:100%!important;aspect-ratio:16/9;height:auto!important;border:0;margin:10px 0}</style></head><body id="body"><div id="wrap"><div id="view-box"><div class="outer"><div class="view-detail-box"><div class="tab-detail-box"><div class="tab-view-box on">
+<div>
+
+<a class="btn-expand btn-expand2" href="https://vcshop.gcoop.com/Imgpop?seq_pd=5186" rel="noopener" target="_blank" xxtarget="_blank">
+<i class="fal fa-search-plus"></i>
+
+</a>
+</div>
+<br/>
+
+<div align="center" class="product_detail">
+<img alt="제품 상세 공지(탑) - 온라인 가품 유통 주의 안내" decoding="async" loading="lazy" src="https://cdn.gcoopm.com/shop/storage/shop_image/V3ue8ESIsAzJJqp54HLFdojrz8YFQt9LzUXZT0Y9.jpg"/>
+</div>
+<div align="center">
+</div>
+<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-myeongjo.css" rel="stylesheet"/>
+<style type="text/css">@font-face {font-family:'NEXON Lv2 Gothic Light';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff') format('woff');font-weight:normal;font-style:normal;}
+            @font-face {font-family:'NEXON Lv2 Gothic';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');font-weight:normal;font-style:normal;}
+            .font_NMr {font-family:'NanumMyeongjo' !important;}
+            .font_NMb {font-family:'NanumMyeongjoBold' !important;}
+            .font_NMeb {font-family:'NanumMyeongjoExtraBold' !important;}
+            .font_Noto {font-family:'Noto Sans KR';}
+            .product_detail_wrap * {box-sizing:border-box;word-break:keep-all;word-wrap:break-word;}
+            .product_detail_wrap ul, ol, li, dl, dt, dd, p, div, span, section, i, form, fieldset, input, table, tr, th, td, button, textarea, br {margin:0;padding:0;}
+            .product_detail_wrap i {font-style:normal;}
+            .product_detail_wrap ul, ol, li, dl, dt, dd {list-style:none;}
+            .product_detail_wrap img {width:auto;max-width:100%;margin:0 auto;}
+            .product_detail_wrap {font-family:'NEXON Lv2 Gothic', sans-serif;width:100%;max-width:800px !important;margin:0 auto;font-size:12px;font-weight:300;letter-spacing:-0.5px;text-align:center;color:#424242;line-height:1.4;}
+
+            /* 공통 */
+            /* 폰트 스타일 */
+            .product_detail_wrap p {transform:rotate(0.04deg)}
+            .product_detail_wrap .p0 {font-size:1.125em;}
+            .product_detail_wrap .p1 {font-size:1.5em;}
+            .product_detail_wrap .ip1 {font-size:1.5em;}
+            .product_detail_wrap .ip2 {font-size:1.75em;}
+            .product_detail_wrap .p3 {font-size:2em;}
+            .product_detail_wrap .p4 {font-size:3em;}
+            .product_detail_wrap .ip4 {font-size:3em;}
+            .product_detail_wrap .ip5 {font-size:6em;}
+            .product_detail_wrap .fw_600 {font-weight:600;}
+            .product_detail_wrap .fw_700 {font-weight:700;}
+            .product_detail_wrap .lh_10 {line-height:1;}
+            .product_detail_wrap .lh_12 {line-height:1.2;}
+            .product_detail_wrap .tl {text-align:left;}
+
+            /* 칼라 스타일 */
+            .product_detail_wrap .color_white {color:#fff;}
+            .product_detail_wrap .color_dark {color:#121212;}
+            .product_detail_wrap .color_gray {color:#8f96a1;}
+            .product_detail_wrap .color_lightbrown {color:#d6a965;}
+            .product_detail_wrap .color_brown {color:#b56a3f;}
+            .product_detail_wrap .color_darkbrown {color:#4d3a32;}
+            .product_detail_wrap .color_pointbrown {color:#785039;}
+            .product_detail_wrap .bg_gray {background-color:#f9f9f9;}
+            .product_detail_wrap .bg_darkbrown {background-color:#382f2c;}
+
+            /* 간격 스타일 */
+            .product_detail_wrap .mg_auto {margin:0 auto;}
+            .product_detail_wrap .mt-05em {margin-top:-0.5em;}
+            .product_detail_wrap .mt_03em {margin-top:0.3em;}
+            .product_detail_wrap .mt_04em {margin-top:0.4em;}
+            .product_detail_wrap .mt_08em {margin-top:0.8em;}
+            .product_detail_wrap .mt_30 {margin-top:30px;}
+            .product_detail_wrap .mt_50 {margin-top:50px;}
+            .product_detail_wrap .mt_70 {margin-top:70px;}
+            .product_detail_wrap .mt_100 {margin-top:100px;}
+            .product_detail_wrap .mt_150 {margin-top:150px;}
+            .product_detail_wrap .pd_2em {padding:2em;}
+            .product_detail_wrap .plrb_2em {padding: 0 2em 2em;}
+            .product_detail_wrap .pb_80 {padding-bottom:80px;}
+            .product_detail_wrap .pb_100 {padding-bottom:100px;}
+
+            /* GRID · FLEX 스타일 */
+            .product_detail_wrap .grid_2step {display:grid;grid-template-columns:repeat(2, 48%);justify-content:space-between;}
+            .product_detail_wrap .grid_3step {display:grid;grid-template-columns:repeat(3, 30%);justify-content:space-between;}
+            .product_detail_wrap .grid_txtList {display:grid;grid-template-columns:1.8em 1fr;align-items:start;gap:1em 0.5em;text-align:left;}
+            .product_detail_wrap .grid_rg36 {row-gap:29px;}
+            .product_detail_wrap .grid_rg45 {row-gap:36px;}
+            .product_detail_wrap .grid_rg60 {row-gap:48px;}
+            .product_detail_wrap .flex_colum {display:flex;flex-direction:column;justify-content:center;}
+            .product_detail_wrap .flex_center {display:flex;align-items:center;}
+
+            /* 기타 스타일 */
+            .product_detail_wrap .w65 {width:65%;margin-left:17.5%;}
+            .product_detail_wrap .w75 {width:75%;margin-left:12.5%;}
+            .product_detail_wrap .w80 {width:80%;margin-left:10%;}
+            .product_detail_wrap .w90 {width:90%;margin-left:5%;}
+            .product_detail_wrap .wMax {width:max-content;}
+            .product_detail_wrap .number_roundbox {display:inline-block;padding:0.5em 0.684em 0.4em;border-radius:150px;background-color:#382f2c;}
+            .product_detail_wrap .bdr_10 {border-radius:10px;overflow:hidden;}
+            .product_detail_wrap .bdr_b10 {border-radius:0 0 10px 10px;overflow:hidden;}
+            .product_detail_wrap .ptr {position:relative;}
+            .product_detail_wrap .nbr {display:block;}
+            .product_detail_wrap .mWidth_10 {max-width:10% !important;}
+            .product_detail_wrap .mWidth_50 {max-width:50% !important;}
+
+            /* 키이미지 */
+            .product_keyimg .key_txtbox {position:absolute;top:136px;}
+
+            /* 타이틀 */
+            .product_title {margin:150px 0 50px;}
+            .product_title img {position:absolute;top:0;left:50%;transform:translateX(-50%);z-index:-1;}
+            .product_title .product_name {display:inline-block;font-size:0.75em;}
+            .product_title .product_name i {background-color:#fff;padding:0 1em;}
+            .product_title .product_name span {font-family:'NanumMyeongjoExtraBold' !important;}
+
+            /* 핵심 6가지 */
+            .main_point {position:absolute;width:90%;top:80px;left:50%;transform:translateX(-50%);}
+            .main_point li {border-top:1px solid #382f2c;}
+            .main_point .num_box {display:inline-block;padding:20px 26px;}
+            .dashed_line {width:0;border-left:1px dashed #382f2c;height:70px;margin:45px auto 50px;}
+
+            /* 제품특징 01 */
+            .ge_grid {position:absolute;width:90%;display:grid;grid-template-columns:3.7037% 1fr 10.4938% 1fr 10.4938% 1fr 10.4938%;justify-content:space-between;align-items:center;}
+            .ge_grid img {max-width:51% !important;}
+            .ge_grid_top {top:50%;left:50%;transform:translate(-50%, -50%);}
+            .ge_grid_bottom {bottom:19%;left:50%;transform:translateX(-50%);}
+            /* 제품특징 02 */
+            .bio_ge p {position:absolute;width:28%;height:27.3418%;color:#fff;}
+            .bio_ge p span {padding:0 1em;}
+            .bio_ge p:nth-of-type(1) {top:0;left:4.6667%;}
+            .bio_ge p:nth-of-type(2) {top:50%;transform:translateY(-50%);left:0;}
+            .bio_ge p:nth-of-type(3) {bottom:0;left:4.6667%;}
+            .bio_ge p:nth-of-type(4) {top:0;right:4.6667%;}
+            .bio_ge p:nth-of-type(5) {top:50%;transform:translateY(-50%);right:0;}
+            .bio_ge p:nth-of-type(6) {bottom:0;right:4.6667%;}
+            /* 제품특징 03 */
+            .ge_cont p {position:absolute;color:#e5d6cd;border:2px dotted #e5d6cd;border-radius:200px;width:21.1111%;height:21.8391%;padding:0.5em 0.5em 0;}
+            .ge_cont p:nth-of-type(1) {top:15%;left:20%;transform:translateX(-50%);}
+            .ge_cont p:nth-of-type(2) {top:8%;left:50%;transform:translateX(-50%);}
+            .ge_cont p:nth-of-type(3) {top:15%;right:20%;transform:translateX(50%);}
+            .ge_stick {padding:10px 0 !important;}
+            .ge_stick::after {content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:35%;height:100%;border-left:1px dotted #382f2c;border-right:1px dotted #382f2c;}
+            /* 제품특징 04 */
+            .research_inst li {min-height:221px;padding:33px 0 !important;}
+            .research_inst img {max-width:52% !important;}
+            /* 제품특징 06 */
+            .tasting_note {border:1px dashed #785039;border-radius:200px;padding:60px 0;}
+            .tasting_note .tit_box {position:absolute;top:-0.7em;left:50%;transform:translateX(-50%);padding:0 0.8em;background-color:#f9f9f9;}
+            .tasting_note .left_txt {position:absolute;top:50%;left:0;transform:translate(-100%, -45%);padding-right:0.3em;}
+            .tasting_note .right_txt {position:absolute;top:50%;right:0;transform:translate(100%, -45%);padding-left:0.3em}
+
+            /* 브랜드 스토리 */
+            .brand_grid {display:grid;grid-template-columns:40% 56%;justify-content:space-between;align-items:start;border:#e1e1e1 solid 1px;text-align:left;}
+            .brand_grid .logo_img {max-width:40% !important;}
+
+            /* 각종인증사항 */
+            .certifi_grid {display:grid;grid-template-columns:15% 82%;justify-content:space-between;align-items:start;border:#e1e1e1 solid 1px;}
+            .certifi_grid .txt_line {position:relative;}
+            .certifi_grid .txt_line:after {content:"";width:100%;position:absolute;bottom:-1px;left:0;border-top:1px solid #e1e1e1;}
+
+            @media all and (max-width:799px) {
+                .product_detail_wrap {font-size:13px;}
+                .product_detail_wrap .ip1 {font-size:2vw;}
+                .product_detail_wrap .ip2 {font-size:3.1111vw;}
+                .product_detail_wrap .ip4 {font-size:5.3333vw;}
+                .product_detail_wrap .ip5 {font-size:8vw;}
+                .product_detail_wrap .mt_30 {margin-top:2.5vw;}
+                .product_detail_wrap .mt_50 {margin-top:4.1667vw;}
+                .product_detail_wrap .mt_70 {margin-top:5.8333vw;}
+                .product_detail_wrap .mt_100 {margin-top:8.3333vw;}
+                .product_detail_wrap .mt_150 {margin-top:12.5vw;}
+                .product_detail_wrap .pb_80 {padding-bottom:6.6667vw;}
+                .product_detail_wrap .pb_100 {padding-bottom:8.3333vw;}
+                .product_detail_wrap .grid_rg36 {row-gap:3.2222vw;}
+                .product_detail_wrap .grid_rg45 {row-gap:4vw;}
+                .product_detail_wrap .grid_rg60 {row-gap:5.3333vw;}
+                .product_detail_wrap .bdr_10 {border-radius:0.8333vw;}
+                .product_detail_wrap .bdr_b10 {border-radius:0 0 0.8333vw 0.8333vw;}
+                .product_detail_wrap .nbr {display:none;}
+                .product_keyimg .key_txtbox {top:17vw;}
+                .product_title {margin:12.5vw 0 4.1667vw;}
+                .main_point {top:10vw;}
+                .main_point .num_box {padding:1.6667vw 2.1667vw;}
+                .dashed_line {height:6vw;margin:3.75vw auto 4.1667vw;}
+                .ge_stick {padding:0.8333vw 0 !important;}
+                .research_inst li {min-height:24.5556vw;padding:3.6667vw 0 !important;}
+                .tasting_note {padding:5vw 0;}
+            }
+
+            @media all and (max-width:720px) {
+                .product_detail_wrap {font-size:12px;}
+            }
+
+            @media all and (max-width:640px) {
+                .product_detail_wrap {font-size:11px;}
+            }
+
+            @media all and (max-width:560px) {
+                .product_detail_wrap {font-size:10px;}
+            }
+
+            @media all and (max-width:510px) {
+                .brand_grid {grid-template-columns:1fr;row-gap:4.1667vw;text-align:center;}
+            }
+
+            @media all and (max-width:480px) {
+                .product_detail_wrap {font-size:9px;}
+            }
+
+            @media all and (max-width:400px) {
+                .product_detail_wrap {font-size:8px;}
+            }
+
+            @media all and (max-width:320px) {
+                .product_detail_wrap {font-size:7px;}
+            }
+
+            @media all and (max-width:280px) {
+                .product_detail_wrap {font-size:6px;}
+            }
+</style>
+<div class="product_detail_wrap">
+<section class="product_keyimg ptr">
+<div class="key_txtbox w90">
+<p class="ip5 fw_700 color_dark lh_12">지쿱카페 게르마늄<br/>
+블랙 커피</p>
+<p class="ip2 font_NMr mt_03em">GCOOP CAFE GERMANIUM BLACK COFFEE</p>
+</div>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_keyimg_mobile.jpg"/>
+<div class="color_darkbrown">
+<p class="p1">세계 최초 유기 게르마늄 (바이오 게르마늄) 커피</p>
+<p class="p3 fw_600 mt_03em">수용성 유기 게르마늄 고함량 “50ug” 함유<br/>
+게르마늄 영지버섯 커피</p>
+</div>
+</section>
+<div class="dashed_line"> </div>
+
+<section class="ptr">
+<div class="main_point">
+<p class="ip4 color_dark">지쿱카페 게르마늄 블랙 커피<br/>
+<span class="fw_600">핵심 6가지</span></p>
+<ul class="grid_3step grid_rg60 mt_50">
+<li>
+<p class="num_box p1 font_NMb color_white bg_darkbrown lh_10">1</p>
+<p class="ip2 fw_600 mt_08em">세계 최초 유기 게르마늄<br/>
+	(바이오 게르마늄 커피)</p>
+</li>
+<li>
+<p class="num_box p1 font_NMb color_white bg_darkbrown lh_10">2</p>
+<p class="ip2 fw_600 mt_08em">수용성 영지버섯<br/>
+	유기 게르마늄 커피</p>
+</li>
+<li>
+<p class="num_box p1 font_NMb color_white bg_darkbrown lh_10">3</p>
+<p class="ip2 fw_600 mt_08em">영지버섯 게르마늄 50ug,<br/>
+	폴리페놀 230mg,<br/>
+	베타글루칸 730mg</p>
+</li>
+<li>
+<p class="num_box p1 font_NMb color_white bg_darkbrown lh_10">4</p>
+<p class="ip2 fw_600 mt_08em">저온 로스팅 공법 사용</p>
+</li>
+<li>
+<p class="num_box p1 font_NMb color_white bg_darkbrown lh_10">5</p>
+<p class="ip2 fw_600 mt_08em">네슬레 커피 사용</p>
+</li>
+<li>
+<p class="num_box p1 font_NMb color_white bg_darkbrown lh_10">6</p>
+<p class="ip2 fw_600 mt_08em">첨가물 무첨가</p>
+</li>
+</ul>
+</div>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_01_mobile.jpg"/></section>
+
+<div class="product_title">
+<div class="ptr"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/product_name_line.jpg"/>
+<p class="product_name font_NMr"><i>GCOOP CAFE</i><br/>
+<span>GERMANIUM BLACK COFFEE</span></p>
+</div>
+<p class="p4 fw_600 mt_04em color_dark">제품 특징</p>
+<p class="p0 font_NMr mt_03em">KEY POINT</p>
+</div>
+
+<section class="_KeyPoint_01">
+<div class="p4 font_NMr color_white lh_10 number_roundbox">1</div>
+<p class="p4 fw_600 color_dark mt_30">기적의 원소 게르마늄</p>
+<p class="p1 mt_08em">영지버섯에서 추출한 산소 도우미 유기 게르마늄(바이오 게르마늄)</p>
+<img class="mt_50" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_02_mobile.jpg"/>
+<div class="w90">
+<p class="p4 fw_600 color_dark mt-05em">게르마늄이란?</p>
+<p class="p1 mt_08em">게르마늄에는 무기 게르마늄, 유기 게르마늄이 있는데,<br/>
+무기 게르마늄은 주로 목걸이나 팔찌 등으로 사용됩니다.<br/>
+먹을 수 있는 유기게르마늄은 산삼이나 영지버섯 등에 아주 미량 함유된 성분으로,<br class="nbr"/>
+면역력 강화와 항암 효과에 좋은 성분이 포함돼 체내에 불필요한 독소, 병원체, 이물질 등을<br class="nbr"/>
+대소변 또는 피부 등으로 배출시켜 신진대사를 왕성하게 하고 활력을 증대시키는<br class="nbr"/>
+효과가 있는 것으로 알려져 있습니다.</p>
+<div class="bdr_10 mt_50 ptr">
+<ul class="ge_grid ge_grid_top">
+<li> </li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_03_01.png"/>
+<p class="p0 fw_600 color_lightbrown mt_03em lh_12">산소</p>
+</li>
+<li> </li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_03_02.png"/>
+<p class="p0 fw_600 color_brown mt_03em lh_12">세포</p>
+</li>
+<li> </li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_03_03.png"/>
+<p class="p0 fw_600 color_darkbrown mt_03em lh_12">활성산소<br/>
+	독소·노폐물</p>
+</li>
+<li> </li>
+</ul>
+<ul class="ge_grid ge_grid_bottom">
+<li> </li>
+<li> </li>
+<li class="p0 fw_600 color_lightbrown">공급</li>
+<li> </li>
+<li class="p0 fw_600 color_brown">공급</li>
+<li> </li>
+<li class="p0 fw_600 color_darkbrown">배출</li>
+</ul>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_03_mobile.jpg"/></div>
+<p class="p0 color_gray mt_30">* 원료적 특성에 한함</p>
+</div>
+</section>
+
+<section class="_KeyPoint_02 w90 mt_100">
+<div class="p4 font_NMr color_white lh_10 number_roundbox">2</div>
+<p class="p4 fw_600 color_dark mt_30">수용성 유기 게르마늄<br/>
+(바이오 게르마늄) 함유</p>
+<p class="p1 mt_08em">미생물 생합성 특허공법으로 개발되어<br/>
+안전하고 생체친화력이 뛰어난 유기 게르마늄</p>
+<div class="bio_ge mt_50 ptr">
+<p class="p0 fw_600 flex_colum"><span>신체에 산소공급 증가</span></p>
+<p class="p0 fw_600 flex_colum"><span>해독작용</span></p>
+<p class="p0 fw_600 flex_colum"><span>항산화작용<br/>
+(유해산소제거)</span></p>
+<p class="p0 fw_600 flex_colum"><span>면역체계 증진</span></p>
+<p class="p0 fw_600 flex_colum"><span>NK 활성증대</span></p>
+<p class="p0 fw_600 flex_colum"><span>혈압조절</span></p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_04.jpg"/></div>
+<p class="p0 color_gray mt_30">* 원료적 특성에 한함</p>
+</section>
+
+<section class="_KeyPoint_03 w90 mt_100">
+<div class="p4 font_NMr color_white lh_10 number_roundbox">3</div>
+<p class="p4 fw_600 color_dark mt_30">영지버섯 게르마늄 50ug,<br/>
+베타글루칸 730mg,<br/>
+폴리페놀 230mg을 커피 한잔에!</p>
+<div class="ge_cont mt_50 ptr">
+<p class="ip1 fw_600 flex_colum">게르마늄<br/>
+50ug</p>
+<p class="ip1 fw_600 flex_colum">베타글루칸<br/>
+730mg</p>
+<p class="ip1 fw_600 flex_colum">폴리페놀<br/>
+230mg</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_05_mobile.jpg"/></div>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_06.jpg"/>
+<ul class="ge_stick grid_3step ptr">
+<li>
+<p class="p1 color_pointbrown fw_600">게르마늄 50ug</p>
+<p class="p0 mt_04em">산소공급, 해독,<br/>
+	면역증진, 혈압조절</p>
+</li>
+<li>
+<p class="p1 color_pointbrown fw_600">베타글루칸 730mg</p>
+<p class="p0 mt_04em">혈당수치 조절, 혈압조절,<br/>
+	면역증진, 항염</p>
+</li>
+<li>
+<p class="p1 color_pointbrown fw_600">폴리페놀 230mg</p>
+<p class="p0 mt_04em">혈당수치 조절, 혈압조절,<br/>
+	콜레스테롤 조절,<br/>
+	혈전예방, 노화방지</p>
+</li>
+</ul>
+</section>
+
+<section class="_KeyPoint_04 w90 mt_100">
+<div class="p4 font_NMr color_white lh_10 number_roundbox">4</div>
+<p class="p4 fw_600 color_dark mt_30">국내 외 국가 시험 연구 기관이<br/>
+성분 확인 검증</p>
+<p class="p1 mt_04em">(유기 게르마늄, 베타글루칸, 폴리페놀)</p>
+<ul class="research_inst grid_2step grid_rg36 mt_50">
+<li class="bdr_10 bg_gray flex_colum"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_07_01.jpg"/>
+<p class="p0 mt_08em">India , China SGS 시험연구소<br/>
+	유기 게르마늄(바이오 게르마늄)<br/>
+	함량 확인</p>
+</li>
+<li class="bdr_10 bg_gray flex_colum"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_07_02.jpg"/>
+<p class="p0 mt_08em">미국 BETA 연구소<br/>
+	유기 게르마늄 (바이오 게르마늄)<br/>
+	인증</p>
+</li>
+<li class="bdr_10 bg_gray flex_colum"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_07_03.jpg"/>
+<p class="p0 mt_08em">영지버섯<br/>
+	베타글루칸 함량 확인</p>
+</li>
+<li class="bdr_10 bg_gray flex_colum"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_07_04.jpg"/>
+<p class="p0 mt_08em">폴리페놀 함량 확인</p>
+</li>
+</ul>
+</section>
+
+<section class="_KeyPoint_05 w90 mt_100">
+<div class="p4 font_NMr color_white lh_10 number_roundbox">5</div>
+<p class="p4 fw_600 color_dark mt_30">저온 로스팅 공법 사용</p>
+<img class="bdr_10 mt_50" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_08.gif"/>
+<p class="p1 fw_600 color_pointbrown mt_30">“갓 내린 커피향 그대로”</p>
+<p class="p1 mt_04em">저온 로스팅 공법으로 원두를 미세하게 갈아 물이나 우유에 쉽게 녹도록 한 공법으로<br class="nbr"/>
+원두고유의 커피의 깊은 맛과 향을 선사합니다.</p>
+</section>
+
+<section class="_KeyPoint_06 w90 mt_100">
+<div class="p4 font_NMr color_white lh_10 number_roundbox">6</div>
+<p class="p4 fw_600 color_dark mt_30">네슬레 커피 사용</p>
+<div class="mt_50 bg_gray pb_100 bdr_b10"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_09_01.jpg"/>
+<p class="p1 mt_30">150년 전통의 커피 전문 업체로 지쿱 만의 원료를 공급받아,<br/>
+아라비카 커피와 로부스타 커피를 적절히 사용하여 커피의 풍미를<br/>
+최대한으로 끌어 올려주었습니다.</p>
+<img class="mt_50 mWidth_50" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_09_02.jpg"/>
+<p class="p3 fw_600 mt_03em">TASTING NOTE</p>
+<p class="p0">프로파일 / 로스팅 포인트</p>
+
+<div class="tasting_note w80 mt_70 ptr">
+<p class="tit_box p1 fw_600 color_pointbrown">Flavor (풍미, 맛)</p>
+<p class="p0 left_txt fw_600 color_pointbrown">Light</p>
+<p class="p0 right_txt fw_600 color_pointbrown">Dark</p>
+<ul class="w65 flex_center ptr">
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_off.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_off.jpg"/></li>
+</ul>
+</div>
+
+<div class="tasting_note w80 mt_70 ptr">
+<p class="tit_box p1 fw_600 color_pointbrown">Aroma (향)</p>
+<p class="p0 left_txt fw_600 color_pointbrown">1</p>
+<p class="p0 right_txt fw_600 color_pointbrown">8</p>
+<ul class="w65 flex_center ptr">
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_off.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_off.jpg"/></li>
+</ul>
+</div>
+
+<div class="tasting_note w80 mt_70 ptr">
+<p class="tit_box p1 fw_600 color_pointbrown">Acidity (신맛, 산성)</p>
+<p class="p0 left_txt fw_600 color_pointbrown">Soft</p>
+<p class="p0 right_txt fw_600 color_pointbrown">Strong</p>
+<ul class="w65 flex_center ptr">
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_on.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_off.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_off.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_off.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_off.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_bean_off.jpg"/></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="_KeyPoint_07 w90 mt_100">
+<div class="p4 font_NMr color_white lh_10 number_roundbox">7</div>
+<p class="p4 fw_600 color_dark mt_30">첨가물 無첨가</p>
+<ul class="grid_3step grid_rg45 mt_50">
+<li class="bdr_10 bg_gray"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_10_01.jpg"/>
+<p class="p3 fw_600 font_Noto">無</p>
+<p class="p0 mt_03em plrb_2em">이산화규소</p>
+</li>
+<li class="bdr_10 bg_gray"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_10_02.jpg"/>
+<p class="p3 fw_600 font_Noto">無</p>
+<p class="p0 mt_03em plrb_2em">스테아린산 마그네슘</p>
+</li>
+<li class="bdr_10 bg_gray"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_10_03.jpg"/>
+<p class="p3 fw_600 font_Noto">無</p>
+<p class="p0 mt_03em plrb_2em">HPMC<br/>
+	(히드록시프로필 메틸셀룰로스)</p>
+</li>
+<li class="bdr_10 bg_gray"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_10_04.jpg"/>
+<p class="p3 fw_600 font_Noto">無</p>
+<p class="p0 mt_03em plrb_2em">착색료</p>
+</li>
+<li class="bdr_10 bg_gray"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_10_05.jpg"/>
+<p class="p3 fw_600 font_Noto">無</p>
+<p class="p0 mt_03em plrb_2em">합성향료</p>
+</li>
+<li class="bdr_10 bg_gray"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_10_06.jpg"/>
+<p class="p3 fw_600 font_Noto">無</p>
+<p class="p0 mt_03em plrb_2em">설탕</p>
+</li>
+</ul>
+</section>
+
+<div class="product_title">
+<div class="ptr"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/product_name_line.jpg"/>
+<p class="product_name font_NMr"><i>GCOOP CAFE</i><br/>
+<span>GERMANIUM BLACK COFFEE</span></p>
+</div>
+<p class="p4 fw_600 mt_04em color_dark">이런 분들께 권해드립니다</p>
+<p class="p0 font_NMr mt_03em">RECOMMENDED TARGET</p>
+</div>
+
+<section class="w90 bg_gray pb_80 bdr_10"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_11_mobile.jpg"/>
+<div class="grid_txtList wMax mg_auto"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_01.png"/>
+<p class="p1">게르마늄 효과를 마시고 싶으신 분</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_01.png"/>
+<p class="p1">영지버섯 효과를 마시고 싶으신 분</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_01.png"/>
+<p class="p1">커피 한잔으로 건강 면역 증진을 원하시는 분</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_01.png"/>
+<p class="p1">건강 걱정 없이 커피를 마시고 싶으신 분</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_01.png"/>
+<p class="p1">평소에 블랙커피를 좋아 하시는 분</p>
+</div>
+</section>
+
+<div class="product_title">
+<div class="ptr"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/product_name_line.jpg"/>
+<p class="product_name font_NMr"><i>GCOOP CAFE</i><br/>
+<span>GERMANIUM BLACK COFFEE</span></p>
+</div>
+<p class="p4 fw_600 mt_04em color_dark">즐기는 최상의 방법</p>
+<p class="p0 font_NMr mt_03em">HOW TO DRINK</p>
+</div>
+
+<section class="w90">
+<div class="grid_2step grid_rg36">
+<div class="bdr_10 bg_gray"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_12_01.jpg"/>
+<p class="p0 plrb_2em">지쿱카페 게르마늄 블랙 커피 스틱 1개를<br class="nbr"/>
+커피잔에 넣으세요.</p>
+</div>
+<div class="bdr_10 bg_gray"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_12_02.jpg"/>
+<p class="p0 plrb_2em">뜨거운 물 80 ~ 100ml를 천천히 부어주세요.<br/>
+(취향에 따라 물의 양은 조절해 드세요)</p>
+</div>
+<div class="bdr_10 bg_gray"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_12_03.jpg"/>
+<p class="p0 plrb_2em">잘 저어주세요.</p>
+</div>
+<div class="bdr_10 bg_gray"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/germanium_black/germanium_black_img_12_04.jpg"/>
+<p class="p0 plrb_2em">신선한 커피 향과<br/>
+풍부한 커피맛을 음미해 보세요.</p>
+</div>
+</div>
+</section>
+
+<section class="brand_grid pd_2em bdr_10 mt_150"><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/new_package/brand_story/brand_cafe_img.png"/>
+<div><img class="logo_img" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/new_package/brand_story/brand_cafe_logo.png"/>
+<p class="p0 fw_600 color_dark mt_30">일상속에서 만나는 지쿱 안의 작은 카페인 지쿱카페는 부담 없이 즐길 수 있는 매력적인 커피 브랜드입니다.</p>
+<p class="p0 mt_04em">고품질의 원두를 엄선하여 자연 그대로의 신선하고 풍부한 커피향과 함께 언제 어디서나 쉽고 편리하게 즐길 수 있는 나만의 작은 카페입니다.</p>
+</div>
+</section>
+
+<div class="mt_100"><img class="mWidth_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/certifications_icon.jpg"/>
+<p class="p4 fw_600 mt_04em color_dark">각종 인증 사항</p>
+<p class="p0 font_NMr mt_03em">CERTIFICATIONS</p>
+</div>
+
+<section class="tl pb_80">
+<div class="certifi_grid pd_2em bdr_10 mt_50"><img alt="비코프인증" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/certifi_B_corp.png"/>
+<div class="_txtBox">
+<p class="p1 fw_600 color_dark">비코프인증 획득!</p>
+<p class="p0 fw_600mt_08em color_dark"><span class="txt_line">비코프인증(B-Corp Certified)</span>이란?</p>
+<p class="p0 mt_04em">B-Corp은 비즈니스를 통해 사회 환경적 문제를 해결하고 사회에 긍정적인 영향을 끼치는 기업을 확대하기 위해서 2007년 BLab (미국비영리 조직)이 만든 글로벌 사회적 기업 인증 제도입니다.</p>
+</div>
+</div>
+<div class="certifi_grid pd_2em bdr_10 mt_30"><img alt="가족친화우수기업 인증" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/certifi_family.png"/>
+<div class="_txtBox">
+<p class="p1 fw_600 color_dark">가족친화우수기업 인증 획득!</p>
+<p class="p0 mt_08em color_dark"><span class="txt_line">가족친화인증</span>이란?</p>
+<p class="p0 mt_04em">가족친화제도를 모범적으로 운영하는 기업 및 공공기관에 대하여 심사를 통해 인증을 부여하는 제도입니다. 가족친화인증 기업은 근로자가 일에 집중하도록 하여 기업 생산성과 경쟁력 강화하고 출산율 제고, 고용 안정 등으로 국가경제 발전에 기여할 뿐 아니라 가족친화경영 확산을 통한 근로자와 가족 구성원의 삶의 질을 향상시키는 바른 기업 문화를 확산 시킵니다.</p>
+</div>
+</div>
+</section>
+</div>
+<div style="text-align:center;">
+<a href="#" rel="noopener" target="_blank"><img decoding="async" loading="lazy" src="https://vcshop.gcoop.com/images/icon_edu_materials.png" style="width:220px;"/></a>
+</div>
+</div></div></div></div></div></div></body></html>

@@ -1,0 +1,848 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><base target="_blank"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap"><link rel="stylesheet" href="https://vcshop.gcoop.com/layouts/shopmobile/css/common.css"><link rel="stylesheet" href="https://vcshop.gcoop.com/layouts/shopmobile/css/sub.css"><style>
+                    /* 제품 상세정보 ~ 배송/교환/반품 안내 텍스트 크기 조정 */
+                    .pdt-detail-view > div > div > h2 {font-size:1rem !important;}
+                    .pdt-detail-view > div, .product-tab-box > div > div, .product-tab-box > div > div > dl > dd, .product-tab-box > div > div > dl > dt, .product-tab-box > div > div > ul > li  {font-size:.8rem;}
+                    .product_info-table {display:relative;}
+                    .product_info-table > ul > li {width:100% !important;}
+                    .product_info-table > ul > li > div {font-size:.8rem;}
+                    .popup_wrap .popup_container{position:absolute;left:50%;top:50%;width:100%;max-height:calc(100% - 50px);background-color:#fff;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+                    /* 제품상세 , 상품정보고시 , 배송 교환 반품 안내 */
+                    .product-tab-box{position:relative;overflow:hidden}
+                    .product-tab-box:after{display:block;content:"";position:absolute;right:0;top:0;z-index:10;width:10px;height:17px;background-color:#fff}
+                    .product-tab-swiper{padding:10px;border-bottom:1px solid #d0d0d0;}
+                    .product-tab-swiper .swiper-slide{width:33% !important; height:40px; line-height:40px; margin-right:0 !important; background:#eee; border-right:1px solid #fff;}
+                    .product-tab-swiper .swiper-slide a{display:block;position:relative; color:#262626; text-align:center; font-size:1em}
+                    .product-tab-swiper .swiper-slide:last-child a{font-size:0.5em}
+                    .product-tab-swiper .swiper-slide .on:after{display:block;content:"";position:absolute;left:0;bottom:-1px;width:100%;height:4px;background-color:#f35656}
+
+                    .product_detail img{width:100%}
+                    .product_info-table{border-bottom:1px solid #ccc}
+                    .product_info-table li{font-size:13px}
+                    .product_info-table li>div:first-child{width:112px;padding:6px 9px}
+                    .product_info-table li>div:last-child{padding:7px 12px;word-break:break-all}
+                    .product_info-table .indent{padding-left:12px}
+
+                    .product_info-table{border:1px solid #ccc}
+                    .product_info-table li{display:table;table-layout:fixed;width:100%;border-bottom:1px solid #dedede;background-color:#f5f5f5;font-weight:500;color:#333}
+                    .product_info-table li:last-child{border-bottom:0}
+                    .product_info-table li>div:first-child{display:table-cell}
+                    .product_info-table li>div:last-child{display:table-cell;background-color:#fff;vertical-align:middle}
+                    iframe{width:100%;height:100%;}
+                </style><style>html,body{margin:0;padding:0;background:#fff;overflow:hidden}#wrap,#view-box,.outer,.view-detail-box,.tab-detail-box{margin:0!important;padding:0!important;border:0!important;width:100%!important;min-height:0!important}.tab-view-box{display:block!important}img{max-width:100%;height:auto}.btn-expand,.btn-expand+br{display:none!important}iframe.yt{display:block;width:100%!important;aspect-ratio:16/9;height:auto!important;border:0;margin:10px 0}</style></head><body id="body"><div id="wrap"><div id="view-box"><div class="outer"><div class="view-detail-box"><div class="tab-detail-box"><div class="tab-view-box on">
+<div>
+
+<a class="btn-expand btn-expand2" href="https://vcshop.gcoop.com/Imgpop?seq_pd=5893" rel="noopener" target="_blank" xxtarget="_blank">
+<i class="fal fa-search-plus"></i>
+
+</a>
+</div>
+<br/>
+
+<div align="center" class="product_detail">
+<img alt="제품 상세 공지(탑) - 온라인 가품 유통 주의 안내" decoding="async" loading="lazy" src="https://cdn.gcoopm.com/shop/storage/shop_image/V3ue8ESIsAzJJqp54HLFdojrz8YFQt9LzUXZT0Y9.jpg"/>
+</div>
+<div align="center">
+</div>
+<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-myeongjo.css" rel="stylesheet"/>
+<link href="https://cdn.gcoop.me/storage/global_image/web_font/nexon_gothic.css" rel="stylesheet"/>
+<style type="text/css">/* 기본 */
+            .font_NMr {font-family:'NanumMyeongjo' !important;}
+            .font_NMb {font-family:'NanumMyeongjoBold' !important;}
+            .font_NMeb {font-family:'NanumMyeongjoExtraBold' !important;}
+            .font_NGL {font-family:'NEXON Lv2 Gothic Light' !important;}
+            .font_NGB {font-family:'NEXON Lv2 Gothic Bold' !important;}
+            .Product_DetailWrap * {box-sizing:border-box;word-break:keep-all;word-wrap:break-word;}
+            .Product_DetailWrap ul, ol, li, dl, dt, dd, p, div, span, section, i, form, fieldset, input, table, tr, th, td, button, textarea, br {margin:0;padding:0;}
+            .Product_DetailWrap i {font-style:normal;}
+            .Product_DetailWrap ul, ol, li, dl, dt, dd {list-style:none;}
+            .Product_DetailWrap img {width:auto;max-width:100%;margin:0 auto;}
+            .Product_DetailWrap {font-family:'NEXON Lv2 Gothic', sans-serif;width:100%;max-width:800px !important;font-weight:400;margin:0 auto;font-size:8px;text-rendering:optimizeSpeed;letter-spacing:-0.05em;-webkit-letter-spacing:-0.25px;text-align:center;color:#424242;line-height:1.4;padding-bottom:64px;}
+
+            /* FONT SIZE CSS */
+            .Product_DetailWrap p {transform:rotate(0.04deg);}
+            .Product_DetailWrap .p1 {font-size:2em;}/*16px, 18px*/
+            .Product_DetailWrap .p2 {font-size:2.6em;}/*24px*/
+            .Product_DetailWrap .p3 {font-size:3.4em;}/*32px*/
+            .Product_DetailWrap .p4 {font-size:5em;}/*48px*/
+            .Product_DetailWrap .p5 {font-size:6em;}/*62px*/
+            .Product_DetailWrap .p6 {font-size:7.4em;}/*94px*/
+            .Product_DetailWrap .p_sub {font-size:0.6em;vertical-align:baseline;}/*아래첨자*/
+            .Product_DetailWrap .p_sup {font-size:0.6em;vertical-align:text-top;}/*위첨자*/
+            .Product_DetailWrap .p_side {font-size:0.6em;}
+
+            /* FONT STYLE CSS */
+            .Product_DetailWrap .fw_600 {font-weight:600;}
+            .Product_DetailWrap .lh_04 {line-height:0.4;}
+            .Product_DetailWrap .lh_10 {line-height:1;}
+            .Product_DetailWrap .lh_12 {line-height:1.2;}
+            .Product_DetailWrap .ta_l {text-align:left;}
+            .Product_DetailWrap .ta_r {text-align:right;}
+            .Product_DetailWrap .t_up {text-transform:uppercase;}
+
+            /* FONT COLOR CSS */
+            .Product_DetailWrap .color_white {color:#fff;}
+            .Product_DetailWrap .color_black {color:#121212;}
+            .Product_DetailWrap .color_gray {color:#666666;}
+            .Product_DetailWrap .color_richblack {color:#071a1d;}
+            .Product_DetailWrap .color_skyblue {color:#6ab0d0;}
+            .Product_DetailWrap .color_tealblue {color:#006c99;}
+            .Product_DetailWrap .color_red {color:#ea3d3d;}
+            .Product_DetailWrap .color_rosewood {color:#724848;}
+            .Product_DetailWrap .color_coralred {color:#fd6d6d;}
+
+            /* BG COLOR CSS */
+            .Product_DetailWrap .bg_white {background-color:#fff;}
+            .Product_DetailWrap .bg_skywhite {background-color:#f5f5f5;}
+            .Product_DetailWrap .bg_rosewhite {background-color:#f9f2f2;}
+            .Product_DetailWrap .bg_red {background-color:#ea3d3d;}
+            .Product_DetailWrap .bg_darkgray {background-color:#424242;}
+            .Product_DetailWrap .bg_lightcoral {background-color:#ea5b5b;}
+            .Product_DetailWrap .bg_pinegreen {background-color:#107f64;}
+            .Product_DetailWrap .bg_ashbrown {background-color:#524747;}
+            .Product_DetailWrap .bg_dustyrose {background-color:#d9c0c0;}
+            .Product_DetailWrap .bg_palerose {background-color:#efdddd;}
+            .Product_DetailWrap .bg_linenpink {background-color:#f6eeee;}
+            .Product_DetailWrap .bg_coralred {background-color:#fd6d6d;}
+
+            /* MARGIN CSS */
+            .Product_DetailWrap .mt_02em {margin-top:0.2em;}
+            .Product_DetailWrap .mt_04em {margin-top:0.4em;}
+            .Product_DetailWrap .mt_15em {margin-top:1.5em;}
+            .Product_DetailWrap .mt_10 {margin-top:8px;}
+            .Product_DetailWrap .mt_20 {margin-top:16px;}
+            .Product_DetailWrap .mt_30 {margin-top:24px;}
+            .Product_DetailWrap .mt_40 {margin-top:32px;}
+            .Product_DetailWrap .mt_50 {margin-top:40px;}
+            .Product_DetailWrap .mt_70 {margin-top:56px;}
+            .Product_DetailWrap .mt_100 {margin-top:80px;}
+            .Product_DetailWrap .mt_150 {margin-top:120px;}
+
+            /* PADDING CSS */
+            .Product_DetailWrap .pd_40 {padding:32px;}
+            .Product_DetailWrap .pt_20 {padding-top:16px;}
+            .Product_DetailWrap .pt_40 {padding-top:32px;}
+            .Product_DetailWrap .pt_50 {padding-top:40px;}
+            .Product_DetailWrap .pt_60 {padding-top:48px;}
+            .Product_DetailWrap .pt_80 {padding-top:64px;}
+            .Product_DetailWrap .pb_20 {padding-bottom:16px;}
+            .Product_DetailWrap .pb_40 {padding-bottom:32px;}
+            .Product_DetailWrap .pb_50 {padding-bottom:40px;}
+            .Product_DetailWrap .pb_60 {padding-bottom:48px;}
+            .Product_DetailWrap .pb_80 {padding-bottom:64px;}
+            
+            /* GRID · FLEX 스타일 */
+            .Product_DetailWrap .grid_2step {display:grid;grid-template-columns:repeat(2, 49%);justify-content:space-between;}
+            .Product_DetailWrap .grid_3step {display:grid;grid-template-columns:repeat(3, 32%);justify-content:space-between;row-gap:3.5em;}
+            .Product_DetailWrap .grid_4step {display:grid;grid-template-columns:repeat(4, 24%);justify-content:space-between;row-gap:3.5em;}
+            .Product_DetailWrap .grid_textList {display:grid;grid-template-columns:0.8em auto;justify-content:center;align-items:start;gap:0.25em;}
+            .Product_DetailWrap .grid_bulletList {display:grid;grid-template-columns:2.5em auto;justify-content:center;align-items:start;gap:1.25em 1em;}
+            .Product_DetailWrap .grid_bulletList img {margin-top:0.2em;}
+            .Product_DetailWrap .flex_c {display:flex;align-items:center;}
+            .Product_DetailWrap .flex_auto {flex:auto;}
+            .Product_DetailWrap .flex_c_auto {flex:auto;display:flex;justify-content:center;align-items:center;}
+
+            /* TABLE STYLE */
+            .Product_DetailWrap table{width:100%;padding:0;border:0;border-spacing:0px;border-collapse:collapse;font-size:unset;}
+            .Product_DetailWrap .Table_Style1 th {background-color:#f3f3f3;border:1px solid #ccc;vertical-align:middle;padding:1.9em 0 1.7em;border-bottom:1px solid #ccc;color:#121212;font-weight:600;}
+            .Product_DetailWrap .Table_Style1 td {border:1px solid #ccc;padding:1.7em 0 1.5em;vertical-align:middle;}
+            .Product_DetailWrap .Table_Style1 tr td:nth-child(3) {border-left:2px solid #fd6d6d;border-right:2px solid #fd6d6d;color:#724848;}
+            .Product_DetailWrap .Table_Style1 tr:last-child td:nth-child(3) {border-bottom:2px solid #fd6d6d;}
+            .Product_DetailWrap .Table_Style1 tr th:nth-child(3) {border-left:2px solid #fd6d6d;border-right:2px solid #fd6d6d;border-top:2px solid #fd6d6d;}
+            .Product_DetailWrap .Table_Style2 th {background-color:#f9f2f2;border:1px solid #e0d0c3;vertical-align:middle;padding:1.9em 0 1.7em;border-bottom:1px solid #e1e1e1;color:#724848;}
+            .Product_DetailWrap .Table_Style2 td {border:1px solid #e0d0c3;padding:1.7em 0 1.5em;vertical-align:middle;}
+
+            /* 기타 스타일 */
+            .Product_DetailWrap .w84 {width:84%;margin-left:8%;}
+            .Product_DetailWrap .w86 {width:86%;margin-left:7%;}
+            .Product_DetailWrap .w90 {width:90%;margin-left:5%;}
+            .Product_DetailWrap .mgAuto {margin-left:auto;margin-right:auto;}
+            .Product_DetailWrap .pos_r {position:relative;}
+            .Product_DetailWrap .wMax {width:max-content;}
+            .Product_DetailWrap .wFit {width:fit-content;}
+            .Product_DetailWrap .bdr_10 {border-radius:0.8333em;overflow:hidden;}
+            .Product_DetailWrap .bdr_l_10 {border-radius:0.8333em 0 0 0.8333em;overflow:hidden;}
+            .Product_DetailWrap .bdr_r_10 {border-radius:0 0.8333em 0.8333em 0;overflow:hidden;}
+            .Product_DetailWrap .bdr_Line {border:1px solid #d9d9d9;border-radius:0.8333em;overflow:hidden;}
+            .Product_DetailWrap .Round_LineBar {border:0.1667em solid #171e7c;border-radius:200px;padding:1em 1.5em 0.7em;}
+            .Product_DetailWrap .Round_TitleBar {display:inline-block;position:absolute;border-radius:200px;padding:0.5em 1em 0.4em;top:0;left:50%;transform:translate(-50%, -50%);}
+            .Product_DetailWrap .SpanBox {padding:0.1em 0.15em 0.05em;}
+            .Product_DetailWrap .Text_Underline {text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:0.25em;}
+            .Product_DetailWrap .ybr {display:none;}
+            .Product_DetailWrap .nbr {display:block;}
+
+            /* 타이틀 */
+            .Point_Num {display:flex;align-items:center;width:max-content;margin-left:auto;margin-right:auto;}
+            .Point_Num p {padding:0.4em 0.7em 0.3em;}
+            .Point_Absolute {position:absolute;top:0;left:50%;transform:translate(-50%, -50%);}
+
+            /* 키이미지 */
+            .KeyImg .key_TextBox {position:absolute;top:11%;}
+
+            /* 제품특징 */
+            .Product_Feature li {border:1px solid #bebebe;display:flex;margin-top:1.2em;}
+            .Product_Feature li p {padding:0.5em 1em 0.4em;}
+            .Product_Feature li p:nth-child(1) {flex:0 1em;display:flex;align-items:center;background: #ea3d3d;border-right:1px solid #bebebe;}
+            .Product_Feature li p:nth-child(2) {flex:1 calc(100% - 1em);color:#121212;}
+            .OneDays p {position:absolute;width:100%;top:8%;}
+
+            /* 고식이섬유 함유 */
+            .Fiber {position:absolute;width:100%;bottom:20%;}
+
+            /* 동결건조 딸기 다이스 */
+            .Freeze_Drying {display:grid;grid-template-columns:42% auto 42%;justify-content:space-between;}
+
+            /* 섭취방법 */
+            .HowtoConsume {display:grid;grid-template-columns:29% 6.5% 29% 6.5% 29%;justify-content:space-between;}
+
+             /* 단백질, 왜 먹어야 할까요? */
+            .Protein {width:56%}
+            .Protein p {position:absolute;width:max-content;}
+            .Protein p:nth-child(1) {top:0;left:82.598%;transform:translateY(-30%) rotate(0.04deg);}
+            .Protein p:nth-child(2) {top:7.5%;left:77.2059%;} 
+            .Protein p:nth-child(3) {top:17%;right:0;transform:translateX(100%) rotate(0.04deg);}
+            .Protein p:nth-child(4) {top:34.8%;left:0;transform:translateX(-100%) rotate(0.04deg);}
+            .Protein p:nth-child(5) {top:67%;left:93.1373%;}
+            .Protein_Graph {display:grid;grid-template-columns:30% 24% 19% 14% 10%;justify-content:space-between;row-gap:0.8em;}
+            .Protein_Graph .Protein_BG {background:url(https://cdn3.gcooperp.com/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_bg_01.jpg) repeat left top;background-size:cover;}
+
+            /* 나이가 들수록 중요한 ‘단백질’ */
+            .Protein_Age {border:0.4167em solid #f5f5f5;border-radius:1.667em;}
+            .Protein_Age ul {display:grid;grid-template-columns:repeat(4, 19.2%);justify-content:space-between;}
+
+            /* 우리 몸 속 많은 역할을 하는 ‘단백질’ */
+            .Protein_Role {width:77%;}
+            .Protein_Role p {position:absolute;width:18.4%;}
+            .Protein_Role p:nth-child(1) {top:21.65%;left:0;}
+            .Protein_Role p:nth-child(2) {top:60.61%;left:0;}
+            .Protein_Role p:nth-child(3) {bottom:0;left:0;transform:translateY(100%) rotate(0.04deg);}
+            .Protein_Role p:nth-child(4) {top:21.65%;right:0;}
+            .Protein_Role p:nth-child(5) {top:60.61%;right:0;}
+            .Protein_Role p:nth-child(6) {bottom:0;right:0;transform:translateY(100%) rotate(0.04deg);}
+
+            /* 매일, 꾸준한 단백질 섭취 */
+            .Protein_Intake {display:grid;grid-template-columns:repeat(3, 29.9%);justify-content:start;column-gap:2.5%;}
+            .Protein_Intake li:nth-child(3) {transform:translateX(10%);}
+            .Protein_Intake li:nth-child(3):after {content:"";width:117%;height:110%;position:absolute;top:0;left:0;transform:translate(-8.5%, -6%);border:0.4167em solid #ea3d3d;border-radius:0.8333em;overflow:hidden;}
+            .Protein_Intake li {display:flex;flex-direction:column;}
+
+            /* 브랜드 스토리 */
+            .Brand_Grid {display:grid;grid-template-columns:40% 58%;justify-content:space-between;align-items:start;border:#d9d9d9 solid 1px;text-align:left;}
+            .Brand_Grid .logo_img {max-width:36% !important;margin-top:1em;}
+
+            @media all and (max-width:799px) {
+                .Product_DetailWrap .p_sup {vertical-align:unset;}
+                .Product_DetailWrap {padding-bottom:6.6667vw;}
+                .Product_DetailWrap .mt_10 {margin-top:0.8333vw;}
+                .Product_DetailWrap .mt_20 {margin-top:1.6667vw;}
+                .Product_DetailWrap .mt_30 {margin-top:2.5vw;}
+                .Product_DetailWrap .mt_40 {margin-top:3.3333vw;}
+                .Product_DetailWrap .mt_50 {margin-top:4.1667vw;}
+                .Product_DetailWrap .mt_70 {margin-top:5.83337vw;}
+                .Product_DetailWrap .mt_100 {margin-top:8.3333vw;}
+                .Product_DetailWrap .mt_150 {margin-top:12.5vw;}
+                .Product_DetailWrap .pd_40 {padding:3.3333vw;}
+                .Product_DetailWrap .pt_20 {padding-top:1.6667vw;}
+                .Product_DetailWrap .pt_40 {padding-top:3.3333vw;}
+                .Product_DetailWrap .pt_50 {padding-top:4.1667vw;}
+                .Product_DetailWrap .pt_60 {padding-top:5vw;}
+                .Product_DetailWrap .pt_80 {padding-top:6.6667vw;}
+                .Product_DetailWrap .pb_20 {padding-bottom:1.6667vw;}
+                .Product_DetailWrap .pb_40 {padding-bottom:3.3333vw;}
+                .Product_DetailWrap .pb_50 {padding-bottom:4.1667vw;}
+                .Product_DetailWrap .pb_60 {padding-bottom:5vw;}
+                .Product_DetailWrap .pb_80 {padding-bottom:6.6667vw;}
+                .Product_DetailWrap .ybr {display:block;}
+                .Product_DetailWrap .nbr {display:none;}
+            }
+
+            @media all and (max-width:720px) {
+                .Product_DetailWrap {font-size:7px;}
+            }
+
+            @media all and (max-width:620px) {
+                .Product_DetailWrap {font-size:6px;}
+            }
+
+            @media all and (max-width:510px) {
+                .Brand_Grid {grid-template-columns:1fr;row-gap:4.1667vw;text-align:center;}
+                .Brand_Grid .logo_img {margin-top:0 !important;}
+            }
+
+            @media all and (max-width:520px) {
+                .Product_DetailWrap {font-size:5px;}
+            }
+
+            @media all and (max-width:420px) {
+                .Product_DetailWrap {font-size:4px;}
+            }
+
+            @media all and (max-width:320px) {
+                .Product_DetailWrap {font-size:3px;}
+            }
+</style>
+<div class="Product_DetailWrap">
+<section class="KeyImg pos_r">
+<div class="key_TextBox w90 lh_12">
+<p class="p3">하루의 시작, 날 위한 한 끼</p>
+<p class="p6 font_NGB color_richblack mt_10">액티브 디에스 프로 플러스</p>
+<p class="p3 font_NMr color_skyblue">ActiveDS Pro Plus</p>
+<p class="p4 color_tealblue mt_30"><span class="fw_600">특별한 헬시 라이프의 시작</span><br/>
+더 맛있고, 더 건강하게!</p>
+</div>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_keyimg.jpg"/></section>
+
+<section class="mt_100">
+<p class="p5 color_black lh_12">액티브 디에스 프로 플러스<br/>
+<span class="fw_600">제품 특징</span></p>
+<ul class="Product_Feature mt_40">
+<li>
+<p class="p3 fw_600 color_white">1</p>
+<p class="p3 ta_l">5종의 식물성 + 동물성 단백질 함유</p>
+</li>
+<li>
+<p class="p3 fw_600 color_white">2</p>
+<p class="p3 ta_l">고식이섬유 &amp; 가벼운 칼로리</p>
+</li>
+<li>
+<p class="p3 fw_600 color_white">3</p>
+<p class="p3 ta_l">초유, 유산균, 효소 등을 포함한 엄선한 영양 부원료</p>
+</li>
+<li>
+<p class="p3 fw_600 color_white">4</p>
+<p class="p3 ta_l">더욱 부드럽고 맛있어진 딸기맛!</p>
+</li>
+<li>
+<p class="p3 fw_600 color_white">5</p>
+<p class="p3 ta_l">동결건조 딸기 다이스로 씹는 즐거움 UP!</p>
+</li>
+</ul>
+<ul class="grid_3step mt_70">
+<li>
+<div class="OneDays bdr_10 pos_r">
+<p class="p2 fw_600 color_black">MORNING</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_01_01.jpg"/></div>
+<p class="p1 mt_20">하루의 시작,<br/>
+	어디서나 든든한 한끼</p>
+</li>
+<li>
+<div class="OneDays bdr_10 pos_r">
+<p class="p2 fw_600 color_black">AFTERNOON</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_01_02.jpg"/></div>
+<p class="p1 mt_20">바쁜 하루 일과 중,<br/>
+	점심을 챙길 수 없을 때</p>
+</li>
+<li>
+<div class="OneDays bdr_10 pos_r">
+<p class="p2 fw_600 color_black">NIGHT</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_01_03.jpg"/></div>
+<p class="p1 mt_20">운동 전/후<br/>
+	가볍게 단백질 보충<br/>
+<span class="p_side">(1회 섭취량당 단백질 12g 함유)</span></p>
+</li>
+</ul>
+<p class="p2 color_black lh_04 mt_30">.<br/>
+.<br/>
+.<br/>
+.<br/>
+.</p>
+<div class="bg_rosewhite pt_80 pb_80 bdr_10 mt_50">
+<p class="p4 color_red fw_600 lh_12">액티브 디에스 프로 플러스가<br/>
+필요한 모든 순간</p>
+<ul class="grid_4step w90 mt_40">
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_02_01.jpg"/>
+<p class="p2 color_rosewood lh_12 mt_20">고강도 근력운동<br/>
+	전후</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_02_02.jpg"/>
+<p class="p2 color_rosewood lh_12 mt_20">가벼운 러닝 /<br/>
+	유산소 운동 전후</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_02_03.jpg"/>
+<p class="p2 color_rosewood lh_12 mt_20">식단에<br/>
+	단백질 충전<br/>
+<span class="p_side">(1회 섭취량당 단백질 12g 함유)</span></p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_02_04.jpg"/>
+<p class="p2 color_rosewood lh_12 mt_20">바쁜 아침<br/>
+	영양 식사 대용</p>
+</li>
+</ul>
+</div>
+</section>
+
+<section class="mt_150">
+<p class="p5 color_black lh_12">액티브 디에스 프로 플러스<br/>
+<span class="fw_600">제품 특징</span></p>
+
+<div class="Point_Num bdr_10 fw_600 color_white mt_70">
+<p class="p3 bg_darkgray">POINT</p>
+<p class="p3 bg_red">01</p>
+</div>
+<p class="p4 color_black mt_30">꼼꼼하고 똑똑하게 <span class="fw_600">동·식물성 단백질 배합</span></p>
+<ul class="grid_2step mt_70">
+<li>
+<div class="pos_r">
+<p class="Round_TitleBar p2 bg_lightcoral color_white">동물성 단백질</p>
+<img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_03_01.jpg"/></div>
+<div class="p1 grid_textList ta_l mt_20">
+<p>-</p>
+<p>풍부한 필수 아미노산</p>
+<p>-</p>
+<p>높은 소화 흡수율 및 체내 흡수율</p>
+</div>
+</li>
+<li>
+<div class="pos_r">
+<p class="Round_TitleBar p2 bg_pinegreen color_white">식물성 단백질</p>
+<img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_03_02.jpg"/></div>
+<div class="p1 grid_textList ta_l mt_20">
+<p>-</p>
+<p>낮은 지방 함량</p>
+<p>-</p>
+<p>낮은 콜레스테롤 수치</p>
+<p>-</p>
+<p>식이섬유, 비타민 등이 풍부</p>
+</div>
+</li>
+</ul>
+
+<div class="mt_150 pos_r">
+<div class="Point_Num bdr_10 fw_600 color_white Point_Absolute">
+<p class="p3 bg_darkgray">POINT</p>
+<p class="p3 bg_red">02</p>
+</div>
+<div class="bg_skywhite pb_80 pt_80 bdr_10">
+<p class="p4 color_black fw_600">고식이섬유</p>
+<div class="w90 bg_white pb_60 pt_60 bdr_10 mt_30">
+<p class="p3 color_black fw_600">고식이섬유 함유!</p>
+<p class="p2 lh_12 mt_20">식이섬유는 탄수화물의 한 종류로, 장내 소화 효소에 의해<br/>
+분해되지 않고 체내에서 다양한 기능을 수행합니다.</p>
+<div class="w84 mt_40 pos_r">
+<div class="grid_2step Fiber">
+<p class="p2 color_white">단백질</p>
+<p class="p2 color_white">식이섬유</p>
+</div>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_04.jpg"/></div>
+<div class="w84 grid_bulletList ta_l mt_30"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_bull_01.jpg"/>
+<p class="p2">식이섬유가 함유되어 있습니다</p>
+</div>
+</div>
+<div class="w90 bg_white pb_60 pt_60 bdr_10 mt_15em">
+<p class="p3 color_black fw_600">몸은 건강하게 칼로리는 가볍게!</p>
+<ul class="grid_2step w84 mt_30">
+<li>
+<div class="bdr_10">
+<p class="p2 color_white bg_ashbrown pb_20 pt_20 lh_12">권장 칼로리 하루 한 끼</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_05_01.jpg"/></div>
+<p class="p2 color_black fw_600 mt_20">약 700 kcal</p>
+<p class="p1">* 성인남녀 19~49세 평균 한 끼 권장 일반식 칼로리</p>
+</li>
+<li>
+<div class="bdr_10">
+<p class="p2 color_white bg_ashbrown pb_20 pt_20 lh_12">액티브 디에스 프로 플러스</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_05_02.jpg"/></div>
+<p class="p2 color_black fw_600 mt_20">35g / 125 kcal</p>
+<p class="p1">하루권장량의 25%</p>
+</li>
+</ul>
+<p class="p2 color_black lh_04 mt_30">.<br/>
+.<br/>
+.<br/>
+.<br/>
+.</p>
+<p class="p3 color_black mt_30 lh_12">칼로리가 낮아 부담없이<br/>
+<span class="fw_600">한끼 식사를 대신할 수 있습니다!</span></p>
+</div>
+</div>
+</div>
+
+<div class="Point_Num bdr_10 fw_600 color_white mt_150">
+<p class="p3 bg_darkgray">POINT</p>
+<p class="p3 bg_red">03</p>
+</div>
+<p class="p4 color_black fw_600 mt_30">총 14종의 엄선한 부원료 함유</p>
+<ul class="grid_3step mt_50">
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_06_01.jpg"/>
+<p class="p1 fw_600 mt_10">초유</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_06_02.jpg"/>
+<p class="p1 fw_600 mt_10">17종 유산균</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_06_03.jpg"/>
+<p class="p1 fw_600 mt_10">식이섬유</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_06_04.jpg"/>
+<p class="p1 fw_600 mt_10">효소</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_06_05.jpg"/>
+<p class="p1 fw_600 mt_10">9종 필수 아미노산</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_06_06.jpg"/>
+<p class="p1 fw_600 mt_10">병풀</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_06_07.jpg"/>
+<p class="p1 fw_600 mt_10">레드비트</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_06_08.jpg"/>
+<p class="p1 fw_600 mt_10">치커리</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_06_09.jpg"/>
+<p class="p1 fw_600 mt_10">크린베리</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_06_10.jpg"/>
+<p class="p1 fw_600 mt_10">석류</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_06_11.jpg"/>
+<p class="p1 fw_600 mt_10">마테</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_06_12.jpg"/>
+<p class="p1 fw_600 mt_10">L-카르니틴</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_06_13.jpg"/>
+<p class="p1 fw_600 mt_10">27종 과일야채</p>
+</li>
+<li><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_06_14.jpg"/>
+<p class="p1 fw_600 mt_10">비타민 &amp; 미네랄</p>
+</li>
+</ul>
+
+<div class="mt_150 pos_r">
+<div class="Point_Num bdr_10 fw_600 color_white Point_Absolute">
+<p class="p3 bg_darkgray">POINT</p>
+<p class="p3 bg_red">04</p>
+</div>
+<div class="bg_rosewhite pb_80 pt_80 bdr_10">
+<p class="p4 color_red fw_600">더욱 부드럽고 맛있어진 딸기맛</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_07.jpg"/>
+<p class="p3 color_rosewood fw_600 lh_12">물만 넣어도 맛있게 즐길 수 있는<br/>
+단백질 쉐이크!</p>
+</div>
+</div>
+
+<div class="Point_Num bdr_10 fw_600 color_white mt_150">
+<p class="p3 bg_darkgray">POINT</p>
+<p class="p3 bg_red">05</p>
+</div>
+<p class="p4 color_black fw_600 mt_30">동결건조 딸기 다이스로 씹는 즐거움</p>
+<p class="p3 lh_12 mt_20">새콤달콤 동결건조 딸기가 듬뿍 들어<br/>
+식감 까지 UP!</p>
+<ul class="Freeze_Drying w86 mt_50">
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_08_01.jpg"/>
+<p class="p2 color_black fw_600 mt_20">상큼딸기맛</p>
+</li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_08_03.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_08_02.jpg"/>
+<p class="p2 color_black fw_600 mt_20">동결건조 딸기 다이스</p>
+</li>
+</ul>
+</section>
+
+<section class="bg_rosewhite pb_80 pt_80 bdr_10 mt_150">
+<p class="p4 color_red fw_600 lh_10">섭취방법</p>
+<p class="p3 color_red lh_10">.....</p>
+<p class="p3 color_rosewood fw_600 mt_10">물만 넣어도 맛있게 한끼 식사 완성</p>
+<ul class="w90 HowtoConsume mt_30">
+<li class="bg_white pb_40 bdr_10">
+<p class="p2 pt_20 pb_20 color_white bg_red lh_10">STEP 1</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_09_01.jpg"/>
+<p class="p1 color_black">물 또는 우유 200 ml를<br/>
+	넣어주세요</p>
+<p class="p1">(기호에 따라 물 양 조절 가)</p>
+</li>
+<li class="flex_c_auto">
+<p class="p1 color_rosewood">▶</p>
+</li>
+<li class="bg_white bdr_10">
+<p class="p2 pt_20 pb_20 color_white bg_red lh_10">STEP 2</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_09_02.jpg"/>
+<p class="p1 color_black">액티브 디에스 프로 플러스<br/>
+	35g(2스푼)을 넣어주세요</p>
+</li>
+<li class="flex_c_auto">
+<p class="p1 color_rosewood">▶</p>
+</li>
+<li class="bg_white bdr_10">
+<p class="p2 pt_20 pb_20 color_white bg_red lh_10">STEP 3</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_09_03.jpg"/>
+<p class="p1 color_black">파우더가 잘 섞이도록<br/>
+	쉐이킹 하고 바로 드세요</p>
+</li>
+</ul>
+</section>
+
+<section class="mt_150">
+<p class="p4 fw_600 color_black mt_20">더욱 새롭게 리뉴얼 되었습니다!</p>
+<table class="Table_Style1 mt_50">
+<colgroup>
+<col/>
+<col style="width:41%;"/>
+<col style="width:41%;"/>
+</colgroup>
+<tbody>
+<tr>
+<th> </th>
+<th>
+<p class="p2">기존</p>
+</th>
+<th>
+<p class="p2 color_coralred">리뉴얼</p>
+</th>
+</tr>
+<tr>
+<td>
+<p class="p1">단백질 종류</p>
+</td>
+<td>
+<p class="p1">3종 WPI, WPC, ISP</p>
+</td>
+<td>
+<p class="p1">5 종 WPI, WPC, ISP, MPI, MPC</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="p1">식감</p>
+</td>
+<td>
+<p class="p1">딸기분말</p>
+</td>
+<td>
+<p class="p1">동결건조 딸기 다이스 (Crispy)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="p1">맛</p>
+</td>
+<td>
+<p class="p1">딸기맛</p>
+</td>
+<td>
+<p class="p1">부드러운 딸기맛 /<br/>
+			우유없이 먹어도 더욱 맛있게!</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p class="p1">부원료</p>
+</td>
+<td>
+<p class="p1">-</p>
+</td>
+<td>
+<p class="p1">초유, 17종 혼합유산균, 효소<br/>
+			27종 과일야채 혼합분말, 다양한 식이섬유<br/>
+			등의 영양 보충 부원료 추가</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="p1">소화</p>
+</td>
+<td>
+<p class="p1">유당* 소화가 어려움<br/>
+			(* 일부소비자에서 속 더부룩한 불편함이 나타남)</p>
+</td>
+<td>
+<p class="p1">식물성단백질 강화로 유당에 의한<br/>
+			불편함 감소!</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="mt_150">
+<p class="p5 color_black fw_600">건강정보</p>
+<p class="p1 color_gray mt_02em">* 제품과 관련 없는 건강정보 입니다.</p>
+<div class="bg_skywhite pb_80 pt_80 mt_50 bdr_10">
+<p class="p4 color_black"><span class="fw_600">단백질,</span> 왜 먹어야 할까요?</p>
+<div class="w90 bg_white pb_80 pt_80 bdr_10 mt_30">
+<p class="p3 color_black">우리 몸에서 수분 다음으로 많은 성분 ‘단백질’</p>
+<div class="Protein mgAuto mt_70 pos_r">
+<p class="p1">기타 1%</p>
+<p class="p1">미네랄 5%</p>
+<p class="p1">지방 10%</p>
+<p class="p2 color_black fw_600">단백질 20%</p>
+<p class="p1">수분 64%</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_10.jpg"/></div>
+<ul class="Protein_Graph w86 mt_40 ta_l lh_12">
+<li class="bg_dustyrose pb_80 bdr_l_10"> </li>
+<li class="Protein_BG"> </li>
+<li class="bg_dustyrose"> </li>
+<li class="bg_palerose"> </li>
+<li class="bg_linenpink bdr_r_10"> </li>
+<li class="p1">수분<br/>
+	64%</li>
+<li class="p1">단백질<br/>
+	20%</li>
+<li class="p1">지방<br/>
+	10%</li>
+<li class="p1">미네랄<br/>
+	5%</li>
+<li class="p1">기타<br/>
+	1%</li>
+</ul>
+</div>
+<div class="w90 bg_white pb_80 pt_80 bdr_10 mt_20">
+<p class="p3 color_black fw_600 lh_12">나이가 들수록 중요한 ‘단백질’<br/>
+나이가 들수록 체내 단백질양은 점차 감소</p>
+<div class="Protein_Age w86 mt_40">
+<ul class="w86 pb_40 pt_50">
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_11_01.jpg"/>
+<p class="p2 color_black mt_10">유년기</p>
+</li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_11_02.jpg"/>
+<p class="p2 color_black mt_10">청소년기</p>
+</li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_11_03.jpg"/>
+<p class="p2 color_black mt_10">중년기</p>
+</li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_11_04.jpg"/>
+<p class="p2 color_black mt_10">노년기</p>
+</li>
+</ul>
+</div>
+<p class="p1 color_gray mt_10">[출처] Rolland etc: 2008; Boirie, 2009</p>
+</div>
+<div class="w90 bg_white pb_80 pt_80 bdr_10 mt_20">
+<p class="p3 color_black fw_600 lh_12">우리 몸 속 많은 역할을 하는 ‘단백질’</p>
+<div class="Protein_Role mgAuto mt_40 pos_r">
+<p class="p2 color_black">효소</p>
+<p class="p2 color_black">호르몬</p>
+<p class="p2 color_black">항체</p>
+<p class="p2 color_black">근육</p>
+<p class="p2 color_black">혈액</p>
+<p class="p2 color_black">에너지</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_12.jpg"/></div>
+<p class="p1 color_gray mt_20">[출처] 보건복지부</p>
+</div>
+<p class="p4 color_black mt_100 lh_12">단백질,<br/>
+<span class="fw_600">얼마나, 어떻게 먹어야 할까요?</span></p>
+<div class="w90 bg_white pb_80 pt_80 bdr_10 mt_40">
+<p class="p3 color_black fw_600">체중 1kg 당 1g의 단백질 섭취 필요</p>
+<table class="Table_Style2 w86 mt_40">
+<colgroup>
+<col/>
+<col style="width:12%;"/>
+<col style="width:12%;"/>
+<col style="width:12%;"/>
+<col style="width:12%;"/>
+<col style="width:12%;"/>
+<col style="width:12%;"/>
+<col style="width:12%;"/>
+</colgroup>
+<tbody class="p1">
+<tr>
+<th>
+<p>몸무게</p>
+</th>
+<th>
+<p>50kg</p>
+</th>
+<th>
+<p>55kg</p>
+</th>
+<th>
+<p>60kg</p>
+</th>
+<th>
+<p>65kg</p>
+</th>
+<th>
+<p>70kg</p>
+</th>
+<th>
+<p>75kg</p>
+</th>
+<th>
+<p>80kg</p>
+</th>
+</tr>
+<tr>
+<td>
+<p class="color_black fw_600">1일 단백질<br/>
+			권장량</p>
+</td>
+<td>
+<p>50g</p>
+</td>
+<td>
+<p>55g</p>
+</td>
+<td>
+<p>60g</p>
+</td>
+<td>
+<p>65g</p>
+</td>
+<td>
+<p>70g</p>
+</td>
+<td>
+<p>75g</p>
+</td>
+<td>
+<p>80g</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="w90 bg_white pb_80 pt_80 bdr_10 mt_20">
+<p class="p3 color_black">매일, <span class="fw_600">꾸준한 단백질 섭취</span></p>
+<ul class="Protein_Intake w86 mt_70">
+<li>
+<div class="bg_rosewhite bdr_10 pb_50 flex_auto"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_13_01.jpg"/>
+<p class="p3 color_rosewood fw_600">탄수화물</p>
+<p class="p2 color_rosewood opac80 mt_10 lh_12">과다하게 섭취한<br/>
+	탄수화물</p>
+</div>
+<p class="p2 color_rosewood mt_20 lh_10">▼</p>
+<div class="pt_20 pb_20 color_white bg_coralred bdr_10 mt_20">
+<p class="p2">지방으로 전환</p>
+</div>
+</li>
+<li>
+<div class="bg_rosewhite bdr_10 pb_50 flex_auto"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_13_02.jpg"/>
+<p class="p3 color_rosewood fw_600">지방</p>
+<p class="p2 color_rosewood opac80 mt_10 lh_12">과다하게 섭취한<br/>
+	지방</p>
+</div>
+<p class="p2 color_rosewood mt_20 lh_10">▼</p>
+<div class="pt_20 pb_20 color_white bg_coralred bdr_10 mt_20">
+<p class="p2">지방조직 축적</p>
+</div>
+</li>
+<li class="pos_r">
+<div class="bg_rosewhite bdr_10 pb_50 flex_auto"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/ActiveDS_Pro_Plus/ActiveDS_Pro_Plus_img_13_03.jpg"/>
+<p class="p3 color_rosewood fw_600">단백질</p>
+<p class="p2 color_rosewood opac80 mt_10 lh_12">체내에 사용하고<br/>
+	남은 단백질</p>
+</div>
+<p class="p2 color_rosewood mt_20 lh_10">▼</p>
+<div class="pt_20 pb_20 color_white bg_coralred bdr_10 mt_20">
+<p class="p2">분해 후 배출</p>
+</div>
+</li>
+</ul>
+<p class="p3 color_black lh_12 mt_100">단백질은 몸에 축적되지 않습니다.<br/>
+쌓이지 않고 분해되어 배출되기 때문에<br/>
+<span class="color_coralred Text_Underline">매일 꾸준히 적당량을 섭취</span>하는 것이 중요합니다.</p>
+<p class="p1 color_gray mt_20">[출처]대한비만학회지 9(3) 2000</p>
+</div>
+</div>
+</section>
+
+<section class="Brand_Grid pd_40 mt_150 bdr_10"><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/new_package/brand_story/brand_active_img.png"/>
+<div><img class="logo_img" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/new_package/brand_story/brand_active_logo.png"/>
+<p class="p2 fw_600 color_black mt_20">즐겁게 비우고 탄탄하게 채우는 토탈 헬스케어 솔루션, 액티브DS!</p>
+<p class="p2 mt_04em">액티브DS는 단순히 굶는 다이어트가 아닌 적절한 영양섭취와 식이조절, 생활습관 개선의 복합 다이어트 솔루션으로 건강하고 똑똑한 다이어트를 지향합니다.</p>
+</div>
+</section>
+</div>
+<div style="text-align:center;">
+<a href="#" rel="noopener" target="_blank"><img decoding="async" loading="lazy" src="https://vcshop.gcoop.com/images/icon_edu_materials.png" style="width:220px;"/></a>
+</div>
+</div></div></div></div></div></div></body></html>

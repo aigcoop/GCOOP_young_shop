@@ -1,0 +1,831 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><base target="_blank"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap"><link rel="stylesheet" href="https://vcshop.gcoop.com/layouts/shopmobile/css/common.css"><link rel="stylesheet" href="https://vcshop.gcoop.com/layouts/shopmobile/css/sub.css"><style>
+                    /* 제품 상세정보 ~ 배송/교환/반품 안내 텍스트 크기 조정 */
+                    .pdt-detail-view > div > div > h2 {font-size:1rem !important;}
+                    .pdt-detail-view > div, .product-tab-box > div > div, .product-tab-box > div > div > dl > dd, .product-tab-box > div > div > dl > dt, .product-tab-box > div > div > ul > li  {font-size:.8rem;}
+                    .product_info-table {display:relative;}
+                    .product_info-table > ul > li {width:100% !important;}
+                    .product_info-table > ul > li > div {font-size:.8rem;}
+                    .popup_wrap .popup_container{position:absolute;left:50%;top:50%;width:100%;max-height:calc(100% - 50px);background-color:#fff;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+                    /* 제품상세 , 상품정보고시 , 배송 교환 반품 안내 */
+                    .product-tab-box{position:relative;overflow:hidden}
+                    .product-tab-box:after{display:block;content:"";position:absolute;right:0;top:0;z-index:10;width:10px;height:17px;background-color:#fff}
+                    .product-tab-swiper{padding:10px;border-bottom:1px solid #d0d0d0;}
+                    .product-tab-swiper .swiper-slide{width:33% !important; height:40px; line-height:40px; margin-right:0 !important; background:#eee; border-right:1px solid #fff;}
+                    .product-tab-swiper .swiper-slide a{display:block;position:relative; color:#262626; text-align:center; font-size:1em}
+                    .product-tab-swiper .swiper-slide:last-child a{font-size:0.5em}
+                    .product-tab-swiper .swiper-slide .on:after{display:block;content:"";position:absolute;left:0;bottom:-1px;width:100%;height:4px;background-color:#f35656}
+
+                    .product_detail img{width:100%}
+                    .product_info-table{border-bottom:1px solid #ccc}
+                    .product_info-table li{font-size:13px}
+                    .product_info-table li>div:first-child{width:112px;padding:6px 9px}
+                    .product_info-table li>div:last-child{padding:7px 12px;word-break:break-all}
+                    .product_info-table .indent{padding-left:12px}
+
+                    .product_info-table{border:1px solid #ccc}
+                    .product_info-table li{display:table;table-layout:fixed;width:100%;border-bottom:1px solid #dedede;background-color:#f5f5f5;font-weight:500;color:#333}
+                    .product_info-table li:last-child{border-bottom:0}
+                    .product_info-table li>div:first-child{display:table-cell}
+                    .product_info-table li>div:last-child{display:table-cell;background-color:#fff;vertical-align:middle}
+                    iframe{width:100%;height:100%;}
+                </style><style>html,body{margin:0;padding:0;background:#fff;overflow:hidden}#wrap,#view-box,.outer,.view-detail-box,.tab-detail-box{margin:0!important;padding:0!important;border:0!important;width:100%!important;min-height:0!important}.tab-view-box{display:block!important}img{max-width:100%;height:auto}.btn-expand,.btn-expand+br{display:none!important}iframe.yt{display:block;width:100%!important;aspect-ratio:16/9;height:auto!important;border:0;margin:10px 0}</style></head><body id="body"><div id="wrap"><div id="view-box"><div class="outer"><div class="view-detail-box"><div class="tab-detail-box"><div class="tab-view-box on">
+<div>
+
+<a class="btn-expand btn-expand2" href="https://vcshop.gcoop.com/Imgpop?seq_pd=5819" rel="noopener" target="_blank" xxtarget="_blank">
+<i class="fal fa-search-plus"></i>
+
+</a>
+</div>
+<br/>
+
+<div align="center" class="product_detail">
+<img alt="제품 상세 공지(탑) - 온라인 가품 유통 주의 안내" decoding="async" loading="lazy" src="https://cdn.gcoopm.com/shop/storage/shop_image/V3ue8ESIsAzJJqp54HLFdojrz8YFQt9LzUXZT0Y9.jpg"/>
+</div>
+<div align="center">
+</div>
+<style type="text/css">/*------------------- common mobile --------------------*/
+@media (max-width:480px) {
+	.product_detail_page{
+		font-size: 10px !important;
+	}
+	.sub_head img {
+		width: 25px;
+	}
+	.arrow > img{
+		width: 60% !important;
+		position: relative;
+		top: -2.5em;
+	}
+}
+/*Tablet*/
+@media (min-width:481px){
+	.product_detail_page{
+		font-size: 14px !important;
+	}
+	.sub_head img {
+		width: 35px;
+	}
+}
+.product_detail_page h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, form, fieldset, input, table, tr, th, td, button, textarea {margin:0;padding:0;}
+.product_detail_page .clear:after{clear:both;content:'''';display:block;}
+.product_detail_page *{box-sizing: border-box;}
+.product_detail_page ul{list-style:none;padding:0;margin:0}
+.product_detail_page {width: 100%;max-width:1200px; margin: 0 auto; padding: 0; font-family: ''Noto Sans KR'', sans-serif;text-align: center;font-weight: 400;letter-spacing: -0.05em;word-break: keep-all;}
+.product_detail_page p {color: #666;font-weight: 400;font-size: 1.2em;margin-bottom:0.8em}
+.product_detail_page p:last-child{margin-bottom:0}
+.product_detail_page p span {color: #333;font-weight: 600;}
+.product_detail_page p.sub_p {width: 80%;margin: 0 auto;margin-bottom: 3%;}
+.product_detail_page h5 {font-weight: 500;font-size: 1.4em;color: #fff;display: inline;background-color: #c3d433;padding: 0 0.7%;}
+.product_detail_page .h5_bar {width: 2%;margin: 0 auto;border-bottom: 3px solid #70abff;position: absolute;left: 50%;bottom: 0;transform: translateX(-50%);z-index: 0;line-height: 1;opacity: 25%;}
+.product_detail_page h2 {display:inline-block;font-weight: 600;font-size: 60px;text-align: center;color: #fff;margin: 0 auto;margin-top: 2%;margin-bottom: 3%; /*3%*/letter-spacing: -1px;position:relative}
+.product_detail_page h2 span {font-weight: 300;color:#000;}
+.product_detail_page h3 {font-weight: 600;font-size: 50px;text-align: center;color: #000;width: 90%;margin: 0 auto;margin-top: 1%;margin-bottom: 3%; /*3%*/}
+.product_detail_page h3 span {font-weight: 300;}
+.product_detail_page img {max-width: 100%;}
+.product_detail_page .tit-desc{font-size:26px;line-height:1.4;font-weight:300;color:#333}
+.product_detail_page .tit-desc .highlight{border-bottom:1px solid #666666;color:#333;font-weight:500}
+.product_detail_page .section {width: 100%;margin: 0 auto;box-sizing: border-box;}
+
+/**브랜드스토리 mobile**/
+.brand_story .point_tit {color: #000;font-size: 2em;font-weight: 700;text-align: center;text-transform: uppercase;margin-top: 4%;margin-bottom: 5%;}
+.brand_story .point_tit span { font-weight: 400;}
+.brand_story {width: 95%;height: auto;border: 1px solid #b1b1b1;margin: 0 auto;margin-top: 8%;/*margin-bottom: 8%;*/padding-bottom: 2%;}
+.brand_story .rounded {width: 200px;background-color: #403025;border:2px solid #000;padding:0.1em 1em;border-radius: 3em;-moz-border-radius: 3em;-webkit-border-radius: 3em;color: #fff;margin: 0 auto;font-size: 1.2em;line-height: 1.2em;margin-top: -2.7%;text-align: center;}
+.brand_story .content {width: 95%;margin: 0 auto;text-align: center;margin-bottom: 5%;}
+.brand_story .content .img, .brand_story .content .txt {/* display: inline-block;vertical-align: middle; */}
+.brand_story .content .img {width: 90%;margin:0 auto;}
+.brand_story .content .img img { width: 100%;}
+.brand_story .content .txt { text-align: center;width: 90%;margin: 0 auto;word-break: keep-all;margin-top: 5%;}
+.brand_story .brand_logo { width: 35%;margin:5% auto;}
+.brand_story .brand_logo img {width: 100%;}
+.brand_story .content .bd {width: 8%;height: 2px;background-color: #666;margin: 1.5% auto;}
+.brand_story .content .txt p {color: #333;font-size: 1.2em;font-weight: 400;margin-top: 5%;}
+.brand_story .content .txt p span {font-weight: 600;}
+.brand_story .content .txt p.subject{font-size:2em;color:#000;margin-top:0;font-weight:500}
+.brand_story .content .txt p.bold{color: #333;font-weight: 600;}
+
+/**건강 정보 mobile**/
+.health_information {width: 100%;padding: 7% 0;}
+.health_information .hinfo_info_tit {width: 95%;margin: 0 auto;}
+.hinfo_info_subject {position: relative;}
+.hinfo_info_subject h2 {width: 100%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 2em!important;font-weight: 700;text-align: center;color: #fff;}
+.hinfo_info_subject h2 span {display:block;margin-top:0.5%;font-size: 0.8em;color:#fff;}
+.health_information .content {width:95%;margin: 0 auto;padding-top: 5%;}
+
+/**각종인증사항 mobile**/
+.certifications {width: 100%;padding-top: 3%; /*10%*/padding-bottom: 8%;margin-bottom: 8%;}
+.certifications .certifi_info_tit {width: 95%;margin: 0 auto;}
+.certifi_info_subject {position: relative;}
+.certifi_info_subject h2 {width: 100%;margin:0;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 2em !important;font-weight: 700;text-align: center;color: #fff;letter-spacing:1px;}
+.certifi_info_subject h2 span.light{color:#fff;font-weight:300}
+.certifi_info_subject h2 span.sm-text {display: block;margin-top: 0.5%;font-size: 0.6em;color:#fff;}
+.certifications img {width: 100%;}
+.certifi_info_content img {}
+.certifi_01 {width: 95%;margin: 0 auto;text-align: left;margin-top: 5%;}
+.certifi_01 .certifi_01_img {display: inline-block;width: 19%;}
+.certifications h5 {font-size: 1.6em !important;font-weight: 700;color: #000;background: none;word-break: break-all;display:block;}
+.certifications h6 {font-size: 1.2em !important;font-weight: 700;color: #333;margin-top: 1.2%;display: inline-block;}
+.certifications h6 span {border-bottom: 1px solid #c1c1c1;}
+.certifications p {font-size: 1.2em;color: #555;margin-top: 1.5%;word-break: break-all;}
+.certifi_01_content {display: inline-block;width: 77%;margin-left: 2.5%;vertical-align: top;}
+
+/*common-sectionnumber(circle) mobile*/	
+.product_detail_page .section-num{position:relative;margin:1% 0}
+.product_detail_page .section-num:before{content:'''';position:absolute;top:50%;left:5%;transform:translateY(-50%);height:2px;width:32%;background-color:#333;}
+.product_detail_page .section-num:after{content:'''';position:absolute;top:50%;right:5%;transform:translateY(-50%);height:2px;width:32%;background-color:#333;}
+.product_detail_page .section-num .round {display: inline-block;width: 60px;height: 60px;border: 2px solid #333333;border-radius: 75px;-moz-border-radius: 75px;-webkit-border-radius: 75px;margin: 0 auto;text-align: center;text-transform: uppercase;position:relative;}
+.product_detail_page .section-num .round p {font-size:1.2em;color: #333333;line-height: 1.5em;position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);width:100%}
+.product_detail_page .section-num .round p span {font-size: 1.6em;font-weight: 700;color: #333333;font-family: sans-serif;}
+/*----------------- section mobile-----------------*/
+.product_detail_page{color:#000}
+.product_detail_page .content .title{font-size:34px;line-height:1.4;font-weight:300;color:#000;font-weight:500;margin-bottom:20px;}
+.product_detail_page .content .title span{font-weight:300}
+.product_detail_page .content .sm-title{font-size:26px;line-height:1.4;font-weight:300;color:#333}
+
+
+
+/*---------------------------------- custom content ----------------------------------*/
+/* section-title */
+.product_detail_page .title-sub-container{}
+.product_detail_page .title-sub-container h5{z-index: 1;position: relative;font-weight: 600;font-size: 1.2em;text-transform: uppercase;color: #fff;display: inline-block;background:#ad2d2c;padding:0 0.25em;}
+/* .product_detail_page .title-sub-container h5:before{z-index: -1;content: '''';background-color: #a2c7e4;padding: 25px;border-radius: 50%;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);}
+.product_detail_page .title-sub-container h5:after{z-index: -1;content: '''';background-color: #a2c7e4;padding: 10px;border-radius: 50%;position: absolute;left: 52%;top:-28px;transform: translateX(-25%);} */
+
+.product_detail_page .title-container{position:relative}
+.product_detail_page .title-container h2 {font-size:1.8em;min-width:250px;font-weight:600;line-height:1.5;padding: 0px 5px 10px 5px;margin-bottom:0;color:#333}
+.product_detail_page .title-container h2 span{color:#333;}
+.product_detail_page .line-block{border-bottom:1px solid #dddddd;width:87%;margin:0 auto;margin-top:-2px;}
+
+
+/* 키이미지 mobile*/
+.product_detail_page .key_img {position: relative;padding-bottom:4em;}
+.product_detail_page .key_box {position: absolute;width: 100%;}
+.product_detail_page .key_box.top {position: absolute;width: 100%;top:7%;}
+.product_detail_page .key_img img {width: 100%;}
+.product_detail_page .key_box .key_label{min-width:50%;position:relative;display:inline-block;border:1px solid #000;padding:0.5em 0.5em;color:#343434}
+.product_detail_page .key_box .key_label .label_text{font-size:1.2em;font-weight:500;}
+.product_detail_page .key_box .key_label .label_tit{min-width:70%;position: absolute;top:-1em;font-size:0.8em;background:#fff;padding:0 15px;left:50%;transform: translateX(-50%);font-weight:400;letter-spacing:1px;}
+.product_detail_page .key_tit {margin: 0 auto;text-align:left;padding:0 2%;text-align:center;}
+.product_detail_page .key_box .key_tit .p01 {margin: 0 auto;color: #343434;font-size: 31px;font-weight: 500;margin-top: 4%;}
+.product_detail_page .key_box .key_tit .p01 span {font-weight: 600;}
+.product_detail_page .key_box h1 {font-weight: 500;font-size: 3em;letter-spacing: -0.02em;line-height:1.3;color:#330e0e;margin-top:0.2em;}
+.product_detail_page .key_box h1 span{font-weight:300}
+.product_detail_page .key_tit .sub-tit{font-size:1.2em;color:#3d3d3d;font-weight: 500;}
+.product_detail_page .key_tit .sub-tit span{font-weight:400}
+.product_detail_page .key_tit .sub-tit small{font-weight:400}
+.product_detail_page .key_tit>.tit-desc{color:#660300;line-height:1.6;font-size:1em;margin-top:3.5em;}
+.product_detail_page .key_tit>.tit-desc .text1{font-size: 1.4em;font-weight: 600;line-height:1}
+.product_detail_page .key_tit>.tit-desc .text2{font-size: 0.5em;font-weight: 300;margin-top:1em}
+.product_detail_page .features {width: 100%;position: absolute;    bottom: 0;}
+.product_detail_page .features .feature-box {display: inline-block;vertical-align: middle;padding:0 1%;margin:1% 0;position:relative}
+.product_detail_page .features .feature-box:after{    content: '''';width: 1px;height: 18px;position: absolute;top: 50%;right: -2px;background: rgba(0,0,0,0.1);transform: translateY(-50%);}
+.product_detail_page .features .feature-box:nth-child(4):after{content:none;}
+.product_detail_page .features .feature-box:last-child:after{content:none;}
+.product_detail_page .features .feature-box:last-child {margin-right: 0;}
+.product_detail_page .features p {color: #3b3b3b;font-weight: 400;line-height:1.3;font-size:1.2em;}
+
+/*quantity-info*/
+.quantity-info{margin:2em auto 1em auto;padding:0 2.5%;}
+.quantity-info .tit{font-size: 1.4em;margin-bottom: 0.5em;font-weight: 600;color: #333;}
+.quantity-info .tit span.light{font-weight:300;color:#666}
+.quantity-info .sub-tit{font-size: 1.4em;margin-bottom: 0.5em;font-weight: 600;color: #333;}
+.quantity-info .desc{color: #333;text-align: left;font-size: 1.2em;font-weight: 300;}
+.quantity-info .desc span{font-weight:500}
+.quantity-info .list-type-desc{text-align:left;font-weight:300;padding:3em 0;}
+.quantity-info .list-type-desc ul li{position:relative;font-size:1.2em;padding-left:1.2em;}
+.quantity-info .list-type-desc ul li span.num{position:absolute;left:0;}
+
+.section .content .content-desc>.desc{font-size:1.4em;color:#666;margin-bottom:2em;}
+
+/*point01*/
+.point01.section{padding:0% 2.5% 0 2.5%;}
+.point01 .about-product{box-shadow: 1px 1px 10px rgba(0,0,0,0.15);margin:0 2.5% 10%;padding:2em 1em;}
+.point01 .about-product .tit{font-size:1.8em;font-weight:600;color:#0b0b0b;position:relative;display:inline-block;padding:0 0.2em;margin-bottom:0.7em;}
+.point01 .about-product .tit::after{z-index:-1;content:'''';display:block;background-color:#fae6e6;height:0.7em;position:absolute;left:0;bottom:0;width:100%;}
+.point01 .about-product .desc{font-size:1.4em;color:#444444}
+.point01 .content{}
+.point01 .content .content-desc{color:#666;}
+.point01 .content .group1{margin:5em 0 4em 0;position:relative}	
+.point01 .content .group1 .img-box{width:50%;margin:0 auto;}
+.point01 .content .group1 .img-box img{display:block;margin:0 auto;}
+.point01 .content .group1 .text-group li{position:absolute}
+.point01 .content .group1 .text-group li .desc{font-size:1.2em;color:#fff;background-color:#ad2d2c;line-height:1.4;border-radius: 1.8em;padding: 0.25em 1em;font-weight:500}
+.point01 .content .group1 .text-group .text1{top:-15%;left:50%;transform: translateX(-50%);}
+.point01 .content .group1 .text-group .text2{top:18%;right:13%;}
+.point01 .content .group1 .text-group .text3{bottom:15%;right:8%}	
+.point01 .content .group1 .text-group .text4{bottom:-15%;left:51%;transform: translateX(-50%);}
+.point01 .content .group1 .text-group .text4 .desc{padding-left:2em;padding-right:2em;}
+.point01 .content .group1 .text-group .text5{bottom:15%;left:8%;}
+.point01 .content .group1 .text-group .text6{top:18%;left:2%;}
+
+/*point02*/
+.point02.section{padding:10% 0 5% 0;}
+.point02 .content .group1 .img-box{width:95%;margin:0 auto;display:inline-block;position: relative;}	
+.point02 .content .group1 .img-box img{z-index: -1;position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);}
+.point02 .content .group1 .img-box .inner-text{box-sizing:border-box;padding:2.5em 3em;color:#fff;text-align:left;width:100%;overflow:hidden;position:relative;background:url(https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-03.jpg)no-repeat center center;background-size:cover}
+.point02 .content .group1 .img-box .inner-text:before{content:'''';position:absolute;left:1em;top:1em;padding:1.5em;border:1px solid #fff;border-right:0;border-bottom:0;}
+.point02 .content .group1 .img-box .inner-text:after{content:'''';position:absolute;right:1em;bottom:1em;padding:1.5em;border:1px solid #fff;border-left:0;border-top:0;}
+.point02 .content .group1 .img-box .inner-text .tit{margin-bottom:0.5em;;border-bottom:1px solid #fff;font-weight:500;font-size:1.4em;display:inline-block;}
+.point02 .content .group1 .img-box .inner-text .desc{font-size:1.2em;font-weight:300;line-height:1.4}	
+
+/*point03*/
+.point03.section{margin:5% 0 9% 0}
+.point03 .content{padding:0 5%}
+.point03 .content .group1{margin:0 auto;}	
+.point03 .content .group1 li{float:left;width:calc(33.333333% + 3.333333%);position:relative}	
+.point03 .content .group1 li:nth-child(2) img{opacity: 0.8;z-index: 1;position: relative;}
+.point03 .content .group1 li:first-child{margin-right:-5%}
+.point03 .content .group1 li:last-child{margin-left:-5%}
+.point03 .content .group1 li .label{position:relative}
+.point03 .content .group1 li .label:before{content: '''';width: 1px;height: 2em;position: absolute;background: rgba(0,0,0,0.15);z-index: 1;top: -1em;}
+.point03 .content .group1 li .label .tit{font-size:1.2em;line-height:1.2;font-weight:500;padding-top:1.5em}
+.point03 .content .group1 li .label .sub-tit{font-size: 18px;font-weight: 300;font-style: italic;margin-top: 3px;padding:0;color:#fff;}	
+
+/*point04*/
+.point04.section {background-color:#f9f9f9;padding:10% 0 0 }	
+.point04 .content .group1{padding:5%}	
+.point04 .content .group1 .group-container{background-color:#fff;padding: 7% 2%;}
+.point04 .content .group1 .group-container .info1{}	
+.point04 .content .group1 .group-container .info1 .img-box{width:40%;margin:0 auto;}
+.point04 .content .group1 .group-container .info1 .tit{background-color: #ad2d2c;color: #fff;border-radius: 3em;display: inline-block;font-size: 1.2em;font-weight: 300;padding: 0.3em 1.5em;margin: 1em 0 1.2em 0;}
+.point04 .content .group1 .group-container .info1 .desc{color:#666;font-size:1.3em;font-weight:300}
+.point04 .content .group1 .group-container .info2{position:relative;margin-top:3em}	
+.point04 .content .group1 .group-container .info2 .img-box{width:70%;margin:0 auto;position:relative}
+.point04 .content .group1 .group-container .info2 .img-box span{color:#000;position:absolute;    padding: 2px 10px;display:block;font-size:1.2em}	
+.point04 .content .group1 .group-container .info2 .img-box .text1{background-color: #fef9eb;bottom:45%;left:-12%;}	
+.point04 .content .group1 .group-container .info2 .img-box .text2{top:-6%;right:-15%}	
+.point04 .content .group1 .group-container .info2 .img-box .text3{background-color: #d3f0f7;top:40%;right:-22%;}	
+.point04 .content .group1 .group-container .info2 .img-box .text4{background-color: #fef9eb;right: -22%;bottom: 30%;}	
+.point04 .content .group1 .group-container .info2 .img-box .text5{background-color: #fef9eb;right: -19%;bottom: 2%;}	
+.point04 .content .group1 .group-container .label{color:#000;display:inline-block;font-size:1.2em;line-height:1.6;margin-top:2em}	
+.point04 .content .group1 .group-container .label span{font-weight:500;border-bottom:1px solid}
+.point04 .content .group1 .note{text-align:left;color:#666;margin:1em 0;font-size:1.2em}	
+
+/*point05*/
+.point05.section {padding:0 5% 0}	
+.point05.section .title-sub-container{margin: 2em 0;text-align:center;}
+.point05 .content .img-box{width: 100%;margin: 0 auto;position: relative;padding: 22%;overflow: hidden;}
+.point05 .content .img-box img{position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);}
+.point05 .content .content-desc{}
+.point05 .content .content-desc h2{color:#333;font-size:1.8em;margin:0 auto}
+.point05 .content .content-desc .desc{color: #666;font-size: 1.4em;margin-top:1em;line-height:1.4}	
+
+/*point06*/
+.point06.section{padding:5% 5% 9%;}	
+.point06 .content .group1{margin:0 auto;padding:0 5%}	
+.point06 .content .group1 li{display:inline-block;width:calc(33.333333% + 3.333333%);position:relative;vertical-align:top;}	
+.point06 .content .group1 li:nth-child(2) img{opacity: 0.8;z-index: 1;position: relative;}
+.point06 .content .group1 li:first-child{margin-right:-5%}
+.point06 .content .group1 li .label{position:relative}
+.point06 .content .group1 li .label:before{content: '''';width: 1px;height: 2em;position: absolute;background: rgba(0,0,0,0.15);z-index: 1;top: -1em;}
+.point06 .content .group1 li .label .tit{font-size:1.2em;line-height:1.2;font-weight:500;padding-top:1.5em}
+.point06 .content .group1 li .label .sub-tit{font-size: 18px;font-weight: 300;font-style: italic;margin-top: 3px;padding:0;color:#fff;}	
+
+/*point07*/
+.point07 .content .group1 .img-box{width:100%;margin:0 auto;display:inline-block;position: relative;}	
+.point07 .content .group1 .img-box img{display:none;}
+.point07 .content .group1 .img-box .inner-text{background:url(https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-12.jpg)no-repeat center center;background-size:cover;
+	box-sizing:border-box;padding:10% 5%;text-align:left;width:100%}
+.point07 .content .group1 .img-box .inner-text .tit{margin-top:0.25em;margin-bottom:0.7em;font-weight:600;font-size:1.8em;display:inline-block;}
+.point07 .content .group1 .img-box .inner-text .tit span{font-weight:300}
+.point07 .content .group1 .img-box .inner-text .desc{font-size:1.4em;line-height:1.6;color:#555555;font-weight:400}	
+
+
+
+
+/*----------------- etc-common -----------------*/
+/**제품 주요성분**/
+.section.main_ingredient{padding:7% 0}
+.main_ingredient .title-sub-container h5{background:none;color:#333;}
+.main_ingredient .content {width: 100%;padding: 2% 3%;margin: 0 auto;}
+.main_ingredient ul li{position:relative;text-align: left;}
+.main_ingredient ul li:after{content: '''';width: 82%;height: 1px;margin: 0 auto;background-color: #e5e5e5;position: absolute;left: 50%;bottom:0;z-index: -1;transform: translateX(-50%);}
+.main_ingredient ul li:nth-child(even){text-align: right;}
+.main_ingredient ul li .ingredient_img, .ingredient_txt {display: inline-block;vertical-align: middle;}
+.main_ingredient ul li .ingredient_img {width: 18%;vertical-align:top;margin-top:2em;}
+.main_ingredient ul li .ingredient_img img{width:100%;}
+.main_ingredient ul li .ingredient_txt {width: 78%;margin-left: 3%;padding:5% 0}
+.main_ingredient ul li .ingredient_txt p {font-size: 1.2em;font-weight: 300;line-height: 1.6;color: #666666;margin-top: 1.5%;word-break: keep-all;}
+.main_ingredient ul li:nth-child(even) .ingredient_txt {width: 78%;margin-right: 3%;margin-left:0;}
+.main_ingredient ul li .ingredient_tit {font-size: 1.4em;font-weight: 600;color: #403025;display: inline-block;}
+.main_ingredient ul li .ingredient_tit span{border-bottom: 1px solid;}
+.main_ingredient .fix_txt {font-size: 1.0em;margin-top: 5%;color:#888;font-weight:300}
+/*한줄 블럭 목록*/
+.main_ingredient ul.single-list li{}
+.main_ingredient ul.single-list li:nth-child(even){text-align:left;}
+.main_ingredient ul.single-list li:after{position: relative;display: block;transform: none;left: 0;bottom: 0;margin: 1.5em 0;width: 100%;}
+.main_ingredient ul.single-list li:last-child:after{content:none;}
+.main_ingredient ul.single-list li .ingredient_txt{margin-right:0;margin-left:3%;width:75%}
+
+/**독일 더마테스트 mobile**/
+.dermatest {width: 100%;padding: 10% 2.5%;background-color: #f9f9f9;}
+.dermatest .img {width: 18%;margin: 0 auto;}
+.dermatest .img img {width: 100%;}
+.dermatest h3 {width:100%;font-size: 1.4em!important;font-weight: 600;line-height: 1.5;margin-top: 3%;}
+.dermatest p {margin-top: 2%;color:#555;font-size:1.2em}
+.dermatest p span {font-weight: 600;}
+
+/**제품사용방법 mobile**/
+.howtouse {padding: 10% 0;margin-top: 10%;background-color:#f4f4f4}
+.howtouse .title-sub-container h5{background:none;color:#333;}
+.howtouse_contents_group01 {width: 95%;text-align: center;margin:0 auto;}
+.howtouse_contents_group01::after{clear:both;content:'''';display:block;}
+.howtouse_contents_group01 .img-box{position:relative;width:30%;margin:0 auto;}
+.howtouse_contents_group01 .img-box img {width: 80%;}
+.howtouse_contents_group01 p {font-size: 1.2em;color: #666;text-align:left;padding:1em 5% 0;text-align:center;}
+.howtouse .howtouse_contents_group01 .tip{font-size:1.2em;font-weight:500;color:#333;margin-top:1em;}
+
+.howtouse .howtouse_contents_group02>.tit{display:inline-block;background-color:#ad2d2c;font-size:1.4em;color:#fff;padding:0.5em 3em;border-radius: 2em;margin:4em 0 3em;}
+.howtouse .howtouse_contents_group02>.img-box{padding:0 15%;margin-bottom:2em;}
+.howtouse .howtouse_contents_group02 ul li>.howtouse_c01_txt{position: absolute;top: 50%;transform: translateY(-50%);left: 30%;}
+
+.howtouse .howtouse_contents_group02 {width: 95%;text-align: center;margin:0 auto;}
+.howtouse .howtouse_contents_group02::after{clear:both;content:'''';display:block;}
+.howtouse .howtouse_contents_group02>ul>li{display:block;position:relative;vertical-align:top;margin-bottom:4em;}
+.howtouse .howtouse_contents_group02>ul>li .num{    background-color: #750007;color: #fff;line-height: 1;padding: 0.3em;position: absolute;top: 0;left: 5%;transform: translateX(-50%);z-index: 1;font-size: 1.4em;font-weight: 100;width: 23px;border-radius: 1em;}
+.howtouse .howtouse_contents_group02>ul>li>.img-box{position: relative;width: 30%;}
+.howtouse .howtouse_contents_group02>ul>li>.img-box img {width: 90%;}
+.howtouse .howtouse_contents_group02>ul>li .Process_subtit {font-size: 1.7em;color: #333333;font-weight: 700;}
+.howtouse .howtouse_contents_group02 ul li p {font-size: 1.2em;color: #000;padding:1em;text-align:left;}
+.howtouse .howtouse_contents_group02 ul li .note{color:#999;margin-top:1em;font-size:1.2em}
+
+.howtouse .howtouse_contents_group02 ul li.caution{width: 100%;padding:0 2%;}
+.howtouse .howtouse_contents_group02 ul li.caution>div{background: #a3575b url(https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-how-to-use-0308.png)no-repeat 150% center;border-radius: 1.5em;border: 2px dashed #000;padding: 2em 5em;;text-align: left;color: #fff;background-size:60%;position:relative;transform:none;left:0;}
+.howtouse .howtouse_contents_group02 ul li.caution .tit{font-size:1.4em;font-weight:500;margin-bottom:0.7em;}
+.howtouse .howtouse_contents_group02 ul li.caution li{display:block;position:relative;width:100%;margin-bottom:1em;}
+.howtouse .howtouse_contents_group02 ul li.caution li span{position: absolute;left: -2em;top: 0;font-weight: 300;background-color: #fff;border-radius: 1.5em;color: #750007;font-size: 1.4em;width: 20px;text-align: center;}
+.howtouse .howtouse_contents_group02 ul li.caution li>div{font-size: 1.2em;font-weight: 300;}
+.howtouse .group2{width:95%;margin:0 auto;}
+.howtouse .group2 .content-desc{font-size:1.2em;color:#45230b}
+
+.howtouse .howtouse_contents_group03::after{clear:both;content:'''';display:block;}
+.howtouse .howtouse_contents_group03>.tit{display:inline-block;background-color:#ad2d2c;font-size:1.4em;color:#fff;padding:0.5em 3em;border-radius: 2em;margin:4em 0 3em;}
+.howtouse .howtouse_contents_group03>.img-box{padding:0 15%;margin-bottom:2em;}
+.howtouse .howtouse_contents_group03 {width: 90%;text-align: center;margin:0 auto;}
+.howtouse .howtouse_contents_group03 ul li>.howtouse_c01_txt{position: absolute;top: 50%;transform: translateY(-50%);left: 30%;}
+.howtouse .howtouse_contents_group03>ul>li{display:block;position:relative;vertical-align:top;margin-bottom:4em;}
+.howtouse .howtouse_contents_group03>ul>li .num{    background-color: #750007;color: #fff;line-height: 1;padding: 0.3em;position: absolute;top: 0;left: 5%;transform: translateX(-50%);z-index: 1;font-size: 1.4em;font-weight: 100;width: 23px;border-radius: 1em;}
+.howtouse .howtouse_contents_group03>ul>li>.img-box{position: relative;width: 30%;}
+.howtouse .howtouse_contents_group03>ul>li>.img-box img {width: 90%;}
+.howtouse .howtouse_contents_group03>ul>li .Process_subtit {font-size: 1.7em;color: #333333;font-weight: 700;}
+.howtouse .howtouse_contents_group03 ul li p {font-size: 1.2em;color: #000;padding:1em;text-align:left;}
+
+.howtouse .howtouse_contents_group04>.tit{display:inline-block;background-color:#ad2d2c;font-size:1.4em;color:#fff;padding:0.5em 3em;border-radius: 2em;margin:4em 0 3em;}
+.howtouse .howtouse_contents_group04>.img-box{padding:0 15%;margin-bottom:2em;}
+.howtouse .howtouse_contents_group04 ul.desc{position: relative;background-color: #fff;padding: 2em;width: 80%;margin: 0 auto;text-align: left;}
+.howtouse .howtouse_contents_group04 ul.desc li{display:block;position:relative;width:100%;padding-left:2em;margin-bottom:1em;font-size: 1.2em;font-weight: 300;color:#666}
+.howtouse .howtouse_contents_group04 ul.desc li span{position: absolute;left: 0em;top: 0.1em;font-weight: 300;background-color: #750007;border-radius: 1.5em;color: #fff;width: 17px;text-align: center;}
+
+
+/**이런 피부에 추천합니다**/
+.recommend {margin: 0 auto;padding: 7% 0;}
+.recommend .tit-label{font-size:28px;color:#0092bd;font-weight:600;}
+.product_detail_page .recommend h2{margin-top:0;margin-bottom:5%;letter-spacing: -1px;}
+.recommend_contents {width: 100%;}
+.recommend_img, .recommend_main_text {vertical-align: middle;display: inline-block;}
+.recommend_img {width: 80%;margin-bottom:2em}
+.recommend_img img {width: 60%;}
+.recommend_check {width: 6%;}
+.recommend_main_text {text-align: left;background-color: #fff8f8;
+width: 95%;padding: 5% 3%;box-sizing: border-box;}
+.recommend_contents .bdb {width: 100%;border-bottom: 1px solid #ececec;margin: 1.5% 0;height:0;}
+.recommend_contents .pt {}
+.recommend_check, .recommend_text {display: inline-block;vertical-align: top;}
+.recommend_text {float:left;width: calc(100% - 2em);}
+.recommend_text p {font-weight: 300;font-size:1.4em;color:#333;}
+.recommend_text span {font-weight: 600;color: #333333;}
+.recommend_check img{width:25px;margin-top:2px;}	
+.recommend_section::after{clear:both;content:'''';display:block;}
+.recommend_section .ico-check{float:left;width:15px;margin-top:3px;margin-right:5px;filter: opacity(1) drop-shadow(0 0 0 #ad2d2c);}
+</style>
+<div class="product_detail_page">
+<div class="key_img">
+<div class="key_box top">
+<div class="key_tit">
+<div class="key_label">
+<div class="label_text">케어셀라 바이오케이</div>
+<div class="label_tit">CARECELLA BIO K</div>
+</div>
+<div class="tit-desc">
+<div class="text1"><span>피부를 위한 </span>토탈 케어 솔루션 Bio K</div>
+</div>
+<h1>케어셀라 바이오케이</h1>
+</div>
+</div>
+<img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-01.jpg"/></div>
+
+<div class="section point01">
+<div class="about-product">
+<div class="tit">바이오케이(Bio K)란?</div>
+<div class="desc">바이오케이(Bio K)는 CK밸런스를 개발하는 과정에서, 화장품에도 이런 식물 기원 기술을 적용시키려는 노력에서 출발하여 만들어진 제품 입니다.<br/>
+현재 BIO K는 CareCella의 식물 줄기 세포 브랜드로서, 제너럴바이오 R&amp;D 센터의 식물 캘러스 연구를 기반으로 화장품에 이 기술을 접목 시키고 있습니다.</div>
+</div>
+<div class="title-sub-container">
+<h5>POINT 01</h5>
+</div>
+<div class="title-container">
+<h2><span>SKIN </span>토탈케어</h2>
+</div>
+<div class="content">
+<div class="content-desc">
+<div class="desc">각종 미용 성분의 최적 배합이 만든 토탈 솔루션으로<br/>
+피부 건강에 도움을 줍니다.</div>
+</div>
+<div class="group1">
+<div class="img-box"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-02.jpg"/>
+<ul class="text-group">
+<li class="text1">
+<div class="desc">주름 개선</div>
+</li>
+<li class="text2">
+<div class="desc">미백</div>
+</li>
+<li class="text3">
+<div class="desc">피부 보습</div>
+</li>
+<li class="text4">
+<div class="desc">피부결 개선</div>
+</li>
+<li class="text5">
+<div class="desc">영양 공급</div>
+</li>
+<li class="text6">
+<div class="desc">생기있는 피부</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section point02">
+<div class="title-sub-container">
+<h5>POINT 02</h5>
+</div>
+<div class="title-container">
+<h2>정제수 베이스가 아닌,<br/>
+쑥부쟁이캘러스추출물로 제조</h2>
+</div>
+<div class="content">
+<div class="content-desc">
+<div class="desc">제너럴바이오에서 직접 개발, 제조한 성분으로 피부 탄력에<br/>
+도움이 되고 건강한 피부로 가꾸어 주는 성분 입니다.</div>
+</div>
+<div class="group1">
+<div class="img-box">
+<div class="inner-text"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-03.jpg"/>
+<div class="tit">쑥부쟁이란?</div>
+<div class="desc">쑥부쟁이는 다른 말로 권영초, 왜쑥부쟁이, 가새쑥부쟁이라고도 합니다.<br/>
+햇빛이 비교적 잘 들고 습기가 약간 있는 산과 들에서 흔하게 자라는 여러해살이 풀입니다.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section point03">
+<div class="title-sub-container">
+<h5>POINT 03</h5>
+</div>
+<div class="title-container">
+<h2>인삼캘러스배양추출물 +<br/>
+쑥부쟁이캘러스추출물<br/>
++ 돌콩피토플라센타추출물의 트리플 효과</h2>
+</div>
+<div class="content">
+<div class="content-desc">
+<div class="desc">식물 줄기 세포의 일종인 인삼캘러스배양추출물과 돌콩피토플라센타추출물이 피부 장벽을 강화해주고, 쑥부쟁이캘러스추출물이 영양을 공급합니다.<br/>
+트리플 효과로 강화된 원료는 피부 보호와 영양 공급을 해주며 피부 스트레스를 완화하여 민감해진 피부에 도움을 줍니다.</div>
+</div>
+<div class="group1 clear">
+<ul>
+<li><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-04.png"/>
+<div class="label">
+<div class="tit">인삼캘러스<br/>
+	배양추출물</div>
+</div>
+</li>
+<li><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-05.png"/>
+<div class="label">
+<div class="tit">쑥부쟁이캘러스<br/>
+	추출물</div>
+</div>
+</li>
+<li><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-06.png"/>
+<div class="label">
+<div class="tit">돌콩피토플라센타<br/>
+	추출물</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="section point04">
+<div class="title-sub-container">
+<h5>POINT 04</h5>
+</div>
+<div class="title-container">
+<h2><span>GF(Growth Factor) 펩타이드 복합체의</span><br/>
+최적의 피부 흡수 시스템</h2>
+</div>
+<div class="content">
+<div class="content-desc">
+<div class="desc">EGF, bFGF, IGF-1, VEGF, TGF-β1 5가지의 Growth Factor로<br/>
+피부에 영양을 공급하여 줍니다.</div>
+</div>
+<div class="group1">
+<div class="group-container">
+<div class="clear">
+<div class="info1">
+<div class="img-box"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-07.jpg"/></div>
+<div class="tit">GF(Growth Factor) 복합체</div>
+<div class="desc">Liposome encapsulation technoloy를 통한 최적의<br/>
+피부 흡수 시스템으로 제작</div>
+</div>
+<div class="info2">
+<div class="img-box"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-08.jpg"/> <span class="text1">Liposome</span> <span class="text2">Average 100nm</span> <span class="text3">Growth factors</span> <span class="text4">epidermis</span> <span class="text5">dermis</span></div>
+<div class="label"><span>최적의 liposome size로 피부 투과를 촉진</span></div>
+</div>
+</div>
+</div>
+<div class="note">*원료적 특성에 한함</div>
+</div>
+</div>
+</div>
+
+<div class="section point05">
+<div class="content clear">
+<div class="img-box"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-09.jpg"/></div>
+<div class="content-desc">
+<div class="title-sub-container">
+<h5>POINT 05</h5>
+</div>
+<div class="content-title">
+<h2><span>5가지 복합 펩타이드로</span> 탄력, 피부결 개선 효과</h2>
+</div>
+<div class="desc">쿠퍼펩타이드(카퍼트리펩타이드-1), 펩타이드 콤플렉스(아세틸헥사펩타이드-8 니코티노일트리펩타이드-1, 헥사펩타이드-9, 트라이펩타이드-29) 5가지 복합 펩타이드는 피부 탄력과 피부 결 개선 효과에 도움을 줍니다.</div>
+</div>
+</div>
+</div>
+
+<div class="section point06">
+<div class="title-sub-container">
+<h5>POINT 06</h5>
+</div>
+<div class="title-container">
+<h2>피부 진정에 도움<span>이 되는 성분 함유</span></h2>
+</div>
+<div class="content">
+<div class="content-desc">
+<div class="desc">히알루론산(소듐하이알루로네이트), 알로에베라잎즙 함유로<br/>
+촉촉한 피부에 도움이 되며, 매끄러운 피부로 가꾸어 줍니다.</div>
+</div>
+<div class="group1 clear">
+<ul>
+<li><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-10.png"/>
+<div class="label">
+<div class="tit">히알루론산<br/>
+	(소듐하이알루로네이트)</div>
+</div>
+</li>
+<li><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-11.png"/>
+<div class="label">
+<div class="tit">알로에베라잎즙</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="section point07">
+<div class="content">
+<div class="content-desc">
+<div class="group1">
+<div class="img-box"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-12.jpg"/>
+<div class="inner-text">
+<div class="title-sub-container">
+<h5>POINT 07</h5>
+</div>
+<div class="tit"><span>피부 스트레스 완화를 위한</span><br/>
+식물성 추출물 함유</div>
+<div class="desc">녹차추출물, 쐐기풀추출물, 병풀추출물,<br/>
+초피나무열매추출물, 할미꽃추출물, 우스니아추출물<br/>
+- 식물성 추출물이 함유되어 피부 진정과<br/>
+피부 스트레스 완화에 도움이 됩니다.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section main_ingredient">
+<div class="title-sub-container">
+<h5>INGREDIENTS</h5>
+</div>
+<div class="title-container">
+<h2><span>제품 </span>주요 성분</h2>
+</div>
+<div class="content">
+<ul>
+<li>
+<div class="ingredient_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/ingredient01.png"/></div>
+<div class="ingredient_txt">
+<div class="ingredient_tit"><span>인삼캘러스배양추출물</span></div>
+<p>피부에 활력을 주어 건강한 피부로 가꿔줍니다.</p>
+</div>
+</li>
+
+<li>
+<div class="ingredient_txt">
+<div class="ingredient_tit"><span>돌콩피토플라센타추출물</span></div>
+<p>돌콩피토플라센타는 식물이 성장할 때 열매에 양분을 공급해 주는 필수 영양소 중 하나입니다. '발아대두'로부터 저온 추출과 분리 정제 기법을 통해 추출합니다. 피부 보호력 강화에 도움을 줍니다.</p>
+</div>
+<div class="ingredient_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/ingredient02.png"/></div>
+</li>
+
+<li>
+<div class="ingredient_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/ingredient03.png"/></div>
+<div class="ingredient_txt">
+<div class="ingredient_tit"><span>쑥부쟁이캘러스추출물</span></div>
+<p>쑥부쟁이는 다른말로 권영초, 왜쑥부쟁이, 가새쑥부쟁이라고도 합니다. 햇빛이 비교적 잘 들고 습기가 약간있는 산과 들에서 흔하게 자라는 여래해살이 풀입니다. 피부 탄력에 도움이 되고, 건강한 피부로 가꾸어 주는 성분 입니다.</p>
+</div>
+</li>
+
+<li>
+<div class="ingredient_txt">
+<div class="ingredient_tit"><span>GF 펩타이드 콤플렉스</span></div>
+<p>에스에이치-올리고펩타이드-1, 에스에이치-폴리펩타이드-1, 에스에이치-올리고펩타이드-2,에스에이치-폴리펩타이드-9, 에스에이치-폴리펩타이드-22등의 성분이 함유되어 피부 장벽을 강화하며 영양을 공급합니다.</p>
+</div>
+<div class="ingredient_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/ingredient04.png"/></div>
+</li>
+
+<li>
+<div class="ingredient_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/ingredient05.png"/></div>
+<div class="ingredient_txt">
+<div class="ingredient_tit"><span>히알루론산 (소듐하이알루로네이트)</span></div>
+<p>피부 수분 증발을 막고 적절한 수분 상태를 유지하도록<br/>
+	도움을 줍니다.</p>
+</div>
+</li>
+
+<li>
+<div class="ingredient_txt">
+<div class="ingredient_tit"><span>병풀추출물</span></div>
+<p>센텔라아시아티카는 인도양 연안 마다가스카르 섬의 신비한 식물로 원주민들이 오래전부터 자극받은 피부에 사용한 귀한 식물입니다.</p>
+</div>
+<div class="ingredient_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/ingredient06.png"/></div>
+</li>
+
+<li>
+<div class="ingredient_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/ingredient07.png"/></div>
+<div class="ingredient_txt">
+<div class="ingredient_tit"><span>알란토인</span></div>
+<p>주로 컴프리라는 식물에서 추출한 성분으로 거칠어진 피부를 개선해 주고 매끄럽게 만들어 주며, 피부의 보습 기능을 좋게 해주어 피부 장벽 강화에 도움을 줍니다.</p>
+</div>
+</li>
+
+</ul>
+<p class="fix_txt">*상기 설명은 원료적 특성에 한함</p>
+</div>
+</div>
+
+<div class="dermatest">
+<div class="img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/common_img/dermatest.png"/></div>
+<h3>독일 피부과학연구소</h3>
+<p>세계적인 독일 피부과학연구소 더마테스트(dermatest)에<br/>
+24시간, 48시간, 72시간 인체 피부 적용 실험을 의뢰<br/>
+<span>“피부자극없음”인 Excellent를 획득</span>하였습니다.</p>
+</div>
+
+<div class="brand_story">
+<div class="rounded">BRAND STORY</div>
+<p class="point_tit"><span>브랜드 </span>스토리</p>
+<div class="content">
+<div class="img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/common_img/brand_story_carecella.png"/></div>
+<div class="text">
+<div class="brand_logo"><img alt="" class="brand_img02" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/common_img/brand_story_cc_logo.png"/></div>
+<div class="bd"> </div>
+<p>케어셀라는 <span>‘낫게하다’를 의미하는 Care</span>와 라틴어로 <span>세포를 의미하는 Cella</span>의 합성어로 피부 본연의 아름다움을 찾아주는 시작점을 뜻합니다.</p>
+<p>자연에서 찾은 식물성 원료를 사용하여 각 피부에 맞는 제품을 개발하고 전문적인 케어 가이드를 제안하는 <span>홈 뷰티 화장품 브랜드</span>입니다.</p>
+</div>
+</div>
+</div>
+
+<div class="howtouse">
+<div class="title-sub-container">
+<h5>DIRECTION</h5>
+</div>
+<div class="title-container">
+<h2><span>제품 </span>사용 방법</h2>
+</div>
+<div class="howtouse_contents_group01">
+<div class="img-box"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-how-to-use-01.png"/></div>
+<div class="howtouse_c01_txt">
+<p>1회 1병을 개봉하여 피부에 골고루 펴 바른 후 흡수시켜 줍니다.</p>
+</div>
+</div>
+</div>
+
+<div class="recommend">
+<div class="title-container">
+<h2>이런 피부에 <span>추천합니다.</span></h2>
+</div>
+<div class="recommend_contents">
+<div class="recommend_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_bio_k/carecella-bio-k-16.jpg"/></div>
+<div class="recommend_main_text">
+<div class="recommend_section"><img alt="" class="ico-check" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_all_in_one_bio_mist/ico-check.png"/>
+<div class="recommend_text">
+<p>영양 성분이 많은 <span>기능성 앰플 제품</span>을 찾으신 분</p>
+</div>
+</div>
+<div class="bdb"> </div>
+<div class="recommend_section"><img alt="" class="ico-check" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_all_in_one_bio_mist/ico-check.png"/>
+<div class="recommend_text">
+<p><span>피부 나이로 생긴 잡티</span>로 고민이신 분</p>
+</div>
+</div>
+<div class="bdb"> </div>
+<div class="recommend_section"><img alt="" class="ico-check" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_all_in_one_bio_mist/ico-check.png"/>
+<div class="recommend_text">
+<p><span>매끄러운 피부 결</span>을 원하시는 분</p>
+</div>
+</div>
+<div class="bdb"> </div>
+<div class="recommend_section"><img alt="" class="ico-check" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_all_in_one_bio_mist/ico-check.png"/>
+<div class="recommend_text">
+<p><span>피부 트러블</span>로 고민이신 분</p>
+</div>
+</div>
+<div class="bdb"> </div>
+<div class="recommend_section"><img alt="" class="ico-check" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/carecella_all_in_one_bio_mist/ico-check.png"/>
+<div class="recommend_text">
+<p><span>집에서 피부 관리용 제품을 사용</span>하고 싶으신 분</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="certifications">
+<div class="certifi_info_tit">
+<div class="certifi_info_subject">
+<h2><span class="light">각종 </span>인증 사항<br/>
+<span class="sm-text">CERTIFICATIONS</span></h2>
+<img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/common_img/certifications.png"/></div>
+</div>
+
+<div class="certifi_info_content">
+<div class="certifi_01">
+<div class="certifi_01_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/common_img/certifi_B_corp.png"/></div>
+<div class="certifi_01_content">
+<div class="certifi_01_Detail">
+<h5>비코프인증 획득!</h5>
+<h6><span>비코프인증(B-Corp Certified)</span>이란?</h6>
+<p>B-Corp은 비즈니스를 통해 사회 환경적 문제를 해결하고 사회에 긍정적인 영향을 끼치는 기업을 확대하기 위해서 2007년 BLab (미국비영리 조직)이 만든 글로벌 사회적 기업 인증 제도입니다</p>
+</div>
+</div>
+</div>
+
+<div class="certifi_01">
+<div class="certifi_01_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/common_img/certifi_iso22716.png"/></div>
+<div class="certifi_01_content">
+<div class="certifi_01_Detail">
+<h5>국제 화장품 규격(CosmeticsGMP)ISO22716인증 획득!</h5>
+<h6><span>ISO 22716</span>이란?</h6>
+<p>CosmeticsGMP(GoodManufacturingPractices)화장품 우수제조관리기준입니다.화장품 기업의 제조 시설관리 기준(GMP)뿐만 아니라, 제품 안전성 관리 시스템(업무체계)의 실행 및 유지가 매우 중요한 평가 요소입니다.품질 및 안전이 보증된 화장품을 제조하기 위한 제품, 시설 및 공정 기준을 제시합니다.총 17개의 요구 사항으로 이루어져 있으며,이 요구 사항들은 인적자원,건물,장비 등의 인프라 관리를 기반으로 원재료에서 완제품까지의 제조 관리 기준을 통과해야만 받을 수 있는 인증입니다</p>
+</div>
+</div>
+</div>
+
+<div class="certifi_01">
+<div class="certifi_01_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/common_img/certifi_cgmp.png"/></div>
+<div class="certifi_01_content">
+<div class="certifi_01_Detail">
+<h5>CGMP(우수화장품 제조기준)인증 획득!</h5>
+<h6><span>CGMP 인증</span>이란?</h6>
+<p>CGMP규정의 목표는 소비자에게 신뢰받는 안전하고 우수한 품질의 제품을 제조하기 위하여 작업장의 구조,설비를 비롯하여 원료의 구입으로부터 생산,포장,출하에 이르기까지의 전 공정에 걸쳐 생산과 품질의 관리에 대한 체계적인 기준으로 평가해 모든 단계를 표준화된 기준에 따라 체계적으로 관리해 제품의 품질보증을 달성하는 기업에게 주는 인증입니다.</p>
+</div>
+</div>
+</div>
+
+<div class="certifi_01">
+<div class="certifi_01_img"><img alt="" decoding="async" loading="lazy" src="https://cdn3.gcooperp.com/storage/global_image/common_img/certifi_family.png"/></div>
+<div class="certifi_01_content">
+<div class="certifi_01_Detail">
+<h5>가족친화우수기업 인증 획득!</h5>
+<h6><span>가족친화인증</span>이란?</h6>
+<p>가족친화제도를 모범적으로 운영하는 기업 및 공공기관에 대하여 심사를 통해 인증을 부여하는 제도입니다.가족친화인증 기업은 근로자가 일에 집중하도록 하여 기업 생산성과 경쟁력 강화하고 출산율 제고,고용 안정 등으로 국가경제 발전에 기여할 뿐 아니라 가족친화경영 확산을 통한 근로자와 가족 구성원의 삶의 질을 향상시키는 바른 기업 문화를 확산 시킵니다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="text-align:center;">
+<a href="#" rel="noopener" target="_blank"><img decoding="async" loading="lazy" src="https://vcshop.gcoop.com/images/icon_edu_materials.png" style="width:220px;"/></a>
+</div>
+</div></div></div></div></div></div></body></html>

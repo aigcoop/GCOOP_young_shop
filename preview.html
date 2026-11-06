@@ -313,7 +313,7 @@ footer b{color:var(--ink);font:800 15px var(--f-display)}
 .pdtabs button{border:0;background:none;padding:14px 0 12px;font:700 15px var(--f-body);color:var(--muted);border-bottom:3px solid transparent;cursor:pointer}
 .pdtabs button[aria-selected="true"]{color:var(--ink);font-weight:900;border-bottom-color:var(--ink)}
 .pdpane{background:#fff}
-.dhost{display:block}
+.dframe{display:block;width:100%;height:70vh;border:0;background:#fff}
 .dcomp{margin:0;padding:22px 16px 10px;font:900 17px/1.35 var(--f-display);color:var(--ink);background:var(--surface);border-top:1px solid var(--line)}
 .dmsg{margin:0;padding:48px 16px;text-align:center;color:var(--muted)}
 .pdpane[data-pane="i"]{padding:12px 14px 20px;background:var(--surface)}
@@ -780,9 +780,10 @@ window.addEventListener("popstate", ()=>{
 /* 상세정보 · 정보고시 (본사 상세 내용을 영샵 안에서 보여줌) */
 const DET = {};
 function loadDet(no){ return DET[no] || (DET[no] = fetch(`details/${no}.json`).then(r=>{ if(!r.ok) throw 0; return r.json(); }).catch(()=>{ delete DET[no]; return null; })); }
-let fontsOn = false;
-function detFonts(){ if(fontsOn) return; fontsOn = true;
-  ["https://cdn.gcoop.me/storage/global_image/web_font/nexon_gothic.css","https://hangeul.pstatic.net/hangeul_static/css/nanum-myeongjo.css"].forEach(h=>{ const l = document.createElement("link"); l.rel = "stylesheet"; l.href = h; document.head.appendChild(l); }); }
+function fitFrame(fr){
+  const fit = ()=>{ try{ const d = fr.contentDocument; if(!d || !d.body) return; d.documentElement.style.setProperty("--vh", (innerHeight/100)+"px"); const h = Math.max(d.documentElement.scrollHeight, d.body.scrollHeight); if(h > 50) fr.style.height = h + "px"; }catch(e){} };
+  fr.addEventListener("load", ()=>{ fit(); try{ const d = fr.contentDocument; new ResizeObserver(fit).observe(d.body); d.querySelectorAll("img").forEach(i=>i.addEventListener("load", fit)); }catch(e){ fr.style.height = "80vh"; fr.setAttribute("scrolling","yes"); } });
+}
 const nlbr = t => esc(t).replace(/\n/g, "<br>");
 function infoTable(rows){ return rows && rows.length ? `<table class="ntab"><tbody>${rows.map(r=>`<tr><th scope="row">${esc(r[0])}</th><td>${nlbr(r[1])}</td></tr>`).join("")}</tbody></table>` : `<p class="dmsg">정보고시 내용을 불러오지 못했어요.</p>`; }
 async function renderDetail(p){
@@ -791,7 +792,6 @@ async function renderDetail(p){
   if(!parts.length){ x.innerHTML = ""; return; }
   x.innerHTML = `<div class="pdtabs" role="tablist"><button type="button" role="tab" data-dtab="d" aria-selected="true">상세정보</button><button type="button" role="tab" data-dtab="i" aria-selected="false">정보고시</button></div>
     <div class="pdpane" data-pane="d"><p class="dmsg">상세정보를 불러오는 중이에요…</p></div><div class="pdpane" data-pane="i" hidden></div>`;
-  detFonts();
   const got = await Promise.all(parts.map(c=>loadDet(c.no)));
   if(!cur || cur.n !== p.n || !$("pdx")) return;
   const dp = x.querySelector('[data-pane="d"]'), ip = x.querySelector('[data-pane="i"]');
@@ -799,9 +799,8 @@ async function renderDetail(p){
   parts.forEach((c,k)=>{
     const g = got[k];
     if(p.comp){ const h = document.createElement("h4"); h.className = "dcomp"; h.textContent = `${k+1}. ${c.name} × ${c.qty}개`; dp.appendChild(h); }
-    const host = document.createElement("div"); host.className = "dhost"; dp.appendChild(host);
-    const root = host.attachShadow({mode:"open"});
-    root.innerHTML = g && g.html ? `<style>:host{display:block;color:#222;background:#fff;overflow:hidden}*{box-sizing:border-box}img{max-width:100%;height:auto}</style>${g.html}` : `<p style="padding:30px;text-align:center;color:#888">상세정보를 불러오지 못했어요.</p>`;
+    const fr = document.createElement("iframe"); fr.className = "dframe"; fr.title = `${c.name||p.name} 상세정보`; fr.loading = k ? "lazy" : "eager";
+    fr.src = `details/${c.no}.html`; dp.appendChild(fr); fitFrame(fr);
     html += (p.comp?`<h4 class="dcomp">${k+1}. ${esc(c.name)}</h4>`:"") + infoTable(g && g.info);
   });
   ip.innerHTML = html;

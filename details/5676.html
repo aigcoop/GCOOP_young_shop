@@ -1,0 +1,711 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><base target="_blank"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap"><link rel="stylesheet" href="https://vcshop.gcoop.com/layouts/shopmobile/css/common.css"><link rel="stylesheet" href="https://vcshop.gcoop.com/layouts/shopmobile/css/sub.css"><style>
+                    /* 제품 상세정보 ~ 배송/교환/반품 안내 텍스트 크기 조정 */
+                    .pdt-detail-view > div > div > h2 {font-size:1rem !important;}
+                    .pdt-detail-view > div, .product-tab-box > div > div, .product-tab-box > div > div > dl > dd, .product-tab-box > div > div > dl > dt, .product-tab-box > div > div > ul > li  {font-size:.8rem;}
+                    .product_info-table {display:relative;}
+                    .product_info-table > ul > li {width:100% !important;}
+                    .product_info-table > ul > li > div {font-size:.8rem;}
+                    .popup_wrap .popup_container{position:absolute;left:50%;top:50%;width:100%;max-height:calc(100% - 50px);background-color:#fff;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+                    /* 제품상세 , 상품정보고시 , 배송 교환 반품 안내 */
+                    .product-tab-box{position:relative;overflow:hidden}
+                    .product-tab-box:after{display:block;content:"";position:absolute;right:0;top:0;z-index:10;width:10px;height:17px;background-color:#fff}
+                    .product-tab-swiper{padding:10px;border-bottom:1px solid #d0d0d0;}
+                    .product-tab-swiper .swiper-slide{width:33% !important; height:40px; line-height:40px; margin-right:0 !important; background:#eee; border-right:1px solid #fff;}
+                    .product-tab-swiper .swiper-slide a{display:block;position:relative; color:#262626; text-align:center; font-size:1em}
+                    .product-tab-swiper .swiper-slide:last-child a{font-size:0.5em}
+                    .product-tab-swiper .swiper-slide .on:after{display:block;content:"";position:absolute;left:0;bottom:-1px;width:100%;height:4px;background-color:#f35656}
+
+                    .product_detail img{width:100%}
+                    .product_info-table{border-bottom:1px solid #ccc}
+                    .product_info-table li{font-size:13px}
+                    .product_info-table li>div:first-child{width:112px;padding:6px 9px}
+                    .product_info-table li>div:last-child{padding:7px 12px;word-break:break-all}
+                    .product_info-table .indent{padding-left:12px}
+
+                    .product_info-table{border:1px solid #ccc}
+                    .product_info-table li{display:table;table-layout:fixed;width:100%;border-bottom:1px solid #dedede;background-color:#f5f5f5;font-weight:500;color:#333}
+                    .product_info-table li:last-child{border-bottom:0}
+                    .product_info-table li>div:first-child{display:table-cell}
+                    .product_info-table li>div:last-child{display:table-cell;background-color:#fff;vertical-align:middle}
+                    iframe{width:100%;height:100%;}
+                </style><style>html,body{margin:0;padding:0;background:#fff;overflow:hidden}#wrap,#view-box,.outer,.view-detail-box,.tab-detail-box{margin:0!important;padding:0!important;border:0!important;width:100%!important;min-height:0!important}.tab-view-box{display:block!important}img{max-width:100%;height:auto}.btn-expand,.btn-expand+br{display:none!important}iframe.yt{display:block;width:100%!important;aspect-ratio:16/9;height:auto!important;border:0;margin:10px 0}</style></head><body id="body"><div id="wrap"><div id="view-box"><div class="outer"><div class="view-detail-box"><div class="tab-detail-box"><div class="tab-view-box on">
+<div>
+
+<a class="btn-expand btn-expand2" href="https://vcshop.gcoop.com/Imgpop?seq_pd=5676" rel="noopener" target="_blank" xxtarget="_blank">
+<i class="fal fa-search-plus"></i>
+
+</a>
+</div>
+<br/>
+
+<div align="center" class="product_detail">
+<img alt="제품 상세 공지(탑) - 온라인 가품 유통 주의 안내" decoding="async" loading="lazy" src="https://cdn.gcoopm.com/shop/storage/shop_image/V3ue8ESIsAzJJqp54HLFdojrz8YFQt9LzUXZT0Y9.jpg"/>
+</div>
+<div align="center">
+</div>
+<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-myeongjo.css" rel="stylesheet"/>
+<link href="https://cdn.gcoop.me/storage/global_image/web_font/nexon_gothic.css" rel="stylesheet"/>
+<style type="text/css">/* 기본 */
+            .font_NMr {font-family:'NanumMyeongjo' !important;}
+            .font_NMb {font-family:'NanumMyeongjoBold' !important;}
+            .font_NMeb {font-family:'NanumMyeongjoExtraBold' !important;}
+            .font_NGL {font-family:'NEXON Lv2 Gothic Light' !important;}
+            .font_NGB {font-family:'NEXON Lv2 Gothic Bold' !important;}
+            .Product_DetailWrap * {box-sizing:border-box;word-break:keep-all;word-wrap:break-word;}
+            .Product_DetailWrap ul, ol, li, dl, dt, dd, p, div, span, section, i, form, fieldset, input, table, tr, th, td, button, textarea, br {margin:0;padding:0;}
+            .Product_DetailWrap i {font-style:normal;}
+            .Product_DetailWrap ul, ol, li, dl, dt, dd {list-style:none;}
+            .Product_DetailWrap img {width:auto;max-width:100%;margin:0 auto;}
+            .Product_DetailWrap {font-family:'NEXON Lv2 Gothic', sans-serif;width:100%;max-width:800px !important;font-weight:400;margin:0 auto;font-size:8px;letter-spacing:-0.05em;-webkit-letter-spacing:-0.25px;text-align:center;color:#424242;line-height:1.4;}
+
+            /* FONT SIZE CSS */
+            .Product_DetailWrap p {transform:rotate(0.03deg);}
+            .Product_DetailWrap .p0 {font-size:2em;}/*14px*/
+            .Product_DetailWrap .p1 {font-size:2.2em;}/*16px*/
+            .Product_DetailWrap .p2 {font-size:2.4em;}/*18px*/
+            .Product_DetailWrap .p3 {font-size:2.6em;}/*24px*/
+            .Product_DetailWrap .p4 {font-size:3.2em;}/*32px*/
+            .Product_DetailWrap .p5 {font-size:4.8em;}/*48px*/
+            .Product_DetailWrap .p6 {font-size:7em;}/*80px*/
+
+            /* FONT STYLE CSS */
+            .Product_DetailWrap .fw_600 {font-weight:600;}
+            .Product_DetailWrap .lh_10 {line-height:1;}
+            .Product_DetailWrap .lh_12 {line-height:1.2;}
+            .Product_DetailWrap .ta_l {text-align:left;}
+            .Product_DetailWrap .ta_r {text-align:right;}
+            .Product_DetailWrap .t_up {text-transform:uppercase;}
+
+            /* FONT COLOR CSS */
+            .Product_DetailWrap .color_white {color:#fff;}
+            .Product_DetailWrap .color_gray {color:#424242;}
+            .Product_DetailWrap .color_dark {color:#121212;}
+            .Product_DetailWrap .color_blue {color:#0068b7;}
+            .Product_DetailWrap .color_lightblue {color:#d3edfb}
+
+            /* BG COLOR CSS */
+            .Product_DetailWrap .bg_white {background-color:#fff;}
+            .Product_DetailWrap .bg_whitegray {background-color:#f9f9f9;}
+            .Product_DetailWrap .bg_gray {background-color:#eeeeee;}
+            .Product_DetailWrap .bg_black {background-color:#000;}
+            .Product_DetailWrap .bg_dark {background-color:#313131;}
+            .Product_DetailWrap .bg_blue {background-color:#0068b7;}
+            .Product_DetailWrap .bg_lightblue {background-color:#f4fafe;}
+
+            /* MARGIN CSS */
+            .Product_DetailWrap .mt_01em {margin-top:0.1em;}
+            .Product_DetailWrap .mt_02em {margin-top:0.2em;}
+            .Product_DetailWrap .mt_03em {margin-top:0.3em;}
+            .Product_DetailWrap .mt_04em {margin-top:0.4em;}
+            .Product_DetailWrap .mt_1em {margin-top:1em;}
+            .Product_DetailWrap .mt_15em {margin-top:1.5em;}
+            .Product_DetailWrap .mt_10 {margin-top:8px;}
+            .Product_DetailWrap .mt_20 {margin-top:16px;}
+            .Product_DetailWrap .mt_30 {margin-top:24px;}
+            .Product_DetailWrap .mt_50 {margin-top:40px;}
+            .Product_DetailWrap .mt_70 {margin-top:56px;}
+            .Product_DetailWrap .mt_100 {margin-top:80px;}
+            .Product_DetailWrap .mt_120 {margin-top:96px;}
+            .Product_DetailWrap .mt_150 {margin-top:120px;}
+            .Product_DetailWrap .mt_200 {margin-top:160px;}
+
+            /* PADDING CSS */
+            .Product_DetailWrap .pt_70 {padding-top:56px;}
+            .Product_DetailWrap .pt_80 {padding-top:64px;}
+            .Product_DetailWrap .pb_3em {padding-bottom:3em;}
+            .Product_DetailWrap .pb_70 {padding-bottom:56px;}
+            .Product_DetailWrap .pb_80 {padding-bottom:64px;}
+            .Product_DetailWrap .pd_5p {padding:5%;}
+            .Product_DetailWrap .pd_1em {padding:1em;}
+            .Product_DetailWrap .pd_2em {padding:2em;}
+            .Product_DetailWrap .plr_5p {padding:0 5%;}
+            .Product_DetailWrap .plr_8p {padding:0 8%;}
+            
+            /* GRID · FLEX 스타일 */
+            .Product_DetailWrap .grid_1step {display:grid;grid-template-columns:32%;justify-content:center;}
+            .Product_DetailWrap .grid_2step {display:grid;grid-template-columns:repeat(2, 32%);justify-content:center;gap:1.5em;}
+            .Product_DetailWrap .grid_3step {display:grid;grid-template-columns:repeat(3, 32%);justify-content:center;gap:1.5em;}
+            .Product_DetailWrap .grid_textList {display:grid;grid-template-columns:2.7em auto;justify-content:center;align-items:start;gap:1.25em;}
+            /* flex study -----------------------------------------------------
+            .Product_DetailWrap .textList > p:nth-of-type(odd) {flex:0 0 4%;}
+            .Product_DetailWrap .textList > p:nth-of-type(even) {flex:1 1 96%;}
+            ------------------------------------------------------------------ */
+            .Product_DetailWrap .flex_ss {display:flex;justify-content:start;align-items:start;}
+            .Product_DetailWrap .flex_cs {display:flex;justify-content:center;align-items:start;}
+            .Product_DetailWrap .flex_cc {display:flex;justify-content:center;align-items:center;}
+            .Product_DetailWrap .flex_wrap {flex-wrap:wrap;}
+            .Product_DetailWrap .cgap_1em {column-gap:1em;}
+            .Product_DetailWrap .rgap_1em {row-gap:1em;}
+
+            /* 기타 스타일 */
+            .Product_DetailWrap .w90 {width:90%;margin-left:5%;}
+            .Product_DetailWrap .pos_r {position:relative;}
+            .Product_DetailWrap .mWidth_10 {max-width:10% !important;}
+            .Product_DetailWrap .bdr_10 {border-radius:10px;overflow:hidden;}
+            .Product_DetailWrap .bdr_10v {border-radius:10px;}
+            .Product_DetailWrap .bdr_topRound {border-radius:300px 300px 0 0;overflow:hidden;}
+            .Product_DetailWrap .gray_linebox {border:1px #d2d2d2 solid;}
+            .Product_DetailWrap .blue_linebox {border:1px #0068b7 solid;}
+            .Product_DetailWrap .lightblue_linebox {border:0.25em #d3edfb solid;}
+            .Product_DetailWrap .title_bar {position:absolute;top:0;left:50%;transform:translate(-50%, -50%);border-radius:300px;padding:0.7em 2em 0.6em;}
+            .Product_DetailWrap .color_bar {display:inline-block;min-width:4em; border-radius:300px;padding:0.5em 1.5em 0.4em;}
+            .Product_DetailWrap .blue_linebar {border-radius:300px;border:#0068b7 1px solid;padding:0.7em 1.2em 0.6em;}
+            .Product_DetailWrap .txtList_dotline {border-bottom:#ccc dotted 1px;margin-bottom:1.5em;padding:0 0.5em 1.5em;}
+            .Product_DetailWrap .underline:after {content:'';width:100%;position:absolute;bottom:-1px;left:0;border-bottom:1px solid #ccc;}
+            .Product_DetailWrap .ybr {display:none;}
+            .Product_DetailWrap .nbr {display:block;}
+
+            /* 타이틀 */
+            .Product_Title .ProductName i {background-color:#fff;padding:0 1em;}
+            .Product_Title .ProductName::after {content: '';position:absolute;display:block;width:100%;height:1px;top:50%;left:50%;transform:translate(-50%, -2px);background:linear-gradient(90deg,#fff,#d9d9d9 20%,#d9d9d9 80%,#fff 100%);z-index:-1;}
+            .NumberBox {display:inline-block;padding:0.5em 0.684em 0.4em;border-radius:150px;background-color:#121212;}
+
+            /* 키이미지 */
+            .KeyImg .key_TitleBox {position:absolute;top:10%;}
+            .Top_Text span {position:relative;font-weight:600;}
+            .Top_Text span:after {content:'';position:absolute;display:block;width:0.15em;height:0.15em;line-height:0;border-radius:100px;top:-0.3em;left:52%;transform:translateX(-50%);background-color:#0068b7;}
+
+            /* 제품 특징 */
+            .KeyPoint_Box {background:linear-gradient(#f7f8f8 75%, #fff 75%);}
+            .KeyPoint_Grid {display:grid;grid-template-columns:auto auto;justify-content:center;gap:2.5em;}
+
+            /* 복합 히알루론산 */
+            .Hyaluronic_Grid {display:grid;grid-template-columns:27.5% auto;justify-content:center;column-gap:1em;}
+            .Hyaluronic_Img p {position:absolute;width:88.2155%;}
+            .Hyaluronic_Img p:nth-child(1) {top:22%;}
+            .Hyaluronic_Img p:nth-child(2) {top:53%;}
+            .Hyaluronic_Img p:nth-child(3) {top:79%;}
+            .Hyaluronic_rowGrid {display:grid;grid-template-rows:33.5% 34% auto;justify-content:start;align-items:start;}
+            .Hyaluronic_GIF {display:grid;grid-template-columns:30% 30%;justify-content:space-evenly;}
+
+            /* 복합 히알루론산 효과 */
+            .Hyaluronic_Graph {display:grid;grid-template-columns:repeat(5, 11%);justify-content:center;column-gap:5em;}
+            .Hyaluronic_Graph .gradient_color {height:21em;background:linear-gradient(#0068b7, #d3edfb);border-top:1px #fff solid;}
+            .Hyaluronic_Graph .graph_mask {position:absolute;top:0;width:100%;height:100%;mix-blend-mode:screen;display:flex;align-items:flex-end;}
+            .Hyaluronic_Graph .h94 {width:100%;height:94%;}
+            .Hyaluronic_Graph .h92 {width:100%;height:92%;}
+            .Hyaluronic_Graph .h81 {width:100%;height:81%;}
+            .Hyaluronic_Graph .h79 {width:100%;height:79%;}
+            .Hyaluronic_Graph .h73 {width:100%;height:73%;}
+
+            /* 펩타이드 4종 */
+            .ActivePep_Solution p {position:absolute;}
+            .ActivePep_Solution p:nth-of-type(1) {top:15.5%;right:67.2327%;}
+            .ActivePep_Solution p:nth-of-type(2) {top:33.6%;right:71.0358%;}
+            .ActivePep_Solution p:nth-of-type(3) {top:52%;right:71.0358%;}
+            .ActivePep_Solution p:nth-of-type(4) {top:70.9%;right:67.2327%;}
+            .ActivePep_Solution p:nth-of-type(5) {top:18.3%;left:69.5749%;}
+            .ActivePep_Solution p:nth-of-type(6) {top:36.6316%;left:73.1544%;}
+            .ActivePep_Solution p:nth-of-type(7) {top:55.3526%;left:73.1544%;}
+            .ActivePep_Solution p:nth-of-type(8) {top:73.9%;left:69.5749%;}
+
+            /* 6가지 유기농 식물 추출물 */
+            .Extract_Grid {display:grid;grid-template-columns:repeat(3, 30%);justify-content:space-between;row-gap:4em;}
+            .Extract_Grid li:after {content:'';position:absolute;display:block;width:1px;height:75%;border-right:1px #3d8cc8 dotted;bottom:0;right:-8%;}
+            .Extract_Grid li:nth-child(3n):after {display:none;}
+
+            /* 어떤 부분이 달라졌을까요 */
+            .Renewal_Grid li > div {width:90%;margin:0 5%;display:grid;grid-template-columns:1fr 20% 1fr;border-bottom:1px #727272 dotted;}
+            .Renewal_Grid li:nth-child(1) {border-bottom:2px #0068b7 solid;}
+            .Renewal_Grid li:nth-child(1) > div, .Renewal_Grid li:last-of-type > div {border-bottom:none;}
+            .Renewal_Grid li:nth-child(n+2) {background-color:#fff;}
+            .Renewal_Grid p {padding:1.2em 1em 1em;color:#424242;display:flex;justify-content:center;align-items:center;}
+            .Renewal_Grid li:nth-child(1) p {padding:0.6em 0.5em;background-color:transparent;}
+            .Renewal_Grid p:nth-child(2) {background-color:#f9f9f9;font-weight:600;color:#121212;}
+            .Renewal_Grid p:nth-child(3) {color:#0068b7;font-weight:600;}
+
+            /* 건강한 피부 정보 */
+            .SkinMoisture_Box {background:linear-gradient(#f9f9f9 85%, #fff 85%);}
+            .SkinMoisture {display:grid;grid-template-columns:repeat(3, 15.2593%);justify-content:center;column-gap:7em;}
+            .SkinMoisture li {z-index:2;}
+            .SkinMoisture:nth-of-type(2):after {content:'';position:absolute;display:block;width:50%;height:1px;border-top:1px #3c8cc9 dotted;top:50%;left:25%;z-index:1;}
+            .SkinMoisture .arrow:after {content:'';position:absolute;width: 0;top:50%;right:-40%;height: 0;border:5px solid transparent;border-top:5px solid #0068b7;border-right:5px solid #0068b7;transform:translate(-100%, -50%) rotate(45deg);}
+            .SkinMoisture_cause {width:fit-content;display:grid;grid-template-columns:auto auto;justify-content:center;align-items:start;column-gap:2em;margin:1.8em auto 0 !important;}
+            .SkinMoisture_cause li {display:grid;grid-template-columns:2.5em auto;justify-content:start;align-items: start;padding:1.5em 2em;column-gap:1em;}
+            .SkinMoisture_cause:after {content:'';position:absolute;display:block;width:100%;height:1px;border-top:1px #3c8cc9 dotted;top:50%;left:50%;transform:translate(-50%, -51%);}
+            .SkinMoisture_cause li:nth-child(odd):after {content:'';position:absolute;display:block;width:1px;height:100%;border-right:1px #3c8cc9 dotted;top:0;right:-1em;transform:translateY(-0.5px);}
+
+            /* 케어셀라 하이드레이션 */
+            .HydrationSet_Grid {display:grid;grid-template-columns:repeat(5, 18%);justify-content:space-around;}
+            .HydrationSet_Grid img {width:7.5em;}
+            .HydrationSet_Grid li {z-index:2;}
+            .HydrationSet_Grid:nth-of-type(2):after {content:'';position:absolute;display:block;width:80%;height:1px;border-top:1px #656565 dotted;top:50%;left:10%;z-index:1;}
+
+            /* 브랜드 스토리 */
+            .Brand_Grid {display:grid;grid-template-columns:40% 56%;justify-content:space-between;align-items:start;border:#ccc solid 1px;text-align:left;}
+            .Brand_Grid .logo_img {max-width:40% !important;margin-top:1em;}
+
+            /* 각종인증사항 */
+            .Certifi_Grid {display:grid;grid-template-columns:15% 82%;justify-content:space-between;align-items:start;border:#cccc solid 1px;}
+
+            @media all and (max-width:799px) {
+                .Product_DetailWrap .mt_10 {margin-top:0.8333vw;}
+                .Product_DetailWrap .mt_20 {margin-top:1.6667vw;}
+                .Product_DetailWrap .mt_30 {margin-top:2.5vw;}
+                .Product_DetailWrap .mt_50 {margin-top:4.1667vw;}
+                .Product_DetailWrap .mt_70 {margin-top:5.8333vw;}
+                .Product_DetailWrap .mt_100 {margin-top:8.3333vw;}
+                .Product_DetailWrap .mt_120 {margin-top:10vw;}
+                .Product_DetailWrap .mt_150 {margin-top:12.5vw;}
+                .Product_DetailWrap .mt_200 {margin-top:16.6667vw;}
+                .Product_DetailWrap .pt_70 {padding-top:5.8333vw;}
+                .Product_DetailWrap .pt_80 {padding-top:6.6667vw;}
+                .Product_DetailWrap .pb_70 {padding-bottom:5.8333vw;}
+                .Product_DetailWrap .pb_80 {padding-bottom:6.6667vw;}
+                .Product_DetailWrap .bdr_10, .Product_DetailWrap .bdr_10_view {border-radius:0.8333vw;}
+                .Product_DetailWrap .ybr {display:block;}
+                .Product_DetailWrap .nbr {display:none;}
+                .SkinMoisture .arrow:after {border:3px solid transparent;border-top:3px solid #0068b7;border-right:3px solid #0068b7;}
+            }
+
+            @media all and (max-width:720px) {
+                .Product_DetailWrap {font-size:7px;}
+            }
+
+            @media all and (max-width:620px) {
+                .Product_DetailWrap {font-size:6px;}
+            }
+
+            @media all and (max-width:510px) {
+                .Brand_Grid {grid-template-columns:1fr;row-gap:4.1667vw;text-align:center;}
+                .Brand_Grid .logo_img {margin-top:0 !important;}
+            }
+
+            @media all and (max-width:520px) {
+                .Product_DetailWrap {font-size:5px;}
+            }
+
+            @media all and (max-width:420px) {
+                .Product_DetailWrap {font-size:4px;}
+            }
+
+            @media all and (max-width:320px) {
+                .Product_DetailWrap {font-size:3px;}
+            }
+</style>
+<div class="Product_DetailWrap">
+<section class="KeyImg pos_r">
+<div class="key_TitleBox w90">
+<p class="p4">한 병에 담은 수분 에너지<br/>
+수분과 영양이 가득한 촉촉한 발림성의 겔 타입 세럼</p>
+<p class="p6 color_dark font_NGB mt_02em lh_12">케어셀라 하이드레이션<br/>
+인텐시브 세럼</p>
+</div>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/intensive_serum/hydration_intensive_serum_keyimg.jpg"/></section>
+<p class="Top_Text p4 color_blue"><span>수</span> <span>분</span> <span>촉</span> <span>촉</span><br/>
+레이어링 하면 할 수록 촉촉하게 차오르는 수분감</p>
+
+<div class="Product_Title mt_150">
+<p class="ProductName pos_r font_NMr t_up lh_12"><i>CareCella</i></p>
+<p class="font_NMr t_up lh_12">Hydration Intensive Serum</p>
+<p class="p5 font_NGB color_dark mt_04em">제품 특징</p>
+<p class="p1 font_NMr mt_04em">KEY POINT</p>
+</div>
+
+<section class="KeyPoint_Box mt_50"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/intensive_serum/hydration_intensive_serum_img_01.jpg"/>
+<div class="w90 KeyPoint_Grid plr_5p bg_white ta_l">
+<div class="font_NMr p6 color_lightblue lh_10">01</div>
+<div>
+<p class="p4 fw_600 color_dark">촉촉 수분 보습막 형성 블렌딩 포뮬라를 함유한<br/>
+투명 수분 세럼에 담은 신개념 집중 앰플형 세럼</p>
+<p class="p3 mt_02em">여러 번 덧발라도 뭉치거나 밀리지 않는 촉촉한 발림성의 겔 타입 앰플형 세럼<br/>
+속 건조를 잡고 싶을 때 레어이링 하여 사용하면 피부에 수분 보습감을 오래 정착 가능<br/>
+미백 주름 개선 2중 기능성</p>
+</div>
+<div class="font_NMr p6 color_lightblue lh_10">02</div>
+<div>
+<p class="p4 fw_600 color_dark">무너진 장벽이 남긴 흔적을 지우는 세럼</p>
+<p class="p3 mt_02em">수분 하나의 효과에서 멈주지 않는 피부 전체 다스림<br/>
+수분보습, 피부장벽, 탄력, 주름까지 케어</p>
+</div>
+<div class="font_NMr p6 color_lightblue lh_10">03</div>
+<div>
+<p class="p4 fw_600 color_dark">하이드레이션 ‘인텐시브 세럼’에만 담긴 새로운 성분!</p>
+<p class="p3 mt_02em">새로운 성분이 피부 깊숙이 수분 장벽을 유지<br/>
+3단계 복합 히알루론산 및 복합 콤플렉스(돌콩피토플라센타, 진세노사이드) 함유</p>
+</div>
+<div class="font_NMr p6 color_lightblue lh_10">04</div>
+<div>
+<p class="p4 fw_600 color_dark">새로운 사용감 새로운 식물성 추출오일향</p>
+<p class="p3 mt_02em">보습 레이어링 효과를 위한 사용감을 개선<br/>
+자연에서 온 식물추출물로만 만들어진 새로운 향으로 산뜻하게</p>
+</div>
+</div>
+<div class="w90 flex_cc flex_wrap cgap_1em rgap_1em mt_50">
+<p class="blue_linebar p2 color_blue lh_10">#피부장벽까지 수분가득</p>
+<p class="blue_linebar p2 color_blue lh_10">#수분 촉촉</p>
+<p class="blue_linebar p2 color_blue lh_10">#한방울의 기적</p>
+<p class="blue_linebar p2 color_blue lh_10">#앰플형 세럼</p>
+</div>
+</section>
+
+<div class="Product_Title mt_150">
+<p class="ProductName pos_r font_NMr t_up lh_12"><i>CareCella</i></p>
+<p class="font_NMr t_up lh_12">Hydration Intensive Serum</p>
+<p class="p5 font_NGB color_dark mt_04em">제품 주요 성분</p>
+<p class="p1 font_NMr t_up mt_04em">Ingredients</p>
+</div>
+
+<section class="w90 mt_50"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_01.jpg"/>
+<p class="p4 fw_600 color_dark">복합 히알루론산</p>
+<p class="p3 mt_02em">3단계 10중 복합 히알루론산으로 끈적임 없이 건조함을 한번에</p>
+
+<div class="Hyaluronic_Grid mt_70">
+<div class="Hyaluronic_Img pos_r">
+<p class="p1 fw_600 color_gray">표피</p>
+<p class="p1 fw_600 color_gray">진피</p>
+<p class="p1 fw_600 color_gray">피하조직</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_02_01.jpg"/></div>
+<ul class="ta_l Hyaluronic_rowGrid">
+<li>
+<p class="p3 fw_600 color_dark mt_01em">고분자(1,800kDa 이상)</p>
+<p class="p0 lh_12">피부 표피와 기저층에 풍부한 수분을 공급하여 매끈한 피부를 유지<br/>
+	피부 표면에 침투하여 볼륨 증가 및 표피내 수분 증발 차단</p>
+</li>
+<li>
+<p class="p3 fw_600 color_dark">중분자(1,000kDa ~ 1,800kDa)</p>
+<p class="p0 lh_12">피부의 기저층과 진피 상단에 침투<br/>
+	피부 볼륨을 높여주어 주름을 완화</p>
+</li>
+<li>
+<p class="p3 fw_600 color_dark">저분자(1,000kDa 미만)</p>
+<p class="p0 lh_12">진피내 수분공급 및 콜라겐 생성에 도움</p>
+</li>
+</ul>
+</div>
+<ul class="w90 Hyaluronic_GIF">
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_02_02.gif"/>
+<p class="p3 fw_600 color_gray mt_04em">고분자 히알루론산</p>
+</li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_02_03.gif"/>
+<p class="p3 fw_600 color_blue mt_04em">초저분자 히알루론산</p>
+</li>
+</ul>
+</section>
+
+<section class="w90 bg_lightblue bdr_10 pt_70 pb_80 mt_100">
+<p class="color_bar p4 fw_600 color_white bg_blue lh_12">복합 히알루론산 효과</p>
+<p class="p4 fw_600 color_blue mt_30">피부 건조 한번에 해결</p>
+<p class="p3 mt_03em">다양한 분자량의 히알루론산을 배합하여<br/>
+피부 바깥부터 피부 안쪽까지 차오르는 물광 피부 완성</p>
+<ul class="Hyaluronic_Graph mt_50">
+<li>
+<div class="pos_r bdr_topRound">
+<div class="bg_white graph_mask">
+<div class="h94 bg_black bdr_topRound">
+<p class="p2 fw_600 color_white mt_1em">94%</p>
+</div>
+</div>
+<div class="gradient_color bdr_topRound"> </div>
+</div>
+<p class="p2 color_dark mt_04em">보습</p>
+</li>
+<li>
+<div class="pos_r bdr_topRound">
+<div class="bg_white graph_mask">
+<div class="h79 bg_black bdr_topRound">
+<p class="p2 fw_600 color_white mt_1em">79%</p>
+</div>
+</div>
+<div class="gradient_color bdr_topRound"> </div>
+</div>
+<p class="p2 color_dark mt_04em">노화방지</p>
+</li>
+<li>
+<div class="pos_r bdr_topRound">
+<div class="bg_white graph_mask">
+<div class="h81 bg_black bdr_topRound">
+<p class="p2 fw_600 color_white mt_1em">81%</p>
+</div>
+</div>
+<div class="gradient_color bdr_topRound"> </div>
+</div>
+<p class="p2 color_dark mt_04em">피부진정</p>
+</li>
+<li>
+<div class="pos_r bdr_topRound">
+<div class="bg_white graph_mask">
+<div class="h92 bg_black bdr_topRound">
+<p class="p2 fw_600 color_white mt_1em">92%</p>
+</div>
+</div>
+<div class="gradient_color bdr_topRound"> </div>
+</div>
+<p class="p2 color_dark mt_04em">수분유지</p>
+</li>
+<li>
+<div class="pos_r bdr_topRound">
+<div class="bg_white graph_mask">
+<div class="h73 bg_black bdr_topRound">
+<p class="p2 fw_600 color_white mt_1em">73%</p>
+</div>
+</div>
+<div class="gradient_color bdr_topRound"> </div>
+</div>
+<p class="p2 color_dark mt_04em">피부강화</p>
+</li>
+</ul>
+</section>
+
+<section class="w90 lightblue_linebox bdr_10 pt_70 pb_80 mt_100">
+<p class="p5 fw_600 color_blue">펩타이드 4종(ActivePep Solution 4)</p>
+<p class="p3 mt_04em">하이드레이션 인텐시브 세럼에만 담긴 특별한 성분!<br/>
+토탈 안티에이징 펩타이드 컴플렉스</p>
+<p class="p3 fw_600 color_blue mt_50">탱탱하게 차오르는 피부를 위한 성분</p>
+<div class="ActivePep_Solution pos_r p1 lh_12 mt_30">
+<p class="ta_r">보톡* 성분 저분자<br/>
+<span class="fw_600 color_dark">아세틸핵사펩타이드</span></p>
+<p class="ta_r">콜라겐 아미노산 3개 조합<br/>
+<span class="fw_600 color_dark">고순도 트리 펩타이드</span></p>
+<p class="ta_r">콜라겐 유사체<br/>
+<span class="fw_600 color_dark">헥사펩타이드</span></p>
+<p class="ta_r">비타민 펩타이드<br/>
+<span class="fw_600 color_dark">니코티노일트라이펩타이드</span></p>
+<p class="fw_600 color_dark">탄력 증진</p>
+<p class="fw_600 color_dark">수분 충전</p>
+<p class="fw_600 color_dark">진정 케어</p>
+<p class="fw_600 color_dark">깊은 광채</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/intensive_serum/hydration_intensive_serum_img_02.jpg"/></div>
+</section>
+
+<section class="w90 mt_120">
+<p class="p5 fw_600 color_blue">복합 콤플렉스 성분</p>
+<ul class="grid_2step mt_30">
+<li class="gray_linebox bdr_10 pb_3em"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_03_01.jpg"/>
+<p class="w90 p2 fw_600 color_dark">돌콩피토플라센타추출물</p>
+<p class="w90 p2 mt_02em">식물 성장에 필요한 필수 양분 공급 / 피부의 탄력과 생기부여 / 피부 윤택 및 노화 방지 등<br class="ybr"/>
+	피부 개선 효과</p>
+</li>
+<li class="gray_linebox bdr_10 pb_3em"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_03_02.jpg"/>
+<p class="w90 p2 fw_600 color_dark">진세노사이드</p>
+<p class="w90 p2 mt_02em">피부 장벽 강화 / 강력한 항산화 효과 / 피부 스트레스 감소 /<br/>
+	피부 탄력 유지 및 미세한 주름과 피부의 다크닝 완화</p>
+</li>
+<li class="gray_linebox bdr_10 pb_3em"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_03_03.jpg"/>
+<p class="w90 p2 fw_600 color_dark">하이드롤라이즈드콜라겐</p>
+<p class="w90 p2 mt_02em">‘마린콜라겐’ 이라고 불리며, 피부에 수분을 공급하여<br class="ybr"/>
+	촉촉한 피부로 유지</p>
+</li>
+<li class="gray_linebox bdr_10 pb_3em"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_03_11.jpg"/>
+<p class="w90 p2 fw_600 color_dark">판테놀</p>
+<p class="w90 p2 mt_02em">수분의 증발을 막아 피부가 자체적으로 수분을 유지하는데 도움</p>
+</li>
+</ul>
+<p class="p2 mt_1em">* 상기 설명은 원료적 특성에 한함</p>
+</section>
+
+<section class="w90 bg_lightblue bdr_10 pt_70 pb_80 mt_100">
+<p class="p5 fw_600 color_dark lh_12">2세대 ver.<br/>
+<span class="color_blue">어떤 부분이 달라졌을까요?</span></p>
+<ul class="Renewal_Grid mt_30 plr_8p">
+<li>
+<div class="p3">
+<p class="color_dark">1세대 (리뉴얼 전)</p>
+<p> </p>
+<p>2세대 (리뉴얼 후)</p>
+</div>
+</li>
+<li>
+<div class="p2">
+<p>끈적임, 오일리, 살짝 무거움</p>
+<p>사용감</p>
+<p>촉촉함, 산뜻함, 수분감</p>
+</div>
+</li>
+<li>
+<div class="p2">
+<p>특허 원료 사용</p>
+<p>원료</p>
+<p>특허 원료 + 수분 핵심 업그레이드 원료</p>
+</div>
+</li>
+<li>
+<div class="p2">
+<p>라벤더 오일</p>
+<p>향</p>
+<p>식물 추출물로만 매스킹한 새로운 향</p>
+</div>
+</li>
+<li>
+<div class="p2">
+<p>기초 5종 + 수분, 보습</p>
+<p>포인트</p>
+<p>기초 5종 + 수분 전문 케어 (기존 대비 수분도 증가)</p>
+</div>
+</li>
+</ul>
+</section>
+
+<section class="w90 mt_100">
+<div class="SkinMoisture_Box bdr_10 pt_70 mt_120">
+<p class="color_bar p4 fw_600 color_white bg_blue lh_12">건강한 피부 정보</p>
+<p class="p4 mt_30 fw_600 color_blue">40대 이후 피부 수분도 급격히 감소</p>
+<p class="p3 mt_03em lh_12">피부 수분 균형이 깨지면 탄력 저하 및 피부 장벽 악화</p>
+<ul class="SkinMoisture mt_70">
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_04_01.png"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_04_02.png"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_04_03.png"/></li>
+</ul>
+<ul class="SkinMoisture pos_r mt_20">
+<li class="arrow pos_r">
+<p class="color_bar p2 bg_blue color_white lh_10">0세</p>
+</li>
+<li class="arrow pos_r">
+<p class="color_bar p2 bg_blue color_white lh_10">40세</p>
+</li>
+<li>
+<p class="color_bar p2 bg_blue color_white lh_10">70세</p>
+</li>
+</ul>
+<img class="mt_50" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_04_bg.png"/>
+<div class="w90 bg_white bdr_10 pd_5p">
+<p class="p4 color_blue fw_600">수분 부족 원인</p>
+<ul class="SkinMoisture_cause pos_r ta_l">
+<li class="pos_r"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_05.png"/>
+<p class="p2 fw_600 color_dark">칙칙해 보이는 피부</p>
+</li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_05.png"/>
+<p class="p2 fw_600 color_dark">푸석푸석한 피부 결</p>
+</li>
+<li class="pos_r"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_05.png"/>
+<p class="p2 fw_600 color_dark">탄력이 없는 피부</p>
+</li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_05.png"/>
+<p class="p2 fw_600 color_dark">피부 사막화</p>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+<div class="Product_Title mt_100">
+<p class="ProductName pos_r font_NMr t_up lh_12"><i>CareCella</i></p>
+<p class="font_NMr t_up lh_12">Hydration Intensive Serum</p>
+<p class="p5 font_NGB color_dark mt_04em">제품 사용 방법</p>
+<p class="p1 font_NMr mt_04em">HOW TO USE</p>
+</div>
+
+<section class="w90 mt_50">
+<ul class="grid_2step">
+<li class="gray_linebox pb_3em bdr_10"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/balance_toner/hydration_balance_toner_img_02_01.jpg"/>
+<p class="w90 p2 pb_30">아침, 저녁 스킨케어<br/>
+	적용 시 토너 다음 단계에 사용합니다.</p>
+</li>
+<li class="gray_linebox pb_3em bdr_10"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/balance_toner/hydration_balance_toner_img_02_02.jpg"/>
+<p class="w90 p2 pb_30">볼과 이마, 턱에 나눠<br/>
+	놓은 후 얼굴 안쪽에서 바깥쪽으로 고르게<br/>
+	펴 바르면서<br/>
+	흡수시켜 줍니다.</p>
+</li>
+</ul>
+</section>
+
+<section class="w90 mt_120">
+<p class="color_dark"><span class="p4">빠른 흡수, 수분가득 오래가는</span><br/>
+<span class="p5 fw_600">하이드레이션 인텐시브 세럼</span></p>
+<p class="p3">빈 공간 없이 채워 넣는 보습감으로 속당김을 해소하는 수분 롱런 세럼</p>
+<ul class="HydrationSet_Grid mt_70">
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_05_01.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_05_02.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_05_03.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_05_04.jpg"/></li>
+<li><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/hydration_img_05_05.jpg"/></li>
+</ul>
+<ul class="HydrationSet_Grid pos_r mt_20">
+<li>
+<p class="color_bar p0 bg_dark color_white lh_10">STEP 01</p>
+</li>
+<li>
+<p class="color_bar p0 bg_dark color_white lh_10">STEP 02</p>
+</li>
+<li>
+<p class="color_bar p0 bg_blue color_white lh_10">STEP 03</p>
+</li>
+<li>
+<p class="color_bar p0 bg_dark color_white lh_10">STEP 04</p>
+</li>
+<li>
+<p class="color_bar p0 bg_dark color_white lh_10">STEP 05</p>
+</li>
+</ul>
+<ul class="HydrationSet_Grid p1 lh_12 mt_10">
+<li>케어셀라 하이드레이션<br/>
+	폼 클렌저 100ml</li>
+<li>케어셀라 하이드레이션<br/>
+	밸런스 토너 120ml</li>
+<li class="color_blue fw_600">케어셀라 하이드레이션<br/>
+	인텐시브 세럼 50ml</li>
+<li>케어셀라 하이드레이션<br/>
+	딥 에멀젼 120ml</li>
+<li>케어셀라 하이드레이션<br/>
+	아쿠아 크림 100ml</li>
+</ul>
+</section>
+
+<div class="Product_Title mt_150">
+<p class="ProductName pos_r font_NMr t_up lh_12"><i>CareCella</i></p>
+<p class="font_NMr t_up lh_12">Hydration Intensive Serum</p>
+<p class="p5 font_NGB color_dark mt_04em">권장 대상</p>
+<p class="p1 font_NMr mt_04em">RECOMMENDED TARGET</p>
+</div>
+
+<section class="w90 bg_whitegray pb_80 mt_50 bdr_10"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/HYDRATION/intensive_serum/hydration_intensive_serum_img_03.jpg"/>
+<div class="w90 grid_textList color_dark ta_l"><img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_02.png"/>
+<p class="p3">무엇을 발라도 속 건조가 해결되지 않을 때</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_02.png"/>
+<p class="p3">거친 피부결, 들뜬 각질 피부가 고민일 때</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_02.png"/>
+<p class="p3">온도, 계절, 외부 환경에 민감해진 피부가 고민일 때</p>
+<img decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/checkbox_style_02.png"/>
+<p class="p3">끈적임 없이 촉촉한 보습감을 느끼고 싶을 때</p>
+</div>
+</section>
+
+<section class="Brand_Grid pd_2em mt_150 bdr_10"><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/dermatest_img.jpg"/>
+<div class="tl">
+<p class="p4 fw_600 color_dark">독일 피부과학연구소 더마테스트(dermatest) 엑셀런트 획득</p>
+<p class="p3 mt_04em">세계 최고 독일 피부과학연구소 더마테스트에 24시간, 48시간, 72시간 인체 피부 적용 실험을 의뢰 “피부자극없음”인 Excellent를 획득하였습니다.</p>
+</div>
+</section>
+
+<section class="Brand_Grid pd_2em mt_30 bdr_10"><img class="bdr_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/new_package/brand_story/brand_carecella_img.png"/>
+<div><img class="logo_img" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/new_package/brand_story/brand_carecella_logo.png"/>
+<p class="p3 color_dark fw_600 mt_30">케어셀라는 ‘낫게하다’를 의미하는 Care와 라틴어로 세포를 의미하는 Cella의 합성어로 피부 본연의 아름다움을 찾아주는 시작점을 뜻합니다.</p>
+<p class="p3 mt_02em">자연에서 찾은 식물성 원료를 사용하여 각 피부에 맞는 제품을 개발하고 전문적인 케어 가이드를 제안하는 홈 뷰티 화장품 브랜드입니다.</p>
+</div>
+</section>
+
+<div class="mt_150"><img class="mWidth_10" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/certifications_icon.jpg"/>
+<p class="p5 font_NGB color_dark mt_04em">각종 인증 사항</p>
+<p class="p1 font_NMr mt_04em">CERTIFICATIONS</p>
+</div>
+
+<section class="ta_l pb_80 mt_50">
+<div class="Certifi_Grid pd_2em bdr_10"><img alt="비코프인증" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/certifi_B_corp.png"/>
+<div class="_txtBox">
+<p class="p4 fw_600 color_dark">비코프인증 획득!</p>
+<p class="p3 color_dark mt_04em"><span class="pos_r underline">비코프인증(B-Corp Certified)</span>이란?</p>
+<p class="p3 mt_04em">B-Corp은 비즈니스를 통해 사회 환경적 문제를 해결하고 사회에 긍정적인 영향을 끼치는 기업을 확대하기 위해서 2007년 BLab(미국비영리 조직)이 만든 글로벌 사회적 기업 인증 제도입니다.</p>
+</div>
+</div>
+<div class="Certifi_Grid pd_2em bdr_10 mt_30"><img alt="국제 화장품 규격(Cosmetics GMP)ISO 22716 인증" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/ISO_22716.png"/>
+<div class="_txtBox">
+<p class="p4 fw_600 color_dark">국제 화장품 규격(Cosmetics GMP) ISO 22716 인증 획득!</p>
+<p class="p3 color_dark mt_04em"><span class="pos_r underline">ISO 22716</span>이란?</p>
+<p class="p3 mt_04em">국제 화장품 규격 ISO 22716은 2007년 11월 15일 공표된 Cosmetics GMP(Guidelines on Good Manufacturing)입니다.<br class="nbr"/>
+ISO 22716에서는 화장품 기업의 제조시설 기준(GMP)뿐만 아니라, 화장품 품질시스템 실행 및 유지 경쟁력이 매우 중요한 평가 요소가 됩니다.</p>
+</div>
+</div>
+<div class="Certifi_Grid pd_2em bdr_10 mt_30"><img alt="CGMP(우수화장품 제조기준) 인증" decoding="async" loading="lazy" src="https://cdn.gcoop.me/storage/global_image/common_img/CGMP.png"/>
+<div class="_txtBox">
+<p class="p4 fw_600 color_dark">CGMP(우수화장품 제조 및 품질관리 기준) 인증 획득!</p>
+<p class="p3 color_dark mt_04em"><span class="pos_r underline">CGMP 인증</span>이란?</p>
+<p class="p3 mt_04em">CGMP 인증은 화장품 제조공장의 구조와 설비, 조직과 원료구매로부터 제조, 포장, 보관, 출하에 이르기까지 모든 단계를 표준화된 기준에 따라 체계적으로 관리하여 제품의 품질보증을 달성하기 위한 규격으로 이를 통해 우수 화장품을 제조, 판매합니다.</p>
+</div>
+</div>
+</section>
+</div>
+<div style="text-align:center;">
+<a href="#" rel="noopener" target="_blank"><img decoding="async" loading="lazy" src="https://vcshop.gcoop.com/images/icon_edu_materials.png" style="width:220px;"/></a>
+</div>
+</div></div></div></div></div></div></body></html>
