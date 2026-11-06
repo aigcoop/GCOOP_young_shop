@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /details/
+Sitemap: https://shop.dailygungang.com/sitemap.xml
