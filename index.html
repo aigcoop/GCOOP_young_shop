@@ -933,7 +933,8 @@ function shipHTML(){
   return `<table class="ntab"><tbody>${SHIP.map(r=>`<tr><th scope="row">${esc(r[0])}</th><td>${r[1].split("\n").map(l=>l==="@KK"?kk:esc(l)).join("<br>")}</td></tr>`).join("")}</tbody></table>`;
 }
 function infoTable(rows){ return rows && rows.length ? `<table class="ntab"><tbody>${rows.map(r=>`<tr><th scope="row">${esc(isCs(r[0])?"소비자 상담 문의":r[0])}</th><td>${isCs(r[0])?`<a class="cskk" ${ext(KAKAO)}>${I.kakao} 영샵 판매자 카카오톡 문의</a>`:r[1].split("\n").map(l=>l==="@KK"?`<a class="cskk" ${ext(KAKAO)}>${I.kakao} 카카오톡 문의하기</a>`:esc(l)).join("<br>")}</td></tr>`).join("")}</tbody></table>` : `<p class="dmsg">정보고시 내용을 불러오지 못했어요.</p>`; }
-function vidsHTML(p){ return p.vids ? (()=>{ let shown = 0; const items = p.vids.map(v=>{ const hide = shown >= 3; shown += 1; return `<figure class="vbox${v.w?" wide":""}"${hide?" data-more hidden":""}><video controls playsinline preload="none" poster="videos/${v.f}.jpg" src="videos/${v.f}.mp4"></video><figcaption>${esc(v.t)}</figcaption></figure>`; }).join("");
+const VBASE = "https://cdn.jsdelivr.net/gh/aigcoop/GCOOP_young_shop@679098c767ce830280179150d62cac9b7af1b311/";
+function vidsHTML(p){ return p.vids ? (()=>{ let shown = 0; const items = p.vids.map(v=>{ const hide = shown >= 3; shown += 1; return `<figure class="vbox${v.w?" wide":""}"${hide?" data-more hidden":""}><video controls playsinline preload="none" poster="${VBASE}${v.f}.jpg" src="${VBASE}${v.f}.mp4"></video><figcaption>${esc(v.t)}</figcaption></figure>`; }).join("");
     const more = p.vids.length - 3;
     return `<section class="pvids" aria-label="제품 영상"><h4>영상으로 먼저 보기 <small>${p.vids.length}개</small></h4><div class="vgrid">${items}</div>${more>0?`<button type="button" class="vmore" data-vmore>영상 ${more}개 더 보기 ▾</button>`:""}</section>`; })() : ""; }
 async function renderDetail(p){
@@ -1113,7 +1114,7 @@ $("slides").addEventListener("mouseenter", ()=>clearInterval(stimer));
 $("slides").addEventListener("mouseleave", autoplay);
 
 const REEL = [[32, "v5"], [44, "v1"], [47, "v13"], [61, "v14"], [41, "v17"], [45, "v20"], [40, "v9"], [43, "v16"], [65, "v31"], [28, "v7"], [25, "v26"], [7, "v45"], [37, "v37"], [34, "v41"], [49, "v36"], [30, "v4"]];
-function renderReel(){ const r = $("reel"); if(!r) return; r.innerHTML = REEL.filter(([n])=>BYN[n]).map(([n,f])=>{ const p = BYN[n]; return `<button type="button" class="rcard" data-open="${n}" data-to="pdx" aria-label="${esc(p.name)} 영상 보기"><img src="videos/${f}.jpg" alt="" loading="lazy"><span class="rplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="rname">${esc(p.name)}</span>${p.vids&&p.vids.length>1?`<span class="rcnt">${p.vids.length}</span>`:""}</button>`; }).join(""); }
+function renderReel(){ const r = $("reel"); if(!r) return; r.innerHTML = REEL.filter(([n])=>BYN[n]).map(([n,f])=>{ const p = BYN[n]; return `<button type="button" class="rcard" data-open="${n}" data-to="pdx" aria-label="${esc(p.name)} 영상 보기"><img src="${VBASE}${f}.jpg" alt="" loading="lazy"><span class="rplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="rname">${esc(p.name)}</span>${p.vids&&p.vids.length>1?`<span class="rcnt">${p.vids.length}</span>`:""}</button>`; }).join(""); }
 renderReel();
 renderSlides(); renderStatic(); renderCats(); renderGrid(); counts(); autoplay();
 { const m = location.hash.match(/^#p(\d+)$/); if(m && BYN[+m[1]]) openProduct(+m[1], false); }
