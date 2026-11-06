@@ -621,10 +621,6 @@ footer .disc{display:block;margin-top:10px;font-size:11px;line-height:1.55;color
     <div class="reel" id="reel"></div>
   </section>
 
-  <section class="sec wrap" aria-labelledby="mh">
-    <div class="sh"><h2 id="mh">이달의 추천 제품</h2><span class="sub">많이 찾으시는 제품을 모았어요</span></div>
-    <div class="shelf" id="shelf"></div>
-  </section>
 
   <section class="sec wrap" id="all" aria-labelledby="ah">
     <div class="sh"><h2 id="ah">전체 상품</h2></div>
@@ -844,7 +840,7 @@ function autoplay(){ clearInterval(stimer); if(!reduce) stimer = setInterval(()=
 
 function renderStatic(){
   $("qcats").innerHTML = CATS.filter(c=>c.id!=="all").map(c=>`<button class="qc" type="button" data-cat="${c.id}"><span class="qimg">${imgTag(BYN[c.rep])}</span><span>${c.label}</span></button>`).join("");
-  $("shelf").innerHTML = PICKS.map(n=>BYN[n]).filter(Boolean).map(card).join("");
+  const sh = $("shelf"); if(sh) sh.innerHTML = PICKS.map(n=>BYN[n]).filter(Boolean).map(card).join("");
 }
 
 function renderCats(){
