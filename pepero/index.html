@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="지쿱AI대학교 학생들을 위한 빼빼로데이 특별 선물 프롬프트. 상자를 열고 제미나이에 내 사진과 함께 붙여넣어 보세요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="빼빼로데이 프롬프트 뽑기 🍫">
+<meta property="og:description" content="지쿱AI대학교 학생들을 위한 특별 선물! 상자를 열고 나만의 빼빼로데이 화보를 만들어 보세요.">
+<meta property="og:image" content="https://shop.dailygungang.com/pepero/img/p09.jpg">
+<meta property="og:url" content="https://shop.dailygungang.com/pepero/">
+<meta name="robots" content="noindex">
+<title>빼빼로데이 프롬프트 뽑기</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Black+Han+Sans&display=swap">
+<style>
+/* 레이아웃: 초콜릿 무대 위 진열대에 상자를 세워 두고, 상자를 열면 아래에서 결과 카드가 올라오는 구조 */
+:root{
+  --cocoa:#2a1410; --cocoa-2:#3b1d16; --biscuit:#e9c48f; --pink:#ff5c93; --blush:#ffd0df; --cream:#fff6f0;
+  --muted:#c9a89a;
+  --display:'Black Han Sans','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  --body:'Gowun Dodum','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{
+  background:radial-gradient(120% 70% at 50% 0%,#5a2a22 0%,var(--cocoa) 60%) var(--cocoa);
+  color:var(--cream);font-family:var(--body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:28px 60px;overflow-x:hidden;
+}
+.wrap{max-width:820px;margin:0 auto}
+header{text-align:center;margin-bottom:28px}
+.date{display:inline-block;font-family:var(--display);letter-spacing:.2em;color:var(--biscuit);font-size:14px;border:1px solid #6b3a2e;border-radius:99px;padding:4px 14px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(34px,9vw,58px);line-height:1.1;margin:14px 0 8px;text-wrap:balance;color:var(--blush);
+  text-shadow:0 3px 0 #8a2a4a,0 10px 30px rgba(255,92,147,.35)}
+h1 b{color:var(--pink);font-weight:400}
+header p{margin:0;color:var(--muted)}
+.kicker{font-family:var(--display);color:var(--biscuit)!important;font-size:clamp(15px,4vw,19px);margin-top:16px!important;letter-spacing:.02em}
+.lead{max-width:34em;margin:12px auto 0!important;color:var(--cream)!important;opacity:.9}
+.hint{margin-top:8px!important;font-size:14px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#3a1d16;color:#fff;padding:12px 18px;border-radius:14px;font-size:14px;z-index:40;max-width:calc(100% - 32px);text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.acts.three{flex-wrap:wrap}
+.acts.three button,.acts.three a{flex:1 1 calc(50% - 5px)}
+.acts a{display:flex;align-items:center;justify-content:center;padding:14px;border-radius:12px;font-family:var(--display);font-size:17px;text-decoration:none}
+.gem{background:linear-gradient(120deg,#4f7cff,#a46bff);color:#fff}
+.kakao{background:#fee500;color:#191600}
+.steps{font-size:13px;color:#8a6a5e;text-align:center;margin-top:10px}
+.bar{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:16px}
+.chip{background:var(--cocoa-2);border:1px solid #5b2e24;border-radius:99px;padding:6px 14px;font-size:14px}
+.chip strong{color:var(--pink);font-variant-numeric:tabular-nums}
+
+.shelf{display:grid;grid-template-columns:repeat(5,1fr);gap:26px 14px;perspective:1000px;padding:10px 4px 0}
+@media (max-width:560px){.shelf{grid-template-columns:repeat(3,1fr)}}
+.slot{background:none;border:0;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;font:inherit;color:inherit}
+.slot:focus-visible{outline:3px solid var(--pink);outline-offset:6px;border-radius:10px}
+.box{position:relative;width:64px;height:132px;transform-style:preserve-3d;transform:rotateX(-10deg) rotateY(-30deg);animation:bob 3.2s ease-in-out infinite;transition:transform .35s}
+.slot:hover .box,.slot:focus-visible .box{transform:rotateX(-6deg) rotateY(8deg) translateY(-12px) scale(1.08);animation-play-state:paused}
+.f{position:absolute;border-radius:3px}
+.fr{inset:0;transform:translateZ(13px);overflow:hidden;background:linear-gradient(170deg,var(--c),color-mix(in srgb,var(--c) 55%,#000));box-shadow:inset 0 0 14px rgba(0,0,0,.35)}
+.sd{width:26px;height:132px;left:19px;transform:rotateY(90deg) translateZ(32px);background:color-mix(in srgb,var(--c) 60%,#000)}
+.tp{width:64px;height:26px;top:53px;transform:rotateX(90deg) translateZ(66px);background:color-mix(in srgb,var(--c) 80%,#fff)}
+.win{position:absolute;left:10px;right:10px;top:18px;height:62px;border-radius:26px 26px 5px 5px;background:rgba(255,255,255,.2);display:flex;justify-content:center;gap:4px;padding-top:7px;box-shadow:inset 0 2px 6px rgba(0,0,0,.35)}
+.win i{width:5px;height:52px;border-radius:3px;background:linear-gradient(#3d2016 0 66%,var(--biscuit) 66%)}
+.rb{position:absolute;bottom:30px;left:0;right:0;height:8px;background:linear-gradient(#fff,#ffd6e5)}
+.fr:after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.5) 48%,transparent 60%);transform:translateX(-130%);animation:shine 4s infinite}
+/* 실사 느낌: 코팅 종이 광택, 접힌 윗뚜껑, 인쇄된 막대과자, 띠 라벨 */
+.box{width:70px;height:140px}
+.fr{background:
+   linear-gradient(90deg,rgba(255,255,255,.28) 0 6%,transparent 18% 82%,rgba(0,0,0,.25) 100%),
+   linear-gradient(175deg,color-mix(in srgb,var(--c) 85%,#fff) 0%,var(--c) 35%,color-mix(in srgb,var(--c) 60%,#000) 100%);
+   border-radius:4px 4px 3px 3px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18),inset 0 -10px 18px rgba(0,0,0,.25)}
+.sd{width:28px;height:140px;left:21px;transform:rotateY(90deg) translateZ(35px);
+   background:linear-gradient(180deg,color-mix(in srgb,var(--c) 70%,#000),color-mix(in srgb,var(--c) 45%,#000))}
+.tp{width:70px;height:28px;top:56px;transform:rotateX(90deg) translateZ(70px);background:linear-gradient(90deg,color-mix(in srgb,var(--c) 75%,#fff),color-mix(in srgb,var(--c) 90%,#fff))}
+.flap{position:absolute;left:0;right:0;top:-1px;height:16px;background:linear-gradient(180deg,rgba(255,255,255,.35),rgba(0,0,0,.12));clip-path:polygon(0 0,100% 0,92% 100%,8% 100%);border-bottom:1px solid rgba(0,0,0,.18)}
+.win{left:11px;right:11px;top:24px;height:66px;border-radius:30px 30px 6px 6px;background:linear-gradient(160deg,rgba(255,240,230,.55),rgba(255,255,255,.15));gap:3px;padding-top:6px;border:1.5px solid rgba(255,255,255,.55)}
+.win i{width:6px;height:60px;background:linear-gradient(90deg,rgba(255,255,255,.25),transparent 40%),linear-gradient(#2e140c 0 68%,#e4b77a 68% 100%);box-shadow:1px 1px 2px rgba(0,0,0,.45);transform:rotate(var(--r,0deg))}
+.win i:nth-child(1){--r:-6deg}.win i:nth-child(2){--r:-2deg}.win i:nth-child(3){--r:3deg}.win i:nth-child(4){--r:7deg}
+.rb{bottom:32px;height:10px;background:linear-gradient(#fff,#ffe1ec);box-shadow:0 1px 2px rgba(0,0,0,.25)}
+.rb:after{content:"11.11";position:absolute;inset:0;font:9px/10px var(--display);color:var(--c);text-align:center;letter-spacing:.12em}
+.gloss{position:absolute;top:0;bottom:0;left:6px;width:8px;background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,0));border-radius:4px;filter:blur(1px)}
+.num{position:absolute;bottom:5px;width:100%;text-align:center;font-family:var(--display);font-size:18px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.shadow{width:70px;height:12px;border-radius:50%;background:rgba(0,0,0,.45);filter:blur(5px);margin-top:10px}
+.slot.done{cursor:default;opacity:.28}
+.slot.done .box{animation:none;transform:rotateX(-10deg) rotateY(-30deg) translateY(6px)}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@keyframes shine{0%,62%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
+
+/* 실사 상자 이미지 */
+body{background:
+  linear-gradient(180deg,rgba(26,10,8,.82) 0%,rgba(26,10,8,.55) 30%,rgba(26,10,8,.78) 100%),
+  url("img/bg.jpg") center top/cover fixed,var(--cocoa)}
+.shelf{gap:22px 10px;perspective:none}
+.pwrap{position:relative;width:min(100%,92px);animation:bob 3.4s ease-in-out infinite;transition:transform .3s}
+.pbox{display:block;width:100%;height:auto;filter:hue-rotate(var(--h)) drop-shadow(0 10px 12px rgba(0,0,0,.45));transform:rotate(-3deg)}
+.slot:nth-child(even) .pbox{transform:rotate(3deg)}
+.slot:hover .pwrap,.slot:focus-visible .pwrap{transform:translateY(-12px) scale(1.07);animation-play-state:paused}
+.pnum{position:absolute;top:6%;right:-6px;min-width:28px;height:28px;padding:0 6px;border-radius:99px;background:var(--cream);color:#7a1d3c;font:16px/28px var(--display);text-align:center;box-shadow:0 3px 8px rgba(0,0,0,.35)}
+.slot.done .pwrap{animation:none;transform:translateY(6px)}
+.slot.done .pbox{filter:grayscale(1) brightness(.7)}
+.slot .shadow{width:80%}
+.how{margin:34px auto 0;max-width:560px;background:var(--cocoa-2);border:1px solid #5b2e24;border-radius:16px;padding:16px 18px;font-size:15px;color:var(--muted)}
+.how b{color:var(--cream)}
+.how ol{margin:6px 0 0;padding-left:20px}
+
+/* 결과 시트 */
+.veil{position:fixed;inset:0;background:rgba(20,8,6,.78);backdrop-filter:blur(4px);display:flex;align-items:flex-end;justify-content:center;z-index:20;
+  padding:0 env(safe-area-inset-right,0px) 0 env(safe-area-inset-left,0px)}
+.sheet{background:var(--cream);color:#3a1d16;width:100%;max-width:520px;max-height:92vh;overflow-y:auto;border-radius:22px 22px 0 0;
+  padding:22px 18px calc(22px + env(safe-area-inset-bottom,0px));animation:up .4s cubic-bezier(.2,.9,.3,1.2)}
+@media (min-width:640px){.veil{align-items:center}.sheet{border-radius:22px}}
+@keyframes up{from{transform:translateY(60px);opacity:0}}
+.tag{font-family:var(--display);color:var(--pink);letter-spacing:.08em;font-size:14px;text-align:center}
+.sheet h2{font-family:var(--display);font-weight:400;font-size:26px;text-align:center;margin:2px 0 14px;text-wrap:balance}
+.photo{display:block;width:100%;max-width:300px;aspect-ratio:9/16;object-fit:cover;margin:0 auto 6px;border-radius:14px;box-shadow:0 12px 30px rgba(90,30,20,.3);background:#f1dcd2}
+.cap{text-align:center;font-size:13px;color:#8a6a5e;margin-bottom:14px}
+.prompt{width:100%;min-height:180px;border:1.5px dashed #f19bb8;border-radius:12px;padding:12px;font:inherit;font-size:14px;line-height:1.7;background:#fff;color:#3a1d16;resize:vertical}
+.acts{display:flex;gap:10px;margin-top:12px}
+.acts button{flex:1;padding:14px;border:0;border-radius:12px;font-family:var(--display);font-size:17px;cursor:pointer}
+.acts button:focus-visible{outline:3px solid #3a1d16;outline-offset:2px}
+.primary{background:var(--pink);color:#fff}
+.ghost{background:#f6e2da;color:#6a3a2c}
+.miss{text-align:center;padding:10px 0}
+.miss .face{font-size:84px;line-height:1}
+.miss p{margin:10px 0 0;color:#6a3a2c}
+.fall{position:fixed;top:-40px;font-size:24px;pointer-events:none;z-index:30;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(115vh) rotate(380deg)}}
+footer{text-align:center;color:#8a6a5e;font-size:13px;margin-top:26px}
+@media (prefers-reduced-motion:reduce){.pwrap,.box,.fr:after,.sheet,.fall{animation:none!important}}
+</style>
+<style>[hidden]{display:none!important}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header>
+    <span class="date">지쿱AI대학교 · 11.11 SPECIAL GIFT</span>
+    <p class="kicker">지쿱AI대학교 학생들을 위한 빼빼로데이 특별 선물</p>
+    <h1>오늘은 내가<br><b>빼빼로데이 모델</b></h1>
+    <p class="lead">상자를 하나 열면 광고 화보 프롬프트가 들어 있어요.<br>제미나이에 내 사진을 올리고 붙여넣기만 하면 나만의 화보가 완성돼요.</p>
+    <p class="hint">상자 15개 중 딱 하나는 꽝이에요 😉</p>
+    <div class="bar">
+      <span class="chip">남은 상자 <strong id="left">15</strong>개</span>
+      <span class="chip">받은 프롬프트 <strong id="got">0</strong>개</span>
+    </div>
+  </header>
+
+  <main class="shelf" id="shelf" aria-label="막대과자 상자 진열대"></main>
+
+  <section class="how">
+    <b>이렇게 써 보세요</b>
+    <ol>
+      <li>상자를 열어 프롬프트를 복사해요.</li>
+      <li>제미나이나 챗GPT 같은 이미지 생성기에 내 얼굴 사진을 올려요.</li>
+      <li>복사한 프롬프트를 붙여 넣으면 내가 빼빼로데이 모델이 돼요.</li>
+    </ol>
+  </section>
+  <footer>마리아의힐링카페와 함께하는 빼빼로데이 이벤트</footer>
+</div>
+
+<div class="veil" id="veil" hidden>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle"></div>
+</div>
+
+<script>
+const H="업로드한 참고 이미지 속 인물의 성별, 얼굴형, 이목구비, 헤어스타일, 피부톤, 체형을 그대로 유지";
+const P=[
+{t:"핑크 하트 이벤트 부스",p:H+". 파스텔 핑크 풍선과 하트 모양 LED 조명으로 꾸민 빼빼로데이 이벤트 포토부스 앞, 인물이 리본으로 묶은 초콜릿 막대과자 다발을 가슴 앞에 들고 한쪽 어깨를 살짝 기울여 환하게 웃는 동작, 손가락 끝까지 자연스러운 손 모양, 배경에는 은은한 하트 보케와 반짝이는 컨페티가 공중에 떠 있음, 소프트박스 정면 조명과 핑크빛 림라이트, 피부 질감과 니트 짜임까지 선명하게 보이는 디테일, 초고해상도 8K, 하이엔드 광고 화보 스타일 실사, 85mm 렌즈, f/2.0, 9:16 세로 비율, 이미지 안에 글자·로고·숫자 없음."},
+{t:"초콜릿 디핑 홈베이킹",p:H+". 화이트 타일과 원목 선반이 있는 밝은 주방, 인물이 리넨 앞치마를 두르고 막대 비스킷을 녹인 다크 초콜릿 볼에 천천히 담갔다 들어 올리는 순간, 초콜릿이 윤기 있게 흘러내리는 모습이 선명하게 포착됨, 조리대 위에 스프링클, 다진 아몬드, 동결건조 딸기, 유산지 위에 줄지어 굳어 가는 막대과자, 창으로 들어오는 아침 자연광과 부드러운 그림자, 초콜릿 광택과 손등 피부 결까지 보이는 초고해상도 8K, 푸드 매거진 스타일 실사, 50mm 렌즈, 9:16 세로 비율, 글자 없음."},
+{t:"막대과자 꽃다발 프러포즈",p:H+". 노을빛이 스며드는 루프탑 테라스, 전구 줄조명이 위쪽으로 길게 늘어져 있고 도시 야경이 흐릿하게 펼쳐진 배경, 인물이 딸기·초콜릿·아몬드 막대과자를 장미처럼 엮은 꽃다발을 두 팔로 내밀며 설레는 표정을 짓는 동작, 코트 자락이 바람에 살짝 날림, 골든아워 역광과 따뜻한 오렌지·핑크 하늘 그라데이션, 머리카락 한 올까지 빛나는 디테일, 초고해상도 8K, 시네마틱 실사, 35mm 렌즈, 얕은 심도, 9:16 세로 비율, 글자 없음."},
+{t:"11월 11일 손가락 포즈",p:H+". 비비드한 코랄 컬러 단색 스튜디오 배경에 막대과자 수십 개가 공중에 흩날리듯 떠 있는 연출, 인물이 양손 손가락 사이에 막대과자를 두 개씩 끼워 얼굴 옆으로 들고 카메라를 향해 장난스럽게 윙크하는 동작, 손가락 관절과 손톱까지 자연스럽고 정확한 손 표현, 하이키 조명과 선명한 그림자, 팝아트 감성의 상큼한 색감, 초고해상도 8K, 패션 광고 화보 실사, 9:16 세로 비율, 글자·숫자 표기 없음."},
+{t:"서프라이즈 선물 상자",p:H+". 따뜻한 전구 조명이 걸린 아늑한 거실, 크림색 소파와 니트 쿠션, 인물이 레드 리본이 달린 하얀 선물 상자 뚜껑을 막 여는 순간, 상자 안에서 막대과자와 하트 초콜릿, 작은 마른 꽃이 가득 보이고 인물은 두 눈을 크게 뜨고 입을 살짝 벌린 채 기뻐하는 표정, 리본 끈이 공중에서 흔들리는 움직임까지 포착, 텅스텐 톤의 포근한 조명과 부드러운 보케, 초고해상도 8K, 감성 라이프스타일 실사, 50mm 렌즈, 9:16 세로 비율, 글자 없음."},
+{t:"이벤트 테이블 스타일링",p:H+". 화이트 대리석 테이블 위에 유리병, 원통형 케이스, 하트 접시에 다양한 맛의 막대과자가 높낮이를 달리해 진열된 이벤트 디스플레이, 핑크 장미와 금색 리본 장식, 인물이 테이블 뒤에서 마지막 막대과자 병을 조심스럽게 내려놓으며 만족스럽게 웃는 동작, 배경에는 커튼 사이로 들어오는 부드러운 낮 빛, 유리 반사와 초콜릿 질감이 선명한 디테일, 초고해상도 8K, 고급 디저트 브랜드 광고 실사, 9:16 세로 비율, 글자·로고 없음."},
+{t:"초콜릿 스플래시 광고컷",p:H+"하고 인물을 디저트 광고 모델로 연출. 진한 초콜릿색 배경에서 녹은 초콜릿이 왕관처럼 튀어 오르는 순간, 인물이 막대과자 하나를 우아하게 들어 입술 가까이 가져가며 매혹적으로 미소 짓는 포즈, 초콜릿 방울이 공중에 멈춘 고속 촬영 느낌, 골드 하이라이트와 깊은 그림자의 드라마틱한 조명, 윤기 나는 초콜릿 질감과 피부 결까지 선명, 초고해상도 8K, 프리미엄 TV 광고 스틸컷 실사, 9:16 세로 비율, 글자 없음."},
+{t:"레드카펫 스타 모먼트",p:H+"하고 인물을 시상식 스타처럼 연출. 레드카펫 위에서 버건디 벨벳 드레스 또는 블랙 턱시도 차림으로 리본 장식 막대과자 부케를 한 손에 들고 걸어오는 포즈, 뒤로 카메라 플래시가 별빛처럼 터지는 보케, 금색 스탠션과 벨벳 로프, 화려한 스포트라이트와 반짝이는 원단 질감, 초고해상도 8K, 셀럽 매거진 커버 같은 실사, 70mm 렌즈, 9:16 세로 비율, 글자 없음."},
+{t:"핑크 샴페인 글래머 화보",p:H+"하고 인물을 빼빼로데이 광고의 메인 모델로 연출. 핑크 새틴 드레스 또는 핑크 실크 셔츠 수트 차림, 거대한 초콜릿 막대과자 조형물 사이에 기대어 서서 턱을 살짝 들고 자신감 있게 카메라를 응시하는 포즈, 공중에 흩날리는 핑크 꽃잎과 금빛 컨페티, 하트 모양 크리스털 조명, 뷰티 디시 조명과 핑크 림라이트로 빛나는 피부, 럭셔리 브랜드 캠페인 포스터 구도, 초고해상도 8K, 하이엔드 패션 화보 실사, 85mm 렌즈, 9:16 세로 비율, 상단에 여백, 이미지 안에 글자·로고·숫자 없음."},
+{t:"핑크 구름 판타지",p:H+"하고 인물을 동화 같은 광고 모델로 연출. 솜사탕 같은 핑크 구름 위, 거대한 막대과자들이 기둥처럼 하늘로 솟아 있는 몽환적인 세트, 인물이 흩날리는 파스텔 의상을 입고 막대과자 기둥에 한 손을 얹은 채 바람을 맞으며 환하게 웃는 포즈, 하늘에 떠다니는 리본과 하트 풍선, 노을빛 핑크·라벤더 그라데이션 조명, 초고해상도 8K, 판타지 광고 포스터 실사, 9:16 세로 비율, 글자 없음."},
+{t:"막대과자 꽃 정원 퀸",p:H+"하고 인물을 로맨틱 광고 모델로 연출. 핑크 장미와 막대과자로 가득 장식한 화려한 아치형 플라워 월 앞, 인물이 플로럴 자수 의상을 입고 장미와 막대과자를 섞은 대형 부케를 품에 안고 고개를 살짝 기울여 미소 짓는 포즈, 장미꽃잎이 천천히 떨어지는 장면, 부드러운 자연광과 핑크 반사광, 꽃잎 질감까지 선명, 초고해상도 8K, 웨딩 매거진 같은 화보 실사, 9:16 세로 비율, 글자 없음."},
+{t:"크리스털 하트 왕관 피날레",p:H+"하고 인물을 빼빼로데이의 주인공처럼 연출. 거울과 크리스털로 꾸민 화려한 무대 위, 수천 개의 막대과자가 방사형으로 배열된 배경 조형물 중앙에 인물이 반짝이는 시퀸 의상 차림으로 서서 두 팔을 활짝 펼치고 환하게 웃는 포즈, 머리 위로 크리스털 하트 장식과 은빛 컨페티가 쏟아짐, 무대 스포트라이트와 프리즘 반사광, 초고해상도 8K, 대형 광고 포스터 실사, 와이드 구도, 9:16 세로 비율, 글자 없음."},
+{t:"골드 럭셔리 쥬얼리 무드",p:H+"하고 인물을 명품 광고 모델로 연출. 샴페인 골드 배경, 인물이 아이보리 실크 의상과 은은한 골드 액세서리를 하고 금박을 입힌 막대과자를 보석처럼 손끝에 들어 감상하듯 바라보는 우아한 포즈, 금가루가 빛 속에서 반짝이며 흩날림, 부드러운 확산광과 고급스러운 광택, 초고해상도 8K, 하이주얼리 캠페인 화보 실사, 100mm 렌즈, 9:16 세로 비율, 글자·로고 없음."},
+{t:"하트 네온 팝 포스터",p:H+"하고 인물을 팝 아트 광고 모델로 연출. 핑크와 퍼플 네온 하트가 겹겹이 빛나는 배경, 인물이 트렌디한 메탈릭 재킷 차림으로 막대과자 두 개를 X자로 교차해 얼굴 옆에 들고 당당한 윙크를 하는 포즈, 네온 빛이 피부와 머리카락에 컬러로 반사됨, 비비드하고 상큼한 색감, 초고해상도 8K, 음료·과자 광고 포스터 스타일 실사, 9:16 세로 비율, 네온에 글자 없음."}
+].map((x,i)=>({...x,img:"img/p"+String(i+1).padStart(2,"0")+".jpg"}));
+
+const HUES=[0,-18,22,-38,12,40,-8,-55,30,-28,8,48,-45,18,-12];
+const COLORS=["#e8336f","#c21f5b","#e8590c","#b5179e","#d00000","#ff5c93","#9d1c4a","#f08c00","#7b2cbf","#e63946","#c9184a","#ff006e","#a4133c","#f76707","#d6336c"];
+let deck=[],got=0;
+const shelf=document.getElementById("shelf"),veil=document.getElementById("veil"),sheet=document.getElementById("sheet");
+
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function newGame(){deck=shuffle([...P.map((_,i)=>({w:true,i})),{w:false}]).map(d=>({...d,open:false}));got=0;render()}
+function render(){
+  shelf.innerHTML="";
+  deck.forEach((d,k)=>{
+    const b=document.createElement("button");
+    b.className="slot"+(d.open?" done":"");b.id="box"+k;
+    b.setAttribute("aria-label",(k+1)+"번 상자"+(d.open?" (열림)":""));
+    if(d.open)b.disabled=true;
+    b.style.setProperty("--c",COLORS[k%COLORS.length]);
+    b.innerHTML='<div class="pwrap" style="animation-delay:'+(k*.22)+'s;--h:'+HUES[k%HUES.length]+'deg"><img class="pbox" src="img/box.png" alt=""><span class="pnum">'+(k+1)+'</span></div><div class="shadow"></div>';
+    b.addEventListener("click",()=>openBox(k));
+    shelf.appendChild(b);
+  });
+  document.getElementById("left").textContent=deck.filter(d=>!d.open).length;
+  document.getElementById("got").textContent=got;
+}
+function openBox(k){
+  const d=deck[k];
+  if(!d.w){
+    sheet.innerHTML='<div class="miss"><div class="face">😜</div><h2 id="sheetTitle">앗, 꽝이에요!</h2><p>상자를 다시 섞어 드릴게요.<br>한 번 더 골라 보세요.</p></div><div class="acts"><button class="primary" id="retry">상자 다시 섞기</button></div>';
+    show();document.getElementById("retry").onclick=()=>{hide();newGame()};document.getElementById("retry").focus();return;
+  }
+  d.open=true;got++;const p=P[d.i];
+  sheet.innerHTML='<div class="tag">당첨 · '+(k+1)+'번 상자</div><h2 id="sheetTitle">'+p.t+'</h2>'+
+    '<img class="photo" src="'+p.img+'" alt="'+p.t+' 예시 이미지"><div class="cap">이 프롬프트로 만든 예시 이미지예요</div>'+
+    '<textarea class="prompt" id="ptext" readonly aria-label="프롬프트"></textarea>'+
+    '<div class="acts three"><button class="primary" id="copy">프롬프트 복사</button>'+
+    '<a class="gem" id="gem" href="https://gemini.google.com/app" target="_blank" rel="noopener">제미나이로 열기</a>'+
+    '<button class="kakao" id="share">카톡으로 보내기</button><button class="ghost" id="close">다른 상자 열기</button></div>'+
+    '<p class="steps">제미나이로 열기를 누르면 프롬프트가 복사된 채로 제미나이가 열려요.<br>내 사진을 올리고 입력창에 붙여넣기만 하세요.</p>';
+  document.getElementById("ptext").value=p.p;
+  const quietCopy=()=>{try{return navigator.clipboard.writeText(p.p).catch(()=>{const ta=document.getElementById("ptext");ta.select();try{document.execCommand("copy")}catch(e){}})}catch(e){return Promise.resolve()}};
+  document.getElementById("gem").onclick=()=>{quietCopy();toast("프롬프트를 복사했어요. 제미나이 입력창에 붙여넣어 주세요.")};
+  document.getElementById("share").onclick=async()=>{
+    const text="[지쿱AI대학교 빼빼로데이 선물 프롬프트] "+p.t+"\n\n"+p.p;
+    try{ if(navigator.share){await navigator.share({title:p.t,text});return} }catch(e){}
+    try{await navigator.clipboard.writeText(text)}catch(e){const ta=document.getElementById("ptext");ta.select();try{document.execCommand("copy")}catch(_){}}
+    toast("프롬프트를 복사했어요. 카카오톡 대화창에 붙여넣어 보내 주세요.");
+  };
+  const cb=document.getElementById("copy");
+  cb.onclick=()=>{
+    const ta=document.getElementById("ptext");
+    const done=()=>{cb.textContent="복사했어요 ✓";setTimeout(()=>cb.textContent="프롬프트 복사",1800)};
+    const fallback=()=>{ta.focus();ta.select();try{document.execCommand("copy")}catch(e){}done()};
+    try{navigator.clipboard.writeText(p.p).then(done,fallback)}catch(e){fallback()}
+  };
+  document.getElementById("close").onclick=()=>{hide();render()};
+  show();render();rain();cb.focus();
+}
+let tt;function toast(msg){let t=document.querySelector(".toast");if(!t){t=document.createElement("div");t.className="toast";t.setAttribute("role","status");document.body.appendChild(t)}t.textContent=msg;t.hidden=false;clearTimeout(tt);tt=setTimeout(()=>t.hidden=true,2600)}
+function show(){veil.hidden=false}
+function hide(){veil.hidden=true}
+veil.addEventListener("click",e=>{if(e.target===veil){hide();render()}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!veil.hidden){hide();render()}});
+function rain(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  for(let i=0;i<20;i++){const h=document.createElement("div");h.className="fall";h.textContent=["💗","🍫","✨","💝"][i%4];
+    h.style.left=Math.random()*100+"vw";h.style.animationDuration=(2+Math.random()*2)+"s";document.body.appendChild(h);setTimeout(()=>h.remove(),4300)}
+}
+newGame();
+</script>
+
+</body>
+</html>
