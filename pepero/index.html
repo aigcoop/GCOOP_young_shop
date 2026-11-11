@@ -42,7 +42,8 @@ header p{margin:0;color:var(--muted)}
 .hint{margin-top:8px!important;font-size:14px}
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#3a1d16;color:#fff;padding:12px 18px;border-radius:14px;font-size:14px;z-index:40;max-width:calc(100% - 32px);text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.35)}
 .acts.three{flex-wrap:wrap}
-.acts.three button,.acts.three a{flex:1 1 calc(50% - 5px)}
+.acts.three button{flex:1 1 calc(50% - 5px)}
+.acts .share{flex-basis:100%;order:-1;background:linear-gradient(120deg,#ff5c93,#ff8a5c);color:#fff}
 .acts a{display:flex;align-items:center;justify-content:center;padding:14px;border-radius:12px;font-family:var(--display);font-size:17px;text-decoration:none}
 .gem{background:linear-gradient(120deg,#4f7cff,#a46bff);color:#fff}
 .kakao{background:#fee500;color:#191600}
@@ -217,17 +218,15 @@ function openBox(k){
     '<img class="photo" src="'+p.img+'" alt="'+p.t+' 예시 이미지"><div class="cap">이 프롬프트로 만든 예시 이미지예요</div>'+
     '<textarea class="prompt" id="ptext" readonly aria-label="프롬프트"></textarea>'+
     '<div class="acts three"><button class="primary" id="copy">프롬프트 복사</button>'+
-    '<a class="gem" id="gem" href="https://gemini.google.com/app" target="_blank" rel="noopener">제미나이로 열기</a>'+
-    '<button class="kakao" id="share">카톡으로 보내기</button><button class="ghost" id="close">다른 상자 열기</button></div>'+
-    '<p class="steps">제미나이로 열기를 누르면 프롬프트가 복사된 채로 제미나이가 열려요.<br>내 사진을 올리고 입력창에 붙여넣기만 하세요.</p>';
+    '<button class="share" id="share">프롬프트 공유하기</button><button class="ghost" id="close">다른 상자 열기</button></div>'+
+    '<p class="steps">공유하기를 누르면 휴대폰 공유창이 열려요.<br>제미나이, 카카오톡, 문자 등 원하는 앱을 골라 보내세요.</p>';
   document.getElementById("ptext").value=p.p;
   const quietCopy=()=>{try{return navigator.clipboard.writeText(p.p).catch(()=>{const ta=document.getElementById("ptext");ta.select();try{document.execCommand("copy")}catch(e){}})}catch(e){return Promise.resolve()}};
-  document.getElementById("gem").onclick=()=>{quietCopy();toast("프롬프트를 복사했어요. 제미나이 입력창에 붙여넣어 주세요.")};
   document.getElementById("share").onclick=async()=>{
     const text="[지쿱AI대학교 빼빼로데이 선물 프롬프트] "+p.t+"\n\n"+p.p;
     try{ if(navigator.share){await navigator.share({title:p.t,text});return} }catch(e){}
     try{await navigator.clipboard.writeText(text)}catch(e){const ta=document.getElementById("ptext");ta.select();try{document.execCommand("copy")}catch(_){}}
-    toast("프롬프트를 복사했어요. 카카오톡 대화창에 붙여넣어 보내 주세요.");
+    toast("이 화면에서는 공유창을 열 수 없어 프롬프트를 복사했어요. 원하는 앱에 붙여넣어 주세요.");
   };
   const cb=document.getElementById("copy");
   cb.onclick=()=>{
