@@ -450,6 +450,11 @@ footer .disc{display:block;margin-top:10px;font-size:11px;line-height:1.55;color
 .pdbtns [data-cart]{grid-column:1/-1}
 .b2{display:flex;align-items:center;justify-content:center;gap:6px;height:50px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;border:1.5px solid var(--line);background:var(--surface);color:var(--ink)}
 .b2:hover{border-color:var(--brand);color:var(--brand)}
+.b2 .btx{display:flex;flex-direction:column;align-items:flex-start;min-width:0;flex:1;line-height:1.25;text-align:left}
+.b2 .btx b{font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.b2 .btx small{font-size:11.5px;font-weight:600;opacity:.85}
+.b2.pri:has(.btx){height:auto;min-height:56px;padding:8px 14px;justify-content:flex-start}
+.plabel .unit{margin:0 0 0 6px;padding:1px 7px;font-size:11px;vertical-align:1px}
 .b2.pri{background:var(--brand);border-color:var(--brand);color:var(--brand-ink);font-weight:800}
 .b2.pri:hover{background:var(--brand-deep);color:var(--brand-ink)}
 .b2.kk{background:var(--kakao);border-color:var(--kakao);color:var(--kakao-ink)}
@@ -840,9 +845,9 @@ function card(p){
     </div>
     <div class="pinfo">
       <span class="pbrand">${subLabel(p)}</span>
-      <h3 class="pname"><button type="button" data-open="${p.n}">${esc(p.name)}</button></h3>${unitTag(p)}
+      <h3 class="pname"><button type="button" data-open="${p.n}">${esc(p.name)}</button></h3>
       <p class="pdesc">${esc(p.desc||"")}</p>
-      <div class="pprice"><span class="plabel">${p.mOnly?"회원가":(/\d/.test(p.price)?"소비자가":"가격 안내")}</span>${priceHTML(p.price)}${p.pnote?`<span class="pn">${esc(p.pnote)}</span>`:""}</div>
+      <div class="pprice"><span class="plabel">${p.mOnly?"회원가":(/\d/.test(p.price)?"소비자가":"가격 안내")}${unitTag(p)}</span>${priceHTML(p.price)}${p.pnote?`<span class="pn">${esc(p.pnote)}</span>`:""}</div>
       <div class="pact">${goBtn(p)}</div>
     </div>
   </article>`;
@@ -1000,14 +1005,14 @@ function renderPD(){
   const link = links[multi ? Math.min(curOpt, links.length-1) : 0];
   let buy;
   const chips = (p.qurl || p.packs) ? `<div class="full pdq">${qtyChips(p)}${sum}</div>` : "";
-  if(o.length || pk) buy = `${chips}<a class="b2 pri full" ${ext(multi&&!pk?o[curOpt].url:qUrl(p))}>${pk?"선택한 스페셜팩 바로구매 (회원가)":`${p.qurl?`${q}개${qX(p,q)} `:""}링크오더로 바로구매 (회원가)`}${pk?(pkOff(pk)?`<span class="offtag">${pkOff(pk)}%↓</span>`:""):offTag(p)} ${I.arrow}</a>`;
+  if(o.length || pk) buy = `${chips}<a class="b2 pri full" ${ext(multi&&!pk?o[curOpt].url:qUrl(p))}><span class="btx"><b>${pk?"선택한 스페셜팩 바로구매":`${p.qurl?`${q}개${qX(p,q)} `:""}링크오더로 바로구매`}</b><small>회원가로 구매 · 가입 없이 바로 결제</small></span>${pk?(pkOff(pk)?`<span class="offtag">${pkOff(pk)}%↓</span>`:""):offTag(p)} ${I.arrow}</a>`;
   else buy = `${chips}<a class="b2 kk full" ${ext(KAKAO)}>${I.kakao} 카카오톡으로 구입문의</a>`;
   head.innerHTML = `
    <div class="pdin">
     <div class="pdimg">${imgTag(p,false)}</div>
     <div class="pdbody">
       <span class="pbrand">${subLabel(p)}</span>
-      <h3>${esc(p.name)}</h3>${unitTag(p)}
+      <h3>${esc(p.name)}</h3>
       <p class="pddesc">${esc(p.desc||"")}</p>
       <div class="pdprices">${p.mOnly?`<div class="pp mem"><span class="pl">회원가${p.bv?` <em class="mo bvt">${esc(p.bv)}BV</em>`:""}</span><b class="pv">${won(p.member)}<small>원</small></b></div>`:/\d/.test(p.price)?`<div class="pp"><span class="pl">소비자가</span>${mem?`<s class="pv">${priceHTML(p.price)}</s>`:`<b class="pv">${priceHTML(p.price)}</b>`}</div>`:`<div class="pp"><b class="pv">${priceHTML(p.price)}</b></div>`}${p.mOnly?"":mem}</div>
       ${multi?`<div class="optt">옵션 선택</div><div class="opts">${o.map((x,i)=>`<button class="opt" type="button" data-opt="${i}" aria-pressed="${i===curOpt}">${esc(x.label)}</button>`).join("")}</div>`:""}
