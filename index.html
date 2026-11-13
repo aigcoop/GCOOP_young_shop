@@ -89,6 +89,12 @@ a{color:inherit}
 /* 헤더 */
 .hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);box-shadow:0 1px 0 var(--line)}
 .hrow{display:flex;align-items:center;gap:16px;padding-block:10px}
+.chl{display:flex;gap:4px;flex:none}
+.chb{display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 6px;border-radius:10px;font-size:10.5px;font-weight:800;color:var(--ink);text-decoration:none;letter-spacing:-.03em;white-space:nowrap}
+.chb:hover{background:var(--fill)}
+.chi{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--surface);box-shadow:0 0 0 1px var(--line),0 3px 8px -4px rgba(0,0,0,.25)}
+.chi svg{width:20px;height:20px}
+@media (max-width:900px){.chl{margin-left:auto}}
 .logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex:none;background:none;border:0;padding:0;cursor:pointer;min-width:0}
 .logo .mark{width:40px;height:40px;flex:none;display:block;filter:drop-shadow(0 4px 8px rgba(20,82,58,.28))}
 .logo .mark svg{display:block;width:100%;height:100%}
@@ -593,11 +599,12 @@ footer .disc{display:block;margin-top:10px;font-size:11px;line-height:1.55;color
 
 </head>
 <body>
-<div class="annc"><div class="wrap"><div class="tick"><div class="tick-in"><span><b>회원가입 없이 회원가로</b> 바로 구입</span><span><b>지쿱 파트너스 영샵</b> · 본사 정품 직접 발송</span><span>여러 개는 맞춤 링크오더로 카톡 발송</span><span>회원가입을 원할 경우 카톡 문의</span></div></div></div><div class="ship"><div class="wrap"><button type="button" class="shipbtn" data-shipopen aria-haspopup="dialog"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span>링크오더(회원가)로 구입 시 <b>50,000원 미만</b>은 택배비 <b>2,500원</b>이 부과됩니다.</span><span class="shipmore">배송·교환·반품 안내 ›</span></button></div></div></div>
+<div class="annc"><div class="wrap"><div class="tick"><div class="tick-in"><span><b>회원가입 없이 회원가로</b> 바로 구입</span><span><b>지쿱 파트너스 영샵</b> · 본사 정품 직접 발송</span><span>여러 개는 맞춤 링크오더로 카톡 발송</span><span>회원가입을 원할 경우 카톡 문의</span></div></div></div><div class="ship"><div class="wrap"><button type="button" class="shipbtn" data-shipopen aria-haspopup="dialog"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span>회원가 <b>5만 원 미만</b> 주문 시 택배비 <b>2,500원</b></span><span class="shipmore">배송·교환·반품 ›</span></button></div></div></div>
 
 <header class="hdr"><div class="wrap">
   <div class="hrow">
     <button class="logo" type="button" id="home" aria-label="처음으로"><span class="mark" aria-hidden="true"><svg viewBox="0 0 40 40"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f8f5f"/><stop offset="1" stop-color="#14523a"/></linearGradient></defs><rect width="40" height="40" rx="12" fill="url(#lg)"/><path d="M28.6 14.2A10 10 0 1 0 30 20h-9.2" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M27.6 7.2c3.9-.6 6 1.4 5.6 5.4-3.8.6-6-1.5-5.6-5.4z" fill="#b9f0c9"/><circle cx="20" cy="20" r="2.1" fill="#ffd84d"/></svg></span><span class="lt"><span class="lk">GCOOP PARTNERS <i>제휴샵</i></span><b>지쿱 파트너스 <em>영샵</em></b></span></button>
+    <nav class="chl" aria-label="운영 채널 바로가기"><a class="chb yt" href="https://www.youtube.com/channel/UC7d5F0nS6WrmMd1Y3wVGJWA" target="_blank" rel="noopener"><span class="chi"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4.5" fill="#ff0033"/><path d="M10 9.2v5.6l4.8-2.8z" fill="#fff"/></svg></span>건강TV</a><a class="chb dg" href="https://dailygungang.com" target="_blank" rel="noopener" title="데일리건강 · 건강칼럼 읽으러 가기"><span class="chi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.2c2.6-.9 5.4-.7 8.5 1v12c-3.1-1.7-5.9-1.9-8.5-1z" fill="#e3f3e9" stroke="#1f6b46" stroke-width="1.5" stroke-linejoin="round"/><path d="M20.5 6.2c-2.6-.9-5.4-.7-8.5 1v12c3.1-1.7 5.9-1.9 8.5-1z" fill="#e3f3e9" stroke="#1f6b46" stroke-width="1.5" stroke-linejoin="round"/><path d="M16.2 9.6v4.2M14.1 11.7h4.2" stroke="#e5484d" stroke-width="1.8" stroke-linecap="round"/></svg></span>건강칼럼</a></nav>
     <label class="search" for="q">
       <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input id="q" type="search" placeholder="제품 검색하기 (예: 세럼, 유산균)" autocomplete="off">
