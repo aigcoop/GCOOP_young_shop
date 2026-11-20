@@ -465,9 +465,13 @@ footer .disc{display:block;margin-top:10px;font-size:11px;line-height:1.55;color
 .buyrow{display:flex;gap:8px;align-items:stretch}
 .buyrow>a.b2{flex:1;min-width:0}
 .buyrow>a.b2{padding:8px 10px 8px 14px;gap:6px}
-.buyrow .btx b{font-size:14.5px;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;word-break:keep-all;line-height:1.3}
+.buyrow .btx b{font-size:14px;letter-spacing:-.04em;line-height:1.25}
 .buyrow .offtag{font-size:12px;padding:3px 6px}
-.buyrow .btx small{font-size:11.5px}
+.buyrow .btx small{font-size:11px;letter-spacing:-.03em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.buyrow>a.b2.pri{min-height:50px!important;padding-block:7px!important}
+.buyrow>a.b2 > .ico:last-child,.buyrow>a.b2>svg:last-child{display:none}
+.pdbtns .buyrow .cartmini{min-height:50px}
+@media (max-width:390px){.buyrow .btx b{font-size:12.5px;letter-spacing:-.06em}.buyrow .offtag{font-size:11px;padding:2px 5px}.buyrow>a.b2{padding-inline:12px 8px}.pdbtns .buyrow .cartmini{width:60px}}
 .pdbtns .buyrow .cartmini{grid-column:auto;flex:none;width:68px;height:auto;min-height:50px;flex-direction:column;gap:2px;padding:6px 4px;font-size:12px;font-weight:700}
 .cartmini .ico{width:20px;height:20px}
 .pdtop .sharebtn,.pdtop .copybtn{min-width:0;padding-inline:5px}
