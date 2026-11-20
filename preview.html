@@ -457,6 +457,16 @@ footer .disc{display:block;margin-top:10px;font-size:11px;line-height:1.55;color
 .ssb.pri{background:var(--brand);border-color:var(--brand);color:#fff}
 .ssb.done{border-color:var(--brand);color:var(--brand)}
 @media (max-width:400px){.shopshare{padding:9px 10px;gap:6px}.ssb{padding:0 8px;font-size:12.5px;gap:4px}.ssb .ico{width:15px;height:15px}.shopshare .ssu b{font-size:12.5px;letter-spacing:-.2px}.shopshare .ssu small{font-size:11px}}
+.buyrow{display:flex;gap:8px;align-items:stretch}
+.buyrow>a.b2{flex:1;min-width:0}
+.buyrow>a.b2{padding:8px 10px 8px 14px;gap:6px}
+.buyrow .btx b{font-size:14.5px;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;word-break:keep-all;line-height:1.3}
+.buyrow .offtag{font-size:12px;padding:3px 6px}
+.buyrow .btx small{font-size:11.5px}
+.pdbtns .buyrow .cartmini{grid-column:auto;flex:none;width:68px;height:auto;min-height:50px;flex-direction:column;gap:2px;padding:6px 4px;font-size:12px;font-weight:700}
+.cartmini .ico{width:20px;height:20px}
+.pdtop .sharebtn,.pdtop .copybtn{min-width:0;padding-inline:5px}
+.pdtop .copybtn.done{color:var(--brand)}
 .pdbtns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto;padding-top:8px}
 .pdbtns .full{grid-column:1/-1}
 .pdbtns [data-cart]{grid-column:1/-1}
@@ -931,7 +941,7 @@ function closeSheets(){ if(!pd.hidden && history.state && history.state.p){ hist
 function realClose(){ if(/^#p\d+$/.test(location.hash)){ try{ history.replaceState(null, "", location.pathname + location.search); }catch(e){} } pd.hidden = true; cartEl.hidden = true; $("shipsheet").hidden = true; scrim.classList.remove("on"); document.body.style.overflow=""; lastFocus?.focus?.(); }
 function openProduct(n, push=true, to=""){
   cur = BYN[n]; curOpt = 0;
-  pd.innerHTML = `<div class="pdtop"><button class="bk" type="button" data-close aria-label="목록으로">${I.chev(0)}<span>목록</span></button><b class="tt">${esc(cur.name)}</b><button class="bk sharebtn" type="button" data-share="${n}" aria-label="이 제품 링크 공유">${I.share}<span>공유</span></button><button class="bk cartbtn" type="button" data-cartopen aria-label="바구니">${I.bag}<span>바구니</span></button></div><div class="pdhead"></div><section class="pdx" id="pdx" aria-label="상세정보"></section><a class="fkk" ${ext(KAKAO)} aria-label="카카오톡으로 문의하기">${I.kakao}<span>카톡 문의</span></a>`;
+  pd.innerHTML = `<div class="pdtop"><button class="bk" type="button" data-close aria-label="목록으로">${I.chev(0)}<span>목록</span></button><b class="tt">${esc(cur.name)}</b><button class="bk sharebtn" type="button" data-share="${n}" aria-label="이 제품 링크 공유">${I.share}<span>공유</span></button><button class="bk copybtn" type="button" data-copylink="${n}" aria-label="이 제품 링크 복사"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>복사</span></button><button class="bk cartbtn" type="button" data-cartopen aria-label="바구니">${I.bag}<span>바구니</span></button></div><div class="pdhead"></div><section class="pdx" id="pdx" aria-label="상세정보"></section><a class="fkk" ${ext(KAKAO)} aria-label="카카오톡으로 문의하기">${I.kakao}<span>카톡 문의</span></a>`;
   renderPD(); renderDetail(cur);
   if(!cartEl.hidden) cartEl.hidden = true;
   openSheet(pd); pd.scrollTop = 0;
@@ -939,6 +949,7 @@ function openProduct(n, push=true, to=""){
   if(to) setTimeout(()=>goDetail(), 60);
 }
 const SHARE_BASE = "https://shop.dailygungang.com/p/";
+const CARTMINI = p => `<button class="b2 cartmini" type="button" data-cart="${p.n}" aria-label="바구니 담기 (4개 이상 · 여러 제품 함께)">${I.bag}<span>바구니</span></button>`;
 const SHOP_URL = "https://shop.dailygungang.com/";
 async function copyText(url, btn, msg){
   try{ await navigator.clipboard.writeText(url); }
@@ -956,7 +967,7 @@ async function copyLink(n, btn){
   try{ await navigator.clipboard.writeText(url); }
   catch(e){ const t=document.createElement("textarea"); t.value=url; t.setAttribute("readonly",""); t.style.position="fixed"; t.style.opacity="0"; document.body.appendChild(t); t.select(); let ok=false; try{ ok=document.execCommand("copy"); }catch(_){} t.remove(); if(!ok){ window.prompt("이 링크를 복사해 주세요", url); return; } }
   toast("제품 링크를 복사했어요. 블로그·카톡에 붙여넣어 쓰세요");
-  if(btn){ const b=btn.querySelector("b"); btn.classList.add("done"); b.textContent="복사됨"; setTimeout(()=>{ btn.classList.remove("done"); b.textContent="링크 복사"; },1600); }
+  if(btn){ const b=btn.querySelector("b,span"); const o=b.textContent; btn.classList.add("done"); b.textContent="복사됨"; setTimeout(()=>{ btn.classList.remove("done"); b.textContent=o; },1600); }
 }
 async function shareProduct(n){
   const p = BYN[n], url = `${SHARE_BASE}${n}.html`;
@@ -1044,8 +1055,8 @@ function renderPD(){
   const link = links[multi ? Math.min(curOpt, links.length-1) : 0];
   let buy;
   const chips = (p.qurl || p.packs) ? `<div class="full pdq">${qtyChips(p)}${sum}</div>` : "";
-  if(o.length || pk) buy = `${chips}<a class="b2 pri full" ${ext(multi&&!pk?o[curOpt].url:qUrl(p))}><span class="btx"><b>${pk?"선택한 스페셜팩 바로구매":`${p.qurl?`${q}개${qX(p,q)} `:""}링크오더로 바로구매`}</b><small>회원가로 구매 · 가입 없이 바로 결제</small></span>${pk?(pkOff(pk)?`<span class="offtag">${pkOff(pk)}%↓</span>`:""):offTag(p)} ${I.arrow}</a>`;
-  else buy = `${chips}<a class="b2 kk full" ${ext(KAKAO)}>${I.kakao} 카카오톡으로 구입문의</a>`;
+  if(o.length || pk) buy = `${chips}<div class="buyrow full"><a class="b2 pri" ${ext(multi&&!pk?o[curOpt].url:qUrl(p))}><span class="btx"><b>${pk?"선택한 스페셜팩 바로구매":`${p.qurl?`${q}개${qX(p,q)} `:""}링크오더로 바로구매`}</b><small>회원가로 구매 · 가입 없이 바로 결제</small></span>${pk?(pkOff(pk)?`<span class="offtag">${pkOff(pk)}%↓</span>`:""):offTag(p)} ${I.arrow}</a>${CARTMINI(p)}</div>`;
+  else buy = `${chips}<div class="buyrow full"><a class="b2 kk" ${ext(KAKAO)}>${I.kakao} 카카오톡으로 구입문의</a>${CARTMINI(p)}</div>`;
   head.innerHTML = `
    <div class="pdin">
     <div class="pdimg">${imgTag(p,false)}${dealSt(p)}</div>
@@ -1057,7 +1068,6 @@ function renderPD(){
       ${multi?`<div class="optt">옵션 선택</div><div class="opts">${o.map((x,i)=>`<button class="opt" type="button" data-opt="${i}" aria-pressed="${i===curOpt}">${esc(x.label)}</button>`).join("")}</div>`:""}
       <div class="pdbtns">
         ${buy}
-        <div class="cartrow"><button class="b2 cartb" type="button" data-cart="${p.n}">${I.bag}<span class="ct"><b>바구니 담기</b><small>4개 이상 · 여러 제품 함께</small></span></button><button class="b2 shareb" type="button" data-share="${p.n}" aria-label="이 제품 링크 공유">${I.share}<b>링크 공유</b></button><button class="b2 copyb" type="button" data-copylink="${p.n}" aria-label="이 제품 링크 복사"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><b>링크 복사</b></button></div>
         ${(p.ino||p.comp||p.vids)?`<button class="b2 info" type="button" data-godetail><span class="ii"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span class="it"><b>상세정보 · 성분 보기</b><small>아래에서 바로 보기 · 상품정보제공고시 포함</small></span><span class="ia">${I.chev(1)}</span></button>`:link?`<a class="b2 info" ${ext(link.url)}><span class="ii"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span class="it"><b>상세정보 · 성분 보기</b><small>본사 상세페이지 · 상품정보제공고시 포함</small></span><span class="ia">${I.chev(1)}</span></a>`:`<a class="b2 kk" ${ext(KAKAO)}>${I.kakao} 상담</a>`}
       </div>
       ${links.length>1?`<div class="optt">옵션별 상세정보 · 성분 보기 <span class="optsub">(상품정보제공고시 포함)</span></div><div class="pdlinks">${links.map(x=>`<a ${ext(x.url)}>${esc(x.label)} ${I.arrow}</a>`).join("")}</div>`:""}
